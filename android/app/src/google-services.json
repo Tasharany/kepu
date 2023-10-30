@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "800389373250",
+    "project_id": "kepu-cc28b",
+    "storage_bucket": "kepu-cc28b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:800389373250:android:5608e1a645ec25f465fcdb",
+        "android_client_info": {
+          "package_name": "io.arjuningole.osiris"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5r-7A8gBnAxXeuJM8t9x2WPElZ6ZIDsQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
