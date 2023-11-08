@@ -1,4 +1,4 @@
-package io.arjuningole.osiris
+package com.myApp.Kepu
 
 import io.flutter.embedding.android.FlutterActivity
 

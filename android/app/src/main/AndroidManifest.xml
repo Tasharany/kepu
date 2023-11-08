@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.arjuningole.osiris">
+    package="com.myApp.Kepu">
     <queries>
         <intent>
             <action android:name="android.intent.action.VIEW" />
@@ -8,7 +8,7 @@
         </intent>
     </queries>
    <application
-        android:label="Osiris"
+        android:label="Kepu"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity

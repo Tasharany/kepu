@@ -1,26 +1,44 @@
 {
   "project_info": {
-    "project_number": "800389373250",
-    "project_id": "kepu-cc28b",
-    "storage_bucket": "kepu-cc28b.appspot.com"
+    "project_number": "799949434221",
+    "project_id": "kepu-f6479",
+    "storage_bucket": "kepu-f6479.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:800389373250:android:5608e1a645ec25f465fcdb",
+        "mobilesdk_app_id": "1:799949434221:android:5993524dc0106dca64be64",
         "android_client_info": {
-          "package_name": "io.arjuningole.osiris"
+          "package_name": "com.myApp.Kepu"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "799949434221-iqa6e68sklp1tb9c2fe6paq9s8h8rp77.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myApp.Kepu",
+            "certificate_hash": "fe90e847023c51f00f75073661047c12066cca14"
+          }
+        },
+        {
+          "client_id": "799949434221-b945idov0k193sh7gsuae7lq6ldheas8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyB5r-7A8gBnAxXeuJM8t9x2WPElZ6ZIDsQ"
+          "current_key": "AIzaSyDSvslcn62jLneDFwZYdjQy7qJm2RwZKh0"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799949434221-b945idov0k193sh7gsuae7lq6ldheas8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
