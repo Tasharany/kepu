@@ -1,12 +1,12 @@
 import 'package:dio/dio.dart';
-import 'package:osiris/Models/EpisodeDetail.dart';
-import 'package:osiris/Models/MovieDetail.dart';
-import 'package:osiris/Models/PopularMovies.dart';
-import 'package:osiris/Models/SearchResult.dart';
-import 'package:osiris/Models/TvShow.dart';
-import 'package:osiris/Models/TvShowDetail.dart';
-import 'package:osiris/Models/VideoDetails.dart';
-import 'package:osiris/Services/key.dart';
+import 'package:Kepu/Models/EpisodeDetail.dart';
+import 'package:Kepu/Models/MovieDetail.dart';
+import 'package:Kepu/Models/PopularMovies.dart';
+import 'package:Kepu/Models/SearchResult.dart';
+import 'package:Kepu/Models/TvShow.dart';
+import 'package:Kepu/Models/TvShowDetail.dart';
+import 'package:Kepu/Models/VideoDetails.dart';
+import 'package:Kepu/Services/key.dart';
 
 class APIService {
   final Dio _dio = Dio();

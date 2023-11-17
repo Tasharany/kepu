@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:osiris/Services/API.dart';
+import 'package:Kepu/Services/API.dart';
 
 class SeasonsList extends StatefulWidget {
   SeasonsList(this.seasonNumber, this.movieId, {super.key});

@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:osiris/Screens/LoginScreen.dart';
-import 'package:osiris/Screens/MainScreen.dart';
+import 'package:Kepu/Screens/LoginScreen.dart';
+import 'package:Kepu/Screens/MainScreen.dart';
 
 class NavScreen extends StatefulWidget with RouteAware {
   const NavScreen({super.key});

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:osiris/Screens/LoginScreen.dart';
-import 'package:osiris/Screens/MainScreen.dart';
-import 'package:osiris/Screens/MovieScreen.dart';
-import 'package:osiris/Screens/NavScreen.dart';
-import 'package:osiris/Screens/ProfileScreen.dart';
-import 'package:osiris/Screens/SearchScreen.dart';
-import 'package:osiris/Screens/TvShowScreen.dart';
+import 'package:Kepu/Screens/LoginScreen.dart';
+import 'package:Kepu/Screens/MainScreen.dart';
+import 'package:Kepu/Screens/MovieScreen.dart';
+import 'package:Kepu/Screens/NavScreen.dart';
+import 'package:Kepu/Screens/ProfileScreen.dart';
+import 'package:Kepu/Screens/SearchScreen.dart';
+import 'package:Kepu/Screens/TvShowScreen.dart';
 
 GoRouter router = GoRouter(initialLocation: '/', routes: [
   GoRoute(

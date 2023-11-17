@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:osiris/Services/consts.dart';
+import 'package:Kepu/Services/consts.dart';
 
 class ErrorScreen extends StatelessWidget {
   const ErrorScreen({super.key});

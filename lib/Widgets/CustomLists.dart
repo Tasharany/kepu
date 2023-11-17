@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:osiris/Models/PopularMovies.dart';
-import 'package:osiris/Models/TvShow.dart';
-import 'package:osiris/Widgets/MovieCard.dart';
+import 'package:Kepu/Models/PopularMovies.dart';
+import 'package:Kepu/Models/TvShow.dart';
+import 'package:Kepu/Widgets/MovieCard.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
 class CustomListMovie extends StatefulWidget {

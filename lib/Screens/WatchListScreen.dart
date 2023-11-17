@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
-import 'package:osiris/Services/API.dart';
-import 'package:osiris/Services/consts.dart';
+import 'package:Kepu/Services/API.dart';
+import 'package:Kepu/Services/consts.dart';
 
 class WatchListScreen extends StatefulWidget {
   WatchListScreen({required this.watchList, required this.status, super.key});

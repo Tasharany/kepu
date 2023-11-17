@@ -1,15 +1,15 @@
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
-import 'package:osiris/Models/TvShow.dart';
-import 'package:osiris/Services/API.dart';
-import 'package:osiris/Services/consts.dart';
-import 'package:osiris/Widgets/CustomLists.dart';
-import 'package:osiris/Widgets/LoadingScreen.dart';
-import 'package:osiris/Widgets/SeasonsList.dart';
+import 'package:Kepu/Models/TvShow.dart';
+import 'package:Kepu/Services/API.dart';
+import 'package:Kepu/Services/consts.dart';
+import 'package:Kepu/Widgets/CustomLists.dart';
+import 'package:Kepu/Widgets/LoadingScreen.dart';
+import 'package:Kepu/Widgets/SeasonsList.dart';
 import 'package:unicons/unicons.dart';
-import 'package:osiris/Services/extraServices.dart';
-import 'package:osiris/Widgets/DetailScreenComponents.dart';
+import 'package:Kepu/Services/extraServices.dart';
+import 'package:Kepu/Widgets/DetailScreenComponents.dart';
 
 class TVShowScreen extends StatefulWidget {
   TVShowScreen(this.movieId, {super.key});
