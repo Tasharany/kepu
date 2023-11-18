@@ -2,7 +2,7 @@
 <div style="border-radius: 10%; overflow: hidden; width: 120px; height: 120px;">
   <img src="assets/launcher_icon/foreground.png" alt="Osiris">
 </div>
-<h1 align ="center"><b>Osiris</b></h1>
+<h1 align ="center"><b>Kepu!</b></h1>
 </div>
 
 <div align = "center"> 
@@ -11,9 +11,9 @@
 </div>
 <br>
 
-Osiris is a powerful movie and show tracker app built using Flutter, Firebase, and The Movie Database (TMDb) API. With Osiris, you can easily keep track of your favorite movies and TV shows, discover new ones, and stay up-to-date with the latest releases. The app provides a seamless user experience with a beautiful interface and efficient data synchronization using Firebase.
+Kepu! is a powerful movie, show, game, and music tracker app built using Flutter, Firebase, and The Movie Database (TMDb) API. With Kepu!, you can easily keep track of your favorite movies and TV shows, discover new ones, and stay up-to-date with the latest releases. The app provides a seamless user experience with a beautiful interface and efficient data synchronization using Firebase.
 
-![Osiris](screenshots/screenshot-main.png)
+![Kepu!](screenshots/screenshot-main.png)
 
 ## Features
 
@@ -31,16 +31,14 @@ Osiris is a powerful movie and show tracker app built using Flutter, Firebase, a
 
 ## Installation
 
-To run Osiris locally, follow these steps:
+To run Kepu! locally, follow these steps:
 
-1. Clone the repository:
-```bash
-git clone https://github.com/Arjun-Ingole/Osiris.git
-```
+1. Get access to the repository:
+https://github.com/Tasharany/Kepu
 
 2. Change to the project directory:
 ```bash
-cd Osiris
+cd Kepu
 ```
 3. Install the dependencies:
 ```bash
