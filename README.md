@@ -2,7 +2,7 @@
 <div style="border-radius: 10%; overflow: hidden; width: 120px; height: 120px;">
   <img src="assets/launcher_icon/foreground.png" alt="Osiris">
 </div>
-<h1 align ="center"><b>Osiris</b></h1>
+<h1 align ="center"><b>Kepu!</b></h1>
 </div>
 
 <div align = "center"> 
