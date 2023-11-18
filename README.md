@@ -13,7 +13,7 @@
 
 Osiris is a powerful movie and show tracker app built using Flutter, Firebase, and The Movie Database (TMDb) API. With Osiris, you can easily keep track of your favorite movies and TV shows, discover new ones, and stay up-to-date with the latest releases. The app provides a seamless user experience with a beautiful interface and efficient data synchronization using Firebase.
 
-![Osiris](screenshots/screenshot-main.png)
+![Kepu!](screenshots/screenshot-main.png)
 
 ## Features
 
