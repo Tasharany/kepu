@@ -4,7 +4,6 @@ import 'package:Kepu/Services/auth.dart';
 import 'package:Kepu/Services/consts.dart';
 import 'package:provider/provider.dart';
 import 'package:lottie/lottie.dart';
-
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
@@ -25,6 +24,7 @@ class LoginScreen extends StatelessWidget {
                 Container(
                   height: size.height * 0.3,
                 ),
+
                 Lottie.asset(
                   "assets/AuthDuck.json",
                   width: size.width * 0.60,
@@ -53,7 +53,7 @@ class LoginScreen extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(14)),
-                            backgroundColor: Color(0xFF2A292F)),
+                            backgroundColor: Color(0xFFFBCD71)),
                       )),
                 ),
                 Container(
@@ -63,7 +63,15 @@ class LoginScreen extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Color(0xFF423E50)),
                   ),
-                )
+                ),
+                  Container(
+                  margin: EdgeInsets.fromLTRB(28, 0, 28, 24),
+            child: Text(
+              header_text,
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Color(0xFF423E50)),
+            )
+                  )
               ],
             ),
           ))),
