@@ -11,7 +11,7 @@
 </div>
 <br>
 
-Kepu! is a powerful movie,show, game, and music tracker app built using Flutter, Firebase, and The Movie Database (TMDb) API. With Kepu!, you can easily keep track of your favorite movies and TV shows, discover new ones, and stay up-to-date with the latest releases. The app provides a seamless user experience with a beautiful interface and efficient data synchronization using Firebase.
+Kepu! is a powerful movie, show, game, and music tracker app built using Flutter, Firebase, and The Movie Database (TMDb) API. With Kepu!, you can easily keep track of your favorite movies and TV shows, discover new ones, and stay up-to-date with the latest releases. The app provides a seamless user experience with a beautiful interface and efficient data synchronization using Firebase.
 
 ![Kepu!](screenshots/screenshot-main.png)
 
