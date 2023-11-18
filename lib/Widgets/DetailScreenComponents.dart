@@ -7,7 +7,7 @@ Widget TextContainer(String data, EdgeInsets margin, Color color) {
     decoration: BoxDecoration(
         color: color.withOpacity(0.6),
         border:
-            Border.all(width: 0.75, color: Color(0xFFA3A3B0).withOpacity(0.5)),
+            Border.all(width: 0.75, color: const Color(0xFFA3A3B0).withOpacity(0.5)),
         borderRadius: BorderRadius.circular(16)),
     child: Padding(
       padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),

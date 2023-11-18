@@ -128,7 +128,7 @@ class APIService {
   Future<List<Results>> getSimilarMovie(String movieId) async {
     try {
       List<Results> movieList = [];
-      final url = '$baseUrl/movie/${movieId}/similar?$apiKey&page=1';
+      final url = '$baseUrl/movie/$movieId/similar?$apiKey&page=1';
       final response = await _dio.get(url);
       var movies = response.data['results'] as List;
       movieList = movies.map((m) => Results.fromJson(m)).toList();
@@ -142,7 +142,7 @@ class APIService {
   Future<List<Results>> getRecommendedMovie(String movieId) async {
     try {
       List<Results> movieList = [];
-      final url = '$baseUrl/movie/${movieId}/recommendations?$apiKey&page=1';
+      final url = '$baseUrl/movie/$movieId/recommendations?$apiKey&page=1';
       final response = await _dio.get(url);
       var movies = response.data['results'] as List;
       movieList = movies.map((m) => Results.fromJson(m)).toList();
@@ -155,7 +155,7 @@ class APIService {
 
   Future<String> getTrailerLink(String movieId, String mediaType) async {
     try {
-      final url = '$baseUrl/$mediaType/${movieId}/videos?$apiKey';
+      final url = '$baseUrl/$mediaType/$movieId/videos?$apiKey';
       final response = await _dio.get(url);
       var videos = response.data['results'] as List;
       List<VideoResults> videosList =
@@ -164,7 +164,7 @@ class APIService {
       for (var i = 0; i < videosList.length; i++) {
         if (videosList[i].site == 'YouTube' &&
             videosList[i].type == 'Trailer') {
-          trailerLink = await videosList[i].key.toString();
+          trailerLink = videosList[i].key.toString();
         }
       }
       return 'https://www.youtube.com/watch?v=$trailerLink';

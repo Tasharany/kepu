@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:kepu/Services/auth.dart';
-import 'package:unicons/unicons.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 Future<void> LaunchUrl(String url) async {
-  final Uri _url = Uri.parse(url);
-  if (!await launchUrl(_url)) {
-    throw Exception('Could not launch $_url');
+  final Uri url0 = Uri.parse(url);
+  if (!await launchUrl(url0)) {
+    throw Exception('Could not launch $url0');
   }
 }
 
@@ -16,7 +15,7 @@ void pshowDialog(BuildContext context, String Id, String mediaType) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        backgroundColor: Color(0xFF12121C).withOpacity(0.95),
+        backgroundColor: const Color(0xFF12121C).withOpacity(0.95),
         title: SizedBox(
           width: MediaQuery.of(context).size.width * 0.8,
           child: Column(

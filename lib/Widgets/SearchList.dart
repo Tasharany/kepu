@@ -3,7 +3,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:kepu/Models/SearchResult.dart';
-import 'package:kepu/Widgets/MovieCard.dart';
 import 'package:kepu/Widgets/SearchCard.dart';
 
 class SearchList extends StatefulWidget {
@@ -24,10 +23,10 @@ class _SearchListState extends State<SearchList> {
       future: widget.future,
       builder: (context, AsyncSnapshot snapshot) {
         if (snapshot.hasData) {
-          return Container(
+          return SizedBox(
             height: size.height * 0.8,
             child: ListView.builder(
-              padding: EdgeInsets.only(top: 0),
+              padding: const EdgeInsets.only(top: 0),
               scrollDirection: Axis.vertical,
               controller: widget.scrollController,
               physics: const BouncingScrollPhysics(),

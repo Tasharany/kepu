@@ -90,7 +90,7 @@ class SearchCard extends StatelessWidget {
                         ),
                         Text(
                           popularRating.toString(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                             fontSize: 14,
                           ),

@@ -107,11 +107,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
       backgroundColor: background_primary,
       extendBody: true,
       body: isLoading
-          ? LoadingScreen()
+          ? const LoadingScreen()
           : Container(
               child: ListView(
                 controller: _scrollController,
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.vertical,
                 padding: const EdgeInsets.only(top: 0),
                 children: [
@@ -196,17 +196,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           child: Container(
                             height: 50,
                             width: 50,
-                            margin: EdgeInsets.only(
+                            margin: const EdgeInsets.only(
                               right: 25,
                               bottom: 200,
                             ),
                             decoration: BoxDecoration(
-                                color: Color(0xFF14303B).withOpacity(0.25),
+                                color: const Color(0xFF14303B).withOpacity(0.25),
                                 border: Border.all(
-                                    color: Color(0xFF14303B).withOpacity(0.25),
+                                    color: const Color(0xFF14303B).withOpacity(0.25),
                                     width: 1.5),
                                 borderRadius: BorderRadius.circular(6)),
-                            child: Icon(
+                            child: const Icon(
                               Icons.logout_rounded,
                               color: Colors.white,
                             ),
@@ -216,7 +216,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ],
                   ),
                   Container(
-                    margin: EdgeInsets.only(right: 8, left: 8),
+                    margin: const EdgeInsets.only(right: 8, left: 8),
                     alignment: Alignment.topLeft,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -225,7 +225,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           children: [
                             GestureDetector(
                               onTap: () {
-                                if (watching.length == 0) {
+                                if (watching.isEmpty) {
                                   HapticFeedback.mediumImpact();
                                 } else {
                                   Navigator.push(
@@ -244,7 +244,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                if (completed.length == 0) {
+                                if (completed.isEmpty) {
                                   HapticFeedback.mediumImpact();
                                 } else {
                                   Navigator.push(
@@ -267,7 +267,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           children: [
                             GestureDetector(
                                 onTap: () {
-                                  if (onhold.length == 0) {
+                                  if (onhold.isEmpty) {
                                     HapticFeedback.mediumImpact();
                                   } else {
                                     Navigator.push(
@@ -285,7 +285,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     onhold.length.toString(), "On Hold")),
                             GestureDetector(
                                 onTap: () {
-                                  if (dropped.length == 0) {
+                                  if (dropped.isEmpty) {
                                     HapticFeedback.mediumImpact();
                                   } else {
                                     Navigator.push(
@@ -320,8 +320,8 @@ Widget WatchListTile(String count, String title) {
     margin: const EdgeInsets.all(8),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(10),
-      color: Color(0xFF14303B).withOpacity(0.25),
-      border: Border.all(color: Color(0xFF14303B).withOpacity(0.5), width: 1),
+      color: const Color(0xFF14303B).withOpacity(0.25),
+      border: Border.all(color: const Color(0xFF14303B).withOpacity(0.5), width: 1),
     ),
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -341,7 +341,7 @@ Widget WatchListTile(String count, String title) {
           margin: const EdgeInsets.only(top: 4, left: 8),
           child: Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 18,
             ),

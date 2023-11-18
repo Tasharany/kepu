@@ -44,7 +44,7 @@ class _TVShowScreenState extends State<TVShowScreen> {
     return Scaffold(
       backgroundColor: background_primary,
       body: isLoading
-          ? LoadingScreen()
+          ? const LoadingScreen()
           : FutureBuilder(
               future: APIService().getTvShowDetail(widget.movieId),
               builder: (context, AsyncSnapshot snapshot) {
@@ -247,8 +247,8 @@ class _TVShowScreenState extends State<TVShowScreen> {
                                         seasonList[index].toString(),
                                         const EdgeInsets.only(right: 8),
                                         index == selectedSeason
-                                            ? Color(0xFF545551)
-                                            : Color(0xFF14303B)),
+                                            ? const Color(0xFF545551)
+                                            : const Color(0xFF14303B)),
                                   );
                                 },
                               ),

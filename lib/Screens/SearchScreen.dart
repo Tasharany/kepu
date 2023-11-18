@@ -61,6 +61,7 @@ class _SearchScreenState extends State<SearchScreen> {
     }
   }
 
+  @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return WillPopScope(

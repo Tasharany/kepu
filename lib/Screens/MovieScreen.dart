@@ -41,7 +41,7 @@ class _MovieScreenState extends State<MovieScreen> {
     return Scaffold(
       backgroundColor: background_primary,
       body: isLoading
-          ? LoadingScreen()
+          ? const LoadingScreen()
           : FutureBuilder(
               future: APIService().getMovieDetail(widget.movieId),
               builder: (context, AsyncSnapshot snapshot) {

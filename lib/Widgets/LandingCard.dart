@@ -9,7 +9,7 @@ class LandingCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
       height: (size.height * 0.33 < 300) ? 300 : size.height * 0.33,
       width: size.width,
       child: Stack(

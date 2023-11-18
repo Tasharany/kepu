@@ -19,7 +19,7 @@ class _CustomListMovieState extends State<CustomListMovie>
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         height: 200,
         child: ListView.builder(
           shrinkWrap: true,
@@ -57,7 +57,7 @@ class _CustomListTVState extends State<CustomListTV>
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         height: 200,
         child: ListView.builder(
           shrinkWrap: true,

@@ -32,7 +32,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 Center(
                   child: Container(
-                      margin: EdgeInsets.all(24),
+                      margin: const EdgeInsets.all(24),
                       width: double.infinity,
                       height: 72,
                       child: ElevatedButton.icon(
@@ -48,28 +48,28 @@ class LoginScreen extends StatelessWidget {
                         ),
                         label: Text(
                           sign_in_text,
-                          style: TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Colors.white),
                         ),
                         style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(14)),
-                            backgroundColor: Color(0xFFFBCD71)),
+                            backgroundColor: const Color(0xFFFBCD71)),
                       )),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(28, 0, 28, 24),
+                  margin: const EdgeInsets.fromLTRB(28, 0, 28, 24),
                   child: Text(
                     footer_text,
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Color(0xFF423E50)),
+                    style: const TextStyle(color: Color(0xFF423E50)),
                   ),
                 ),
                   Container(
-                  margin: EdgeInsets.fromLTRB(28, 0, 28, 24),
+                  margin: const EdgeInsets.fromLTRB(28, 0, 28, 24),
             child: Text(
               header_text,
               textAlign: TextAlign.center,
-              style: TextStyle(color: Color(0xFF423E50)),
+              style: const TextStyle(color: Color(0xFF423E50)),
             )
                   )
               ],

@@ -79,6 +79,7 @@ class _MainScreenState extends State<MainScreen> {
     });
   }
 
+  @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
@@ -96,7 +97,7 @@ class _MainScreenState extends State<MainScreen> {
           })),
       extendBody: true,
       body: isLoading
-          ? LoadingScreen()
+          ? const LoadingScreen()
           : Container(
               height: size.height,
               width: size.width,

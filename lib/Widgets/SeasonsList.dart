@@ -13,7 +13,7 @@ class SeasonsList extends StatefulWidget {
 class _SeasonsListState extends State<SeasonsList> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 150,
       child: FutureBuilder(
           future: APIService()

@@ -12,7 +12,7 @@ class CustomCarouselSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
         width: size.width,
         height: (size.height * 0.33 < 300) ? 300 : size.height * 0.33,
         child: PageView.builder(
