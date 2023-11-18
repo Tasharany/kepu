@@ -1,12 +1,12 @@
 import 'package:dio/dio.dart';
-import 'package:Kepu/Models/EpisodeDetail.dart';
-import 'package:Kepu/Models/MovieDetail.dart';
-import 'package:Kepu/Models/PopularMovies.dart';
-import 'package:Kepu/Models/SearchResult.dart';
-import 'package:Kepu/Models/TvShow.dart';
-import 'package:Kepu/Models/TvShowDetail.dart';
-import 'package:Kepu/Models/VideoDetails.dart';
-import 'package:Kepu/Services/key.dart';
+import 'package:kepu/Models/EpisodeDetail.dart';
+import 'package:kepu/Models/MovieDetail.dart';
+import 'package:kepu/Models/PopularMovies.dart';
+import 'package:kepu/Models/SearchResult.dart';
+import 'package:kepu/Models/TvShow.dart';
+import 'package:kepu/Models/TvShowDetail.dart';
+import 'package:kepu/Models/VideoDetails.dart';
+import 'package:kepu/Services/key.dart';
 
 class APIService {
   final Dio _dio = Dio();

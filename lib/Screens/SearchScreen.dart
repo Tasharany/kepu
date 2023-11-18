@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:go_router/go_router.dart';
-import 'package:Kepu/Services/API.dart';
-import 'package:Kepu/Services/consts.dart';
-import 'package:Kepu/Widgets/BottomNavBar.dart';
-import 'package:Kepu/Widgets/SearchList.dart';
+import 'package:kepu/Services/API.dart';
+import 'package:kepu/Services/consts.dart';
+import 'package:kepu/Widgets/BottomNavBar.dart';
+import 'package:kepu/Widgets/SearchList.dart';
 import 'package:unicons/unicons.dart';
 
 class SearchScreen extends StatefulWidget {

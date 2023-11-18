@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:Kepu/Models/PopularMovies.dart';
-import 'package:Kepu/Models/TvShow.dart';
-import 'package:Kepu/Services/API.dart';
-import 'package:Kepu/Services/consts.dart';
-import 'package:Kepu/Widgets/BottomNavBar.dart';
-import 'package:Kepu/Widgets/CarouselCard.dart';
-import 'package:Kepu/Widgets/CustomLists.dart';
-import 'package:Kepu/Widgets/LoadingScreen.dart';
-import 'package:Kepu/Widgets/SectionText.dart';
+import 'package:kepu/Models/PopularMovies.dart';
+import 'package:kepu/Models/TvShow.dart';
+import 'package:kepu/Services/API.dart';
+import 'package:kepu/Services/consts.dart';
+import 'package:kepu/Widgets/BottomNavBar.dart';
+import 'package:kepu/Widgets/CarouselCard.dart';
+import 'package:kepu/Widgets/CustomLists.dart';
+import 'package:kepu/Widgets/LoadingScreen.dart';
+import 'package:kepu/Widgets/SectionText.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});

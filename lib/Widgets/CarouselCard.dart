@@ -2,8 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
-import 'package:Kepu/Models/TvShow.dart';
-import 'package:Kepu/Widgets/LandingCard.dart';
+import 'package:kepu/Models/TvShow.dart';
+import 'package:kepu/Widgets/LandingCard.dart';
 
 class CustomCarouselSlider extends StatelessWidget {
   CustomCarouselSlider(this.data, {super.key});

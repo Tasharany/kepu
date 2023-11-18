@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:Kepu/Services/auth.dart';
-import 'package:Kepu/routes.dart';
+import 'package:kepu/Services/auth.dart';
+import 'package:kepu/routes.dart';
 import 'package:provider/provider.dart';
 
 void main() async {

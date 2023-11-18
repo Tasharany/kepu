@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
-import 'package:Kepu/Models/SearchResult.dart';
-import 'package:Kepu/Widgets/MovieCard.dart';
-import 'package:Kepu/Widgets/SearchCard.dart';
+import 'package:kepu/Models/SearchResult.dart';
+import 'package:kepu/Widgets/MovieCard.dart';
+import 'package:kepu/Widgets/SearchCard.dart';
 
 class SearchList extends StatefulWidget {
   SearchList(this.future, this.scrollController, {super.key});

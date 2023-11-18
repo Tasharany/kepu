@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:Kepu/Services/consts.dart';
+import 'package:kepu/Services/consts.dart';
 
 class LoadingScreen extends StatelessWidget {
   const LoadingScreen({super.key});

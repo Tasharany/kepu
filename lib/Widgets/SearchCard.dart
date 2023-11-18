@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:Kepu/Services/consts.dart';
+import 'package:kepu/Services/consts.dart';
 
 class SearchCard extends StatelessWidget {
   SearchCard(this.title, this.image, this.popularRating, this.mediatype,

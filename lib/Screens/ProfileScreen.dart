@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
-import 'package:Kepu/Screens/WatchListScreen.dart';
-import 'package:Kepu/Services/auth.dart';
-import 'package:Kepu/Services/consts.dart';
-import 'package:Kepu/Widgets/BottomNavBar.dart';
+import 'package:kepu/Screens/WatchListScreen.dart';
+import 'package:kepu/Services/auth.dart';
+import 'package:kepu/Services/consts.dart';
+import 'package:kepu/Widgets/BottomNavBar.dart';
 import 'package:provider/provider.dart';
-import 'package:Kepu/Widgets/LoadingScreen.dart';
+import 'package:kepu/Widgets/LoadingScreen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});

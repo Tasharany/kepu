@@ -1,14 +1,14 @@
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
-import 'package:Kepu/Models/PopularMovies.dart';
-import 'package:Kepu/Services/API.dart';
-import 'package:Kepu/Services/consts.dart';
-import 'package:Kepu/Widgets/CustomLists.dart';
-import 'package:Kepu/Widgets/LoadingScreen.dart';
+import 'package:kepu/Models/PopularMovies.dart';
+import 'package:kepu/Services/API.dart';
+import 'package:kepu/Services/consts.dart';
+import 'package:kepu/Widgets/CustomLists.dart';
+import 'package:kepu/Widgets/LoadingScreen.dart';
 import 'package:unicons/unicons.dart';
-import 'package:Kepu/Services/extraServices.dart';
-import 'package:Kepu/Widgets/DetailScreenComponents.dart';
+import 'package:kepu/Services/extraServices.dart';
+import 'package:kepu/Widgets/DetailScreenComponents.dart';
 
 class MovieScreen extends StatefulWidget {
   MovieScreen(this.movieId, {super.key});

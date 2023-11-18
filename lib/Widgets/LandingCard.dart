@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:Kepu/Services/consts.dart';
+import 'package:kepu/Services/consts.dart';
 
 class LandingCard extends StatelessWidget {
   LandingCard(this.image, this.name, {super.key});
