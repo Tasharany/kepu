@@ -21,11 +21,20 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        return android;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for android - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -45,45 +54,12 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyB01ItigBjfNpf7E-ZFeIrAIH4XyoFX7mg',
-    appId: '1:799949434221:web:5554e170a99a987564be64',
+    appId: '1:799949434221:web:992729a3c060ba4264be64',
     messagingSenderId: '799949434221',
     projectId: 'kepu-f6479',
     authDomain: 'kepu-f6479.firebaseapp.com',
     databaseURL: 'https://kepu-f6479-default-rtdb.firebaseio.com',
     storageBucket: 'kepu-f6479.appspot.com',
-    measurementId: 'G-XR3DLCP3P9',
-  );
-
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDSvslcn62jLneDFwZYdjQy7qJm2RwZKh0',
-    appId: '1:799949434221:android:5993524dc0106dca64be64',
-    messagingSenderId: '799949434221',
-    projectId: 'kepu-f6479',
-    databaseURL: 'https://kepu-f6479-default-rtdb.firebaseio.com',
-    storageBucket: 'kepu-f6479.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyA9A-pDFezvAfl7GrEemhFGgKiBrHhLvSI',
-    appId: '1:799949434221:ios:d6afe841dd69e94c64be64',
-    messagingSenderId: '799949434221',
-    projectId: 'kepu-f6479',
-    databaseURL: 'https://kepu-f6479-default-rtdb.firebaseio.com',
-    storageBucket: 'kepu-f6479.appspot.com',
-    androidClientId: '799949434221-hs0vmr58adimi667glgnupokk423vdcg.apps.googleusercontent.com',
-    iosClientId: '799949434221-vpr71u0larlugo404c370i1bbd9kddim.apps.googleusercontent.com',
-    iosBundleId: 'com.myApp.kepu',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyA9A-pDFezvAfl7GrEemhFGgKiBrHhLvSI',
-    appId: '1:799949434221:ios:9002eb9ab686331464be64',
-    messagingSenderId: '799949434221',
-    projectId: 'kepu-f6479',
-    databaseURL: 'https://kepu-f6479-default-rtdb.firebaseio.com',
-    storageBucket: 'kepu-f6479.appspot.com',
-    androidClientId: '799949434221-hs0vmr58adimi667glgnupokk423vdcg.apps.googleusercontent.com',
-    iosClientId: '799949434221-0k4toi03rpmf9jqqgusohsq9kjs4unbr.apps.googleusercontent.com',
-    iosBundleId: 'com.myApp.kepu.RunnerTests',
+    measurementId: 'G-J08C1W92DL',
   );
 }
