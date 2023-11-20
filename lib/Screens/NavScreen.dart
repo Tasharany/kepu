@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:kepu/Screens/CoverScreen.dart';
 import 'package:kepu/Screens/LoginScreen.dart';
 import 'package:kepu/Screens/MainScreen.dart';
 
@@ -17,7 +18,7 @@ class _NavScreenState extends State<NavScreen> {
       body: StreamBuilder(
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
-          return snapshot.hasData ? const MainScreen() : const LoginScreen();
+          return snapshot.hasData ? const MainScreen() : const CoverScreen();
         },
       ),
     );

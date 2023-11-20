@@ -25,11 +25,7 @@ class LoginScreen extends StatelessWidget {
                   height: size.height * 0.3,
                 ),
 
-                Lottie.asset(
-                  "assets/AuthDuck.json",
-                  width: size.width * 0.60,
-                  frameRate: FrameRate(60),
-                ),
+
                 Center(
                   child: Container(
                       margin: const EdgeInsets.all(24),
