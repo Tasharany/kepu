@@ -4,6 +4,8 @@ import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kepu/utils.dart';
 
+import '../../Widgets/BottomNavBar.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -506,10 +508,8 @@ class HomeScreen extends StatelessWidget {
                 child: SizedBox(
                   width: 390*fem,
                   height: 97*fem,
-                  child: Image.asset(
-                    'assets/page-1/images/bottom-hub-tfL.png',
-                    width: 390*fem,
-                    height: 97*fem,
+                  child: BottomNavBar(
+                    currentIndex: 0,
                   ),
                 ),
               ),

@@ -4,7 +4,7 @@ import 'package:kepu/Screens/CoverScreen.dart';
 import 'package:kepu/Screens/LoginScreen.dart';
 import 'package:kepu/Screens/MainScreen.dart';
 //new screens
-import 'package:kepu/Screens/HomeScreen.dart';
+import 'package:kepu/Screens/Home/HomeScreen.dart';
 
 
 class NavScreen extends StatefulWidget with RouteAware {

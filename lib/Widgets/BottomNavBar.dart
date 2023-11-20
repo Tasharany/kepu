@@ -8,6 +8,8 @@ import 'package:fluttericon/octicons_icons.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:fluttericon/typicons_icons.dart';
 
+import '../Screens/Pouch/CinemaPouch.dart';
+
 class BottomNavBar extends StatefulWidget {
   BottomNavBar({Key? key, required this.currentIndex}) : super(key: key);
   int currentIndex = 0;
@@ -64,11 +66,17 @@ class _BottomNavBarState extends State<BottomNavBar> {
               color: widget.currentIndex == 2 ? Colors.blue : inactive_accent,
             ),
             onPressed: () {
-              HapticFeedback.mediumImpact();
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                      CinemaPouch()));
+
+              // HapticFeedback.mediumImpact();
               setState(() {
                 widget.currentIndex = 2;
               });
-              GoRouter.of(context).go('/search');
+              // GoRouter.of(context).go('/search');
             },
           ),IconButton(
             icon: Icon(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:kepu/Screens/HomeScreen.dart';
+import 'package:kepu/Screens/Home/HomeScreen.dart';
 import 'package:kepu/Screens/LoginScreen.dart';
 import 'package:kepu/Screens/MainScreen.dart';
 import 'package:kepu/Screens/MovieScreen.dart';
