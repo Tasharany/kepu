@@ -22,10 +22,6 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  height: size.height * 0.3,
-                ),
-
                 Lottie.asset(
                   "assets/kepu.json",
                   height: 200,
@@ -59,6 +55,24 @@ class LoginScreen extends StatelessWidget {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(14)),
                             backgroundColor: const Color(0xFFFBCD71)),
+                      )),
+                ),
+                Center(
+                  child: Container(
+                      margin: const EdgeInsets.all(24),
+                      width: double.infinity,
+                      height: 72,
+                      child: ElevatedButton(
+                        onPressed: () {
+                        },
+                        style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(14)),
+                            backgroundColor: const Color(0xFF7F7F7F)),
+                        child: const Text(
+                          'Guest',
+                          style: TextStyle(color: Colors.white),
+                        ),
                       )),
                 ),
                   Container(
