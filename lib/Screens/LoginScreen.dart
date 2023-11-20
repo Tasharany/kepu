@@ -4,6 +4,7 @@ import 'package:kepu/Services/auth.dart';
 import 'package:kepu/Services/consts.dart';
 import 'package:provider/provider.dart';
 import 'package:lottie/lottie.dart';
+import 'package:kepu/Screens/HomeScreen.dart';
 //replaced this screen with coverScreen
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -22,18 +23,32 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Lottie.asset(
-                  "assets/kepu.json",
+                Container(
                   height: 200,
-                  frameRate: FrameRate(30),
+                  child: Image.asset(
+                    'assets/stillicon.png',
+                    fit: BoxFit.cover,
+                  )
+                  // child: Lottie.asset(
+                  //   "assets/kepu.json",
+                  //   frameRate: FrameRate(30),
+                  //   repeat: false,
+                  //   fit: BoxFit.cover,
+                  //   alignment: const Alignment(-10, -1.2),
+                  // )
                 ),
-                Image(
-                  image: new AssetImage("assets/kepu.png"),
+
+                Container(
+                  height: 100,
+                  child: Image.asset(
+                    'assets/kepu.png',
+                    fit: BoxFit.cover,
+                  )
                 ),
 
                 Center(
                   child: Container(
-                      margin: const EdgeInsets.all(24),
+                      margin: const EdgeInsets.only(top: 24, left: 24, right: 24),
                       width: double.infinity,
                       height: 72,
                       child: ElevatedButton.icon(
@@ -49,21 +64,28 @@ class LoginScreen extends StatelessWidget {
                         ),
                         label: Text(
                           sign_in_text,
-                          style: const TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Colors.white, fontSize: 20),
                         ),
                         style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(14)),
                             backgroundColor: const Color(0xFFFBCD71)),
-                      )),
+                      )
+
+                  ),
                 ),
                 Center(
                   child: Container(
-                      margin: const EdgeInsets.all(24),
+                      margin: const EdgeInsets.only(top: 24, left: 24, right: 24),
                       width: double.infinity,
                       height: 72,
                       child: ElevatedButton(
                         onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const HomeScreen()));
                         },
                         style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
@@ -71,7 +93,7 @@ class LoginScreen extends StatelessWidget {
                             backgroundColor: const Color(0xFF7F7F7F)),
                         child: const Text(
                           'Guest',
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.white, fontSize: 20),
                         ),
                       )),
                 ),
