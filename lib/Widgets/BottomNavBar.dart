@@ -3,6 +3,8 @@ import 'package:go_router/go_router.dart';
 import 'package:unicons/unicons.dart';
 import 'package:flutter/services.dart';
 import 'package:kepu/Services/consts.dart';
+import 'package:flutter/widgets.dart';
+import 'package:kepu/assets/my_flutter_app_icons.dart';
 
 class BottomNavBar extends StatefulWidget {
   BottomNavBar({Key? key, required this.currentIndex}) : super(key: key);
@@ -27,7 +29,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
         children: [
           IconButton(
             icon: Icon(
-              UniconsLine.home_alt,
+             // UniconsLine.home_alt,
+              MyFlutterApp.home,
               color: widget.currentIndex == 0 ? Colors.white : inactive_accent,
             ),
             onPressed: () {
