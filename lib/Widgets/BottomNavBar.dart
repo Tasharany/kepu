@@ -66,17 +66,11 @@ class _BottomNavBarState extends State<BottomNavBar> {
               color: widget.currentIndex == 2 ? Colors.blue : inactive_accent,
             ),
             onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) =>
-                      CinemaPouch()));
-
-              // HapticFeedback.mediumImpact();
+              HapticFeedback.mediumImpact();
               setState(() {
                 widget.currentIndex = 2;
               });
-              // GoRouter.of(context).go('/search');
+              GoRouter.of(context).go('/pouch');
             },
           ),IconButton(
             icon: Icon(
