@@ -5,7 +5,7 @@ import 'package:kepu/Screens/LoginScreen.dart';
 import 'package:kepu/Screens/MainScreen.dart';
 import 'package:kepu/Screens/MovieScreen.dart';
 import 'package:kepu/Screens/NavScreen.dart';
-import 'package:kepu/Screens/ProfileScreen.dart';
+import 'package:kepu/Screens/Profile/ProfileScreen.dart';
 import 'package:kepu/Screens/SearchScreen.dart';
 import 'package:kepu/Screens/TvShowScreen.dart';
 import 'package:kepu/Screens/ToDoListScreen.dart';
