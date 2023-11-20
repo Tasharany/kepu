@@ -21,8 +21,8 @@ class _NavScreenState extends State<NavScreen> {
       body: StreamBuilder(
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
-          //return snapshot.hasData ? const MainScreen() : const CoverScreen(); //1st
-          return snapshot.hasData ? const MainScreen() : const HomeScreen();
+          return snapshot.hasData ? const MainScreen() : const CoverScreen(); //fully functional
+         // return snapshot.hasData ? const MainScreen() : const HomeScreen();/ not functional
 
         },
       ),
