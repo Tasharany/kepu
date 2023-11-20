@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
         // homeDFp (60:244)
         width: double.infinity,
         height: 844*fem,
-        decoration: BoxDecoration (
+        decoration: const BoxDecoration (
           color: Color(0xfff7f7f7),
         ),
         child: Stack(

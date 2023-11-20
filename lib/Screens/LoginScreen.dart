@@ -4,7 +4,7 @@ import 'package:kepu/Services/auth.dart';
 import 'package:kepu/Services/consts.dart';
 import 'package:provider/provider.dart';
 import 'package:lottie/lottie.dart';
-//replaced this sceen with coverScreen
+//replaced this screen with coverScreen
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
