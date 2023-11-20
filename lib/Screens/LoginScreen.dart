@@ -12,10 +12,10 @@ class LoginScreen extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
-          color: background_primary,
+          color: Colors.white,
           child: SafeArea(
               child: Container(
-            color: background_primary,
+            color: Colors.white,
             height: size.height,
             width: size.width,
             child: Column(
@@ -26,9 +26,12 @@ class LoginScreen extends StatelessWidget {
                 ),
 
                 Lottie.asset(
-                  "assets/AuthDuck.json",
-                  width: size.width * 0.60,
-                  frameRate: FrameRate(60),
+                  "assets/kepu.json",
+                  height: 200,
+                  frameRate: FrameRate(30),
+                ),
+                Image(
+                  image: new AssetImage("assets/kepu.png"),
                 ),
                 Center(
                   child: Container(
@@ -56,21 +59,8 @@ class LoginScreen extends StatelessWidget {
                             backgroundColor: const Color(0xFFFBCD71)),
                       )),
                 ),
-                Container(
-                  margin: const EdgeInsets.fromLTRB(28, 0, 28, 24),
-                  child: Text(
-                    footer_text,
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(color: Color(0xFF423E50)),
-                  ),
-                ),
                   Container(
                   margin: const EdgeInsets.fromLTRB(28, 0, 28, 24),
-            child: Text(
-              header_text,
-              textAlign: TextAlign.center,
-              style: const TextStyle(color: Color(0xFF423E50)),
-            )
                   )
               ],
             ),
