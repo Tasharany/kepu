@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:kepu/Screens/HomeScreen.dart';
 import 'package:kepu/Screens/LoginScreen.dart';
 import 'package:kepu/Screens/MainScreen.dart';
 import 'package:kepu/Screens/MovieScreen.dart';
 import 'package:kepu/Screens/NavScreen.dart';
 import 'package:kepu/Screens/ProfileScreen.dart';
+import 'package:kepu/Screens/RandomScreen.dart';
 import 'package:kepu/Screens/SearchScreen.dart';
 import 'package:kepu/Screens/TvShowScreen.dart';
+import 'package:kepu/Screens/ToDoListScreen.dart';
 
 GoRouter router = GoRouter(initialLocation: '/', routes: [
   GoRoute(
@@ -22,6 +25,7 @@ GoRouter router = GoRouter(initialLocation: '/', routes: [
     path: '/main',
     builder: (context, state) => const MainScreen(),
     pageBuilder: defaultPageBuilder<MainScreen>(const MainScreen()),
+    //pageBuilder: defaultPageBuilder<MainScreen>(const HomeScreen()),
   ),
   GoRoute(
     path: '/search',
@@ -34,13 +38,23 @@ GoRouter router = GoRouter(initialLocation: '/', routes: [
     pageBuilder: defaultPageBuilder<ProfileScreen>(const ProfileScreen()),
   ),
   GoRoute(
+    path: '/todo',
+    builder: (context, state) => const ToDoListScreen(),
+    pageBuilder: defaultPageBuilder<ToDoListScreen>(const ToDoListScreen()),
+  ),
+  GoRoute(
     path: '/movie/:id',
     builder: (context, state) => MovieScreen(state.params['id']!),
   ),
   GoRoute(
     path: '/tv/:id',
     builder: (context, state) => TVShowScreen(state.params['id']!),
-  )
+  ),
+  GoRoute(
+    path: '/random',
+    builder: (context, state) => const RandomScreen(),
+    pageBuilder: defaultPageBuilder<RandomScreen>(const RandomScreen()),
+  ),
 ]);
 
 CustomTransitionPage buildPageWithDefaultTransition<T>({

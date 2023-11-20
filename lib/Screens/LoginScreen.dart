@@ -4,6 +4,7 @@ import 'package:kepu/Services/auth.dart';
 import 'package:kepu/Services/consts.dart';
 import 'package:provider/provider.dart';
 import 'package:lottie/lottie.dart';
+//replaced this screen with coverScreen
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
@@ -33,6 +34,7 @@ class LoginScreen extends StatelessWidget {
                 Image(
                   image: new AssetImage("assets/kepu.png"),
                 ),
+
                 Center(
                   child: Container(
                       margin: const EdgeInsets.all(24),
