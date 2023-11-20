@@ -6,7 +6,6 @@ import 'package:kepu/Screens/MainScreen.dart';
 import 'package:kepu/Screens/MovieScreen.dart';
 import 'package:kepu/Screens/NavScreen.dart';
 import 'package:kepu/Screens/ProfileScreen.dart';
-import 'package:kepu/Screens/RandomScreen.dart';
 import 'package:kepu/Screens/SearchScreen.dart';
 import 'package:kepu/Screens/TvShowScreen.dart';
 import 'package:kepu/Screens/ToDoListScreen.dart';
@@ -50,11 +49,7 @@ GoRouter router = GoRouter(initialLocation: '/', routes: [
     path: '/tv/:id',
     builder: (context, state) => TVShowScreen(state.params['id']!),
   ),
-  GoRoute(
-    path: '/random',
-    builder: (context, state) => const RandomScreen(),
-    pageBuilder: defaultPageBuilder<RandomScreen>(const RandomScreen()),
-  ),
+
 ]);
 
 CustomTransitionPage buildPageWithDefaultTransition<T>({

@@ -81,7 +81,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
               setState(() {
                 widget.currentIndex = 3;
               });
-              GoRouter.of(context).go('/random');
+              GoRouter.of(context).go('/search');
             },
           ),
           IconButton(
