@@ -4,7 +4,9 @@ import 'package:unicons/unicons.dart';
 import 'package:flutter/services.dart';
 import 'package:kepu/Services/consts.dart';
 import 'package:flutter/widgets.dart';
-import 'package:kepu/assets/my_flutter_app_icons.dart';
+import 'package:fluttericon/octicons_icons.dart';
+import 'package:fluttericon/font_awesome5_icons.dart';
+import 'package:fluttericon/typicons_icons.dart';
 
 class BottomNavBar extends StatefulWidget {
   BottomNavBar({Key? key, required this.currentIndex}) : super(key: key);
@@ -30,8 +32,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
           IconButton(
             icon: Icon(
              // UniconsLine.home_alt,
-              MyFlutterApp.home,
-              color: widget.currentIndex == 0 ? Colors.white : inactive_accent,
+              Octicons.home,
+              color: widget.currentIndex == 0 ? Colors.blue : inactive_accent,
             ),
             onPressed: () {
               HapticFeedback.mediumImpact();
@@ -43,8 +45,23 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ),
           IconButton(
             icon: Icon(
-              UniconsLine.search,
-              color: widget.currentIndex == 1 ? Colors.white : inactive_accent,
+              //same function as home button
+              FontAwesome5.th_list,
+              color: widget.currentIndex == 0 ? Colors.blue : inactive_accent,
+            ),
+            onPressed: () {
+              HapticFeedback.mediumImpact();
+              setState(() {
+                widget.currentIndex = 0;
+              });
+              GoRouter.of(context).go('/main');
+            },
+          ),
+          IconButton(
+            icon: Icon(
+              //UniconsLine.search,
+              FontAwesome5.plus_circle,
+              color: widget.currentIndex == 1 ? Colors.blue : inactive_accent,
             ),
             onPressed: () {
               HapticFeedback.mediumImpact();
@@ -53,10 +70,24 @@ class _BottomNavBarState extends State<BottomNavBar> {
               });
               GoRouter.of(context).go('/search');
             },
+          ),IconButton(
+            icon: Icon(
+              // UniconsLine.heart,
+              FontAwesome5.fan,
+              color: widget.currentIndex == 2 ? Colors.white : inactive_accent,
+            ),
+            onPressed: () {
+              HapticFeedback.mediumImpact();
+              setState(() {
+                widget.currentIndex = 2;
+              });
+              GoRouter.of(context).go('/profile');
+            },
           ),
           IconButton(
             icon: Icon(
-              UniconsLine.heart,
+             // UniconsLine.heart,
+              Typicons.user_outline,
               color: widget.currentIndex == 2 ? Colors.white : inactive_accent,
             ),
             onPressed: () {

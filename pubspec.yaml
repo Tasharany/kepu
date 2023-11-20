@@ -53,6 +53,7 @@ dependencies:
   cloud_firestore: ^4.7.1
   intl: ^0.18.1
   google_fonts: ^4.0.4
+  fluttericon: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -827,10 +828,6 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-  fonts:
-    - family: MyFlutterApp
-      fonts:
-        - asset: fonts/MyFlutterApp.ttf
 
 flutter_icons:
     android: "launcher_icon"

@@ -7,7 +7,7 @@ String sign_in_text = "Sign In";
 Color background_primary = const Color(0xFFF7F4FF);
 Color accent_secondary = const Color(0xFF00FFD1);
 Color accent_t = const Color(0xFF34323A);
-Color inactive_accent = const Color(0xFF494949);
+Color inactive_accent = const Color(0xFF96C9DF);
 
 List<Color> ColorPallete = [
   const Color(0xFF14303B),
