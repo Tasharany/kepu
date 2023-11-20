@@ -88,7 +88,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             icon: Icon(
              // UniconsLine.heart,
               Typicons.user_outline,
-              color: widget.currentIndex == 4 ? Colors.white : inactive_accent,
+              color: widget.currentIndex == 4 ? Colors.blue : inactive_accent,
             ),
             onPressed: () {
               HapticFeedback.mediumImpact();
