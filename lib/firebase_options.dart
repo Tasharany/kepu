@@ -17,14 +17,14 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for android - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return android;
       case TargetPlatform.iOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for ios - '
@@ -52,14 +52,12 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyB01ItigBjfNpf7E-ZFeIrAIH4XyoFX7mg',
-    appId: '1:799949434221:web:992729a3c060ba4264be64',
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyDSvslcn62jLneDFwZYdjQy7qJm2RwZKh0',
+    appId: '1:799949434221:android:5993524dc0106dca64be64',
     messagingSenderId: '799949434221',
     projectId: 'kepu-f6479',
-    authDomain: 'kepu-f6479.firebaseapp.com',
     databaseURL: 'https://kepu-f6479-default-rtdb.firebaseio.com',
     storageBucket: 'kepu-f6479.appspot.com',
-    measurementId: 'G-J08C1W92DL',
   );
 }
