@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
-import 'package:flutter/services.dart';
-import 'package:go_router/go_router.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kepu/utils.dart';
 import '../../Widgets/BottomNavBar.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
+class CinemaHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double baseWidth = 390;
@@ -18,46 +14,46 @@ class HomeScreen extends StatelessWidget {
     return Container(
       width: double.infinity,
       child: Container(
-        // homeDFp (60:244)
+        // homepaTE (65:534)
         width: double.infinity,
         height: 844*fem,
-        decoration: const BoxDecoration (
+        decoration: BoxDecoration (
           color: Color(0xfff7f7f7),
         ),
         child: Stack(
           children: [
             Positioned(
-              // example1LbL (60:245)
+              // example1Wrg (65:535)
               left: 11.0993041992*fem,
               top: 134.3833007812*fem,
               child: Container(
                 padding: EdgeInsets.fromLTRB(0*fem, 3.5*fem, 0*fem, 0*fem),
                 width: 367.72*fem,
-                height: 350.61*fem,
+                height: 335.61*fem,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      // autogroupiatrcYr (LDBUQ7nfBzHRpijwGkiatr)
-                      margin: EdgeInsets.fromLTRB(12.67*fem, 0*fem, 194.72*fem, 10.17*fem),
+                      // autogroupcs4y1YY (P4LdeLKnbVnCY1hvzRCs4Y)
+                      margin: EdgeInsets.fromLTRB(12.67*fem, 0*fem, 177.72*fem, 10.17*fem),
                       width: double.infinity,
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
-                            // moviewLE (60:249)
+                            // movieXmn (65:539)
                             margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 12.67*fem, 0.58*fem),
                             width: 26.67*fem,
                             height: 20.67*fem,
                             child: Image.asset(
-                              'assets/page-1/images/movie-oPg.png',
+                              'assets/page-1/images/movie-FL8.png',
                               width: 26.67*fem,
                               height: 20.67*fem,
                             ),
                           ),
                           Text(
-                            // theconjuringdyk (60:247)
-                            'The Conjuring',
+                            // startrek2009FBz (65:537)
+                            'Star Trek (2009)',
                             style: SafeGoogleFont (
                               'Radio Canada',
                               fontSize: 18*ffem,
@@ -65,30 +61,29 @@ class HomeScreen extends StatelessWidget {
                               height: 1.2*ffem/fem,
                               letterSpacing: 0.18*fem,
                               color: Color(0xff000000),
-                              decoration: TextDecoration.none,
                             ),
                           ),
                         ],
                       ),
                     ),
                     Container(
-                      // k1wzS (60:246)
+                      // k1y7z (65:536)
                       margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 3*fem),
                       width: 367.72*fem,
                       height: 206.93*fem,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10*fem),
                         child: Image.asset(
-                          'assets/page-1/images/k-1.png',
+                          'assets/page-1/images/k-1-ftg.png',
                           fit: BoxFit.cover,
                         ),
                       ),
                     ),
                     Container(
-                      // pm3na (60:325)
+                      // pmH8g (65:601)
                       margin: EdgeInsets.fromLTRB(0.16*fem, 0*fem, 0*fem, 0*fem),
                       child: Text(
-                        '12/12/2022 12:56PM',
+                        '12/12/2011 12:56PM',
                         style: SafeGoogleFont (
                           'Radio Canada',
                           fontSize: 10*ffem,
@@ -96,25 +91,25 @@ class HomeScreen extends StatelessWidget {
                           height: 1.2*ffem/fem,
                           letterSpacing: 0.1*fem,
                           color: Color(0x7f000000),
-                          decoration: TextDecoration.none,
                         ),
                       ),
                     ),
                     Container(
-                      // autogroupg8fuLmg (LDBUV2p8w4ahq5Wgjrg8fU)
+                      // autogroupyq4uynC (P4LdkVpBbTJiSZf5JgYQ4U)
                       margin: EdgeInsets.fromLTRB(10.16*fem, 0*fem, 10.52*fem, 0*fem),
                       width: double.infinity,
+                      height: 78*fem,
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            // theconjuringisapopularsupernat (60:248)
-                            margin: EdgeInsets.fromLTRB(0*fem, 3*fem, 23.8*fem, 0*fem),
+                            // startrek2009isasciencefictionf (65:538)
+                            margin: EdgeInsets.fromLTRB(0*fem, 3*fem, 12.8*fem, 0*fem),
                             constraints: BoxConstraints (
-                              maxWidth: 298*fem,
+                              maxWidth: 309*fem,
                             ),
                             child: Text(
-                              '"The Conjuring" is a popular supernatural horror film, the first installment in "The Conjuring Universe," a film series centered around paranormal investigators Ed and Lorraine Warren.',
+                              '"Star Trek" (2009) is a science fiction film that serves as a prequel to the original "Star Trek" television series.',
                               style: SafeGoogleFont (
                                 'Radio Canada',
                                 fontSize: 15*ffem,
@@ -122,44 +117,44 @@ class HomeScreen extends StatelessWidget {
                                 height: 1.2*ffem/fem,
                                 letterSpacing: 0.15*fem,
                                 color: Color(0xff000000),
-                                decoration: TextDecoration.none,
                               ),
                             ),
                           ),
                           Container(
-                            // group6TUv (60:251)
+                            // group67X2 (65:541)
                             padding: EdgeInsets.fromLTRB(2.1*fem, 3.27*fem, 2.1*fem, 2*fem),
+                            height: double.infinity,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Container(
-                                  // favoritefill0wght400grad0opsz2 (60:254)
+                                  // favoritefill0wght400grad0opsz2 (65:544)
                                   margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 8.27*fem),
                                   width: 18.34*fem,
                                   height: 17.46*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/favoritefill0wght400grad0opsz24-1-8mx.png',
+                                    'assets/page-1/images/favoritefill0wght400grad0opsz24-1-Lnp.png',
                                     width: 18.34*fem,
                                     height: 17.46*fem,
                                   ),
                                 ),
                                 Container(
-                                  // schedulefill0wght400grad0opsz2 (60:252)
+                                  // schedulefill0wght400grad0opsz2 (65:542)
                                   margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 7*fem),
                                   width: 21.04*fem,
                                   height: 20*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/schedulefill0wght400grad0opsz24-1-Tf8.png',
+                                    'assets/page-1/images/schedulefill0wght400grad0opsz24-1-A5r.png',
                                     width: 21.04*fem,
                                     height: 20*fem,
                                   ),
                                 ),
                                 Container(
-                                  // forumfill0wght400grad0opsz241k (60:256)
+                                  // forumfill0wght400grad0opsz241F (65:546)
                                   width: 21.04*fem,
                                   height: 20*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/forumfill0wght400grad0opsz24-1-umc.png',
+                                    'assets/page-1/images/forumfill0wght400grad0opsz24-1-PAk.png',
                                     width: 21.04*fem,
                                     height: 20*fem,
                                   ),
@@ -175,165 +170,123 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              // example2rvN (65:508)
-              left: 11.2589111328*fem,
+              // example2NbN (65:602)
+              left: 11.0993041992*fem,
               top: 499.990234375*fem,
               child: Container(
-                padding: EdgeInsets.fromLTRB(0*fem, 3.34*fem, 0*fem, 0*fem),
-                width: 367.85*fem,
+                padding: EdgeInsets.fromLTRB(0*fem, 3.5*fem, 0*fem, 0*fem),
+                width: 367.72*fem,
                 height: 335.61*fem,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      // autogrouph2enjzA (LDBUybpsGTbrLgk6PVH2eN)
-                      margin: EdgeInsets.fromLTRB(11.74*fem, 0*fem, 213.72*fem, 10.17*fem),
+                      // autogroupom3sgMA (P4Le8uLWvtoM3cwLe3om3S)
+                      margin: EdgeInsets.fromLTRB(12.67*fem, 0*fem, 198.72*fem, 10.17*fem),
                       width: double.infinity,
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
-                            // moviefN2 (65:512)
-                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 11.15*fem, 0.82*fem),
-                            width: 29.23*fem,
-                            height: 21.33*fem,
+                            // moviebyv (65:606)
+                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 12.67*fem, 0.58*fem),
+                            width: 26.67*fem,
+                            height: 20.67*fem,
                             child: Image.asset(
-                              'assets/page-1/images/movie-hog.png',
-                              width: 29.23*fem,
-                              height: 21.33*fem,
+                              'assets/page-1/images/movie-Ckc.png',
+                              width: 26.67*fem,
+                              height: 20.67*fem,
                             ),
                           ),
-                          Container(
-                            // overcookedAZg (65:510)
-                            margin: EdgeInsets.fromLTRB(0*fem, 0.16*fem, 0*fem, 0*fem),
-                            child: Text(
-                              'Overcooked',
-                              style: SafeGoogleFont (
-                                'Radio Canada',
-                                fontSize: 18*ffem,
-                                fontWeight: FontWeight.w500,
-                                height: 1.2*ffem/fem,
-                                letterSpacing: 0.18*fem,
-                                color: Color(0xff000000),
-                                decoration: TextDecoration.none,
-                              ),
+                          Text(
+                            // spiritedawayX6t (65:604)
+                            'Spirited Away',
+                            style: SafeGoogleFont (
+                              'Radio Canada',
+                              fontSize: 18*ffem,
+                              fontWeight: FontWeight.w500,
+                              height: 1.2*ffem/fem,
+                              letterSpacing: 0.18*fem,
+                              color: Color(0xff000000),
                             ),
                           ),
                         ],
                       ),
                     ),
                     Container(
-                      // k1GMp (65:509)
-                      margin: EdgeInsets.fromLTRB(0.12*fem, 0*fem, 0*fem, 3.39*fem),
+                      // k1SzY (65:603)
+                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 15*fem),
                       width: 367.72*fem,
                       height: 206.93*fem,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10*fem),
                         child: Image.asset(
-                          'assets/page-1/images/k-1-nrv.png',
+                          'assets/page-1/images/k-1-4rY.png',
                           fit: BoxFit.cover,
                         ),
                       ),
                     ),
                     Container(
-                      // autogrouphlf4y1L (LDBV81kWvojoGPDYdShLf4)
-                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 10.52*fem, 0*fem),
+                      // autogroupzuqyyDn (P4LeE9gmooZMRdVPoKzuQY)
+                      margin: EdgeInsets.fromLTRB(10.16*fem, 0*fem, 10.52*fem, 0*fem),
                       width: double.infinity,
+                      height: 78*fem,
                       child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
-                            // autogroupstanhT8 (LDBVDLvy6B7VEoiRiGStAn)
-                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 11.8*fem, 3*fem),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                  // pmqJS (65:949)
-                                  margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 2.61*fem),
-                                  child: Text(
-                                    '12/12/2011 12:56PM',
-                                    style: SafeGoogleFont (
-                                      'Radio Canada',
-                                      fontSize: 10*ffem,
-                                      fontWeight: FontWeight.w300,
-                                      height: 1.2*ffem/fem,
-                                      letterSpacing: 0.1*fem,
-                                      color: Color(0x7f000000),
-                                      decoration: TextDecoration.none,
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  // autogroup433gid8 (LDBVHkyH8VifggpDe7433g)
-                                  margin: EdgeInsets.fromLTRB(10.28*fem, 0*fem, 0*fem, 0*fem),
-                                  width: 310*fem,
-                                  height: 72*fem,
-                                  child: Stack(
-                                    children: [
-                                      Positioned(
-                                        // exploreahiddenworlduncoverforg (65:511)
-                                        left: 0*fem,
-                                        top: 0*fem,
-                                        child: Align(
-                                          child: SizedBox(
-                                            width: 310*fem,
-                                            height: 72*fem,
-                                            child: Text(
-                                              'Explore a hidden world, uncover forgotten secrets, and face perilous challenges in "The Dive." Pre-order now for the ultimate undersea adventure!',
-                                              style: SafeGoogleFont (
-                                                'Radio Canada',
-                                                fontSize: 15*ffem,
-                                                fontWeight: FontWeight.w400,
-                                                height: 1.2*ffem/fem,
-                                                letterSpacing: 0.15*fem,
-                                                color: Color(0xff000000),
-                                                decoration: TextDecoration.none,
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                            // wherethegrassgrowsisaheartwarm (65:605)
+                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 12.8*fem, 0*fem),
+                            constraints: BoxConstraints (
+                              maxWidth: 309*fem,
+                            ),
+                            child: Text(
+                              '"Where the Grass Grows" is a heartwarming film about a person finding solace and purpose in a rural town\'s nature and community.',
+                              style: SafeGoogleFont (
+                                'Radio Canada',
+                                fontSize: 15*ffem,
+                                fontWeight: FontWeight.w400,
+                                height: 1.2*ffem/fem,
+                                letterSpacing: 0.15*fem,
+                                color: Color(0xff000000),
+                              ),
                             ),
                           ),
                           Container(
-                            // group6kiE (65:514)
+                            // group6LTe (65:608)
                             padding: EdgeInsets.fromLTRB(2.1*fem, 3.27*fem, 2.1*fem, 2*fem),
+                            height: double.infinity,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Container(
-                                  // favoritefill0wght400grad0opsz2 (65:517)
+                                  // favoritefill0wght400grad0opsz2 (65:611)
                                   margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 8.27*fem),
                                   width: 18.34*fem,
                                   height: 17.46*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/favoritefill0wght400grad0opsz24-1-6yG.png',
+                                    'assets/page-1/images/favoritefill0wght400grad0opsz24-1-sqv.png',
                                     width: 18.34*fem,
                                     height: 17.46*fem,
                                   ),
                                 ),
                                 Container(
-                                  // schedulefill0wght400grad0opsz2 (65:515)
+                                  // schedulefill0wght400grad0opsz2 (65:609)
                                   margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 7*fem),
                                   width: 21.04*fem,
                                   height: 20*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/schedulefill0wght400grad0opsz24-1-TxW.png',
+                                    'assets/page-1/images/schedulefill0wght400grad0opsz24-1-9St.png',
                                     width: 21.04*fem,
                                     height: 20*fem,
                                   ),
                                 ),
                                 Container(
-                                  // forumfill0wght400grad0opsz241M (65:519)
+                                  // forumfill0wght400grad0opsz241G (65:613)
                                   width: 21.04*fem,
                                   height: 20*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/forumfill0wght400grad0opsz24-1-MMC.png',
+                                    'assets/page-1/images/forumfill0wght400grad0opsz24-1-Pzc.png',
                                     width: 21.04*fem,
                                     height: 20*fem,
                                   ),
@@ -349,7 +302,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              // whatsnew3jG (60:264)
+              // whatsnewBsa (65:561)
               left: 134.5400390625*fem,
               top: 49.3833007812*fem,
               child: Align(
@@ -365,47 +318,24 @@ class HomeScreen extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                       height: 1.2*ffem/fem,
                       letterSpacing: 0.2*fem,
-                      color: Color(0xff125d9f),
-                      decoration: TextDecoration.none,
+                      color: Color(0xffb86b8e),
                     ),
                   ),
                 ),
               ),
             ),
-            Container(
-              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3.48*fem, 0*fem),
-              child:OutlinedButton(
-                onPressed: () {
-                  HapticFeedback.mediumImpact();
-                  GoRouter.of(context).go('/pocketpouch');
-                },
-                style: OutlinedButton.styleFrom(
-                  backgroundColor: Color(0x3393d5b8),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(5*fem),
-                        topRight: Radius.circular(5*fem),
-                      )
-                  ),
-                  side: BorderSide(color: Color(0xff6ca68c)),
-                  padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
-                ),
-                child:Container(
-                  // autogroupjnk6LJ8 (P4KbnJa4UxRCnNhDU2jnK6)
-                  margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3.48*fem, 0*fem),
-                  padding: EdgeInsets.fromLTRB(33.73*fem, 8.99*fem, 33.7*fem, 7.27*fem),
-                  height: double.infinity,
-                  child: Center(
-                    // stadiacontrollerfill0wght400gr (66:1581)
-                    child: SizedBox(
-                      width: 25.46*fem,
-                      height: 18.58*fem,
-                      child: Image.asset(
-                        'assets/page-1/images/stadiacontrollerfill0wght400grad0opsz24-1.png',
-                        width: 25.46*fem,
-                        height: 18.58*fem,
-                      ),
-                    ),
+            Positioned(
+              // group5FsS (65:593)
+              left: 45*fem,
+              top: 83.3833007812*fem,
+              child: Align(
+                child: SizedBox(
+                  width: 300.04*fem,
+                  height: 35*fem,
+                  child: Image.asset(
+                    'assets/page-1/images/group-5-9PS.png',
+                    width: 300.04*fem,
+                    height: 35*fem,
                   ),
                 ),
               ),
@@ -427,6 +357,6 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-          );
+    );
   }
 }

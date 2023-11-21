@@ -17,6 +17,9 @@ import 'package:get/get.dart';
 import 'package:kepu/view/home/home.dart';
 import 'package:kepu/view/sign%20in/sign_in.dart';
 import 'package:kepu/Screens/Spin/CinemaSpin.dart';
+import 'package:kepu/Screens/Home/CinemaHome.dart';
+import 'package:kepu/Screens/Home/GameHome.dart';
+import 'package:kepu/Screens/Home/MusicHome.dart';
 
 
 GoRouter router = GoRouter(initialLocation: '/main', routes: [
@@ -72,6 +75,21 @@ GoRouter router = GoRouter(initialLocation: '/main', routes: [
     path: '/chartpouch',
     builder: (context, state) => ChartPouch(),
     pageBuilder: defaultPageBuilder<ToDoListScreen>(ChartPouch()),
+  ),
+  GoRoute(
+    path: '/cinemahome',
+    builder: (context, state) => CinemaHome(),
+    pageBuilder: defaultPageBuilder<ToDoListScreen>(CinemaHome()),
+  ),
+  GoRoute(
+    path: '/gamehome',
+    builder: (context, state) => GameHome(),
+    pageBuilder: defaultPageBuilder<ToDoListScreen>(GameHome()),
+  ),
+  GoRoute(
+    path: '/musichome',
+    builder: (context, state) => MusicHome(),
+    pageBuilder: defaultPageBuilder<ToDoListScreen>(MusicHome()),
   ),
 
 ]);
