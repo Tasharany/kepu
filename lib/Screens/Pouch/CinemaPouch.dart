@@ -84,7 +84,7 @@ class CinemaPouch extends StatelessWidget {
                                 width: 23.22*fem,
                                 height: 18.58*fem,
                                 child: Image.asset(
-                                  'assets/page-1/images/vector-Hvk.png',
+                                  'assets/page-1/images/movie-8ev.png',
                                   width: 23.22*fem,
                                   height: 18.58*fem,
                                 ),
@@ -135,7 +135,7 @@ class CinemaPouch extends StatelessWidget {
                                 width: 18*fem,
                                 height: 18*fem,
                                 child: Image.asset(
-                                  'assets/page-1/images/headphonesfill0wght400grad0opsz24-1-1qn.png',
+                                  'assets/page-1/images/headphonesfill0wght400grad0opsz24-1-o6S.png',
                                   width: 18*fem,
                                   height: 18*fem,
                                 ),
@@ -177,7 +177,7 @@ class CinemaPouch extends StatelessWidget {
                                   width: 29.17*fem,
                                   height: 29.17*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/schedulefill0wght400grad0opsz24-1-kXv.png',
+                                    'assets/page-1/images/schedulefill0wght400grad0opsz24-1-8wC.png',
                                     width: 29.17*fem,
                                     height: 29.17*fem,
                                   ),
@@ -205,7 +205,7 @@ class CinemaPouch extends StatelessWidget {
                                   width: 27.5*fem,
                                   height: 30.87*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/multi-selection-S2G.png',
+                                    'assets/page-1/images/multi-selection.png',
                                     width: 27.5*fem,
                                     height: 30.87*fem,
                                   ),
@@ -344,7 +344,7 @@ class CinemaPouch extends StatelessWidget {
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.circular(5*fem),
                                           child: Image.asset(
-                                            'assets/page-1/images/rectangle-35-w3i.png',
+                                            'assets/page-1/images/rectangle-35.png',
                                             fit: BoxFit.cover,
                                           ),
                                         ),
@@ -687,110 +687,12 @@ class CinemaPouch extends StatelessWidget {
                 child: Stack(
                   children: [
                     Positioned(
-                      // wifi33z (66:1611)
-                      left: 329.2163085938*fem,
-                      top: 7.0717773438*fem,
-                      child: Align(
-                        child: SizedBox(
-                          width: 14*fem,
-                          height: 9.74*fem,
-                          child: Image.asset(
-                            'assets/page-1/images/wifi-foa.png',
-                            width: 14*fem,
-                            height: 9.74*fem,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      // signaljxQ (66:1613)
-                      left: 312*fem,
-                      top: 6.3291015625*fem,
-                      child: Align(
-                        child: SizedBox(
-                          width: 13*fem,
-                          height: 10.9*fem,
-                          child: Image.asset(
-                            'assets/page-1/images/signal-Dxp.png',
-                            width: 13*fem,
-                            height: 10.9*fem,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      // am2Ri (66:1614)
-                      left: 0*fem,
-                      top: 6.3291015625*fem,
-                      child: Align(
-                        child: SizedBox(
-                          width: 54*fem,
-                          height: 15*fem,
-                          child: Text(
-                            '12:00 AM',
-                            style: SafeGoogleFont (
-                              'Radio Canada',
-                              fontSize: 12*ffem,
-                              fontWeight: FontWeight.w600,
-                              height: 1.2*ffem/fem,
-                              letterSpacing: 0.12*fem,
-                              color: Color(0xff000000),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      // batteryKQp (66:1615)
-                      left: 348.2163085938*fem,
-                      top: 9.0024414062*fem,
-                      child: Align(
-                        child: SizedBox(
-                          width: 19.79*fem,
-                          height: 8.3*fem,
-                          child: Image.asset(
-                            'assets/page-1/images/battery-myW.png',
-                            width: 19.79*fem,
-                            height: 8.3*fem,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
                       // autogroupnoekRTr (P4KfK32Fztd9BACAdTnoek)
                       left: 68.1789550781*fem,
                       top: 0*fem,
                       child: Container(
                         width: 231.44*fem,
                         height: 836.54*fem,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              // applethingjzL (66:1619)
-                              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 810.76*fem),
-                              width: double.infinity,
-                              height: 20.33*fem,
-                              decoration: BoxDecoration (
-                                color: Color(0xff1b1b1b),
-                                borderRadius: BorderRadius.only (
-                                  bottomRight: Radius.circular(10*fem),
-                                  bottomLeft: Radius.circular(10*fem),
-                                ),
-                              ),
-                            ),
-                            Container(
-                              // applebuttonerQ (66:1620)
-                              margin: EdgeInsets.fromLTRB(53.39*fem, 0*fem, 54.36*fem, 0*fem),
-                              width: double.infinity,
-                              height: 5.45*fem,
-                              decoration: BoxDecoration (
-                                borderRadius: BorderRadius.circular(5*fem),
-                                color: Color(0xff000000),
-                              ),
-                            ),
-                          ],
-                        ),
                       ),
                     ),
                   ],
