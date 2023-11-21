@@ -22,6 +22,8 @@ import 'package:kepu/Screens/Home/GameHome.dart';
 import 'package:kepu/Screens/Home/MusicHome.dart';
 import 'package:kepu/view/sign%20up/sign_up.dart';
 import 'package:kepu/view/splash/splash_screen.dart';
+import 'package:kepu/Screens/Spin/GameSpin.dart';
+import 'package:kepu/Screens/Spin/MusicSpin.dart';
 
 
 GoRouter router = GoRouter(initialLocation: '/', routes: [
@@ -102,6 +104,21 @@ GoRouter router = GoRouter(initialLocation: '/', routes: [
     path: '/editprofile',
     builder: (context, state) => ProfileEditScreen(),
     pageBuilder: defaultPageBuilder<ToDoListScreen>(ProfileEditScreen()),
+  ),
+  GoRoute(
+    path: '/home',
+    builder: (context, state) => const HomeScreen(),
+    pageBuilder: defaultPageBuilder<ToDoListScreen>(const HomeScreen()),
+  ),
+  GoRoute(
+    path: '/gamespin',
+    builder: (context, state) => GameSpin(),
+    pageBuilder: defaultPageBuilder<ToDoListScreen>(GameSpin()),
+  ),
+  GoRoute(
+    path: '/musicspin',
+    builder: (context, state) => MusicSpin(),
+    pageBuilder: defaultPageBuilder<ToDoListScreen>(MusicSpin()),
   ),
 
 ]);

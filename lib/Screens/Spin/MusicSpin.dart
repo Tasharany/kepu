@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kepu/utils.dart';
@@ -47,22 +49,6 @@ class MusicSpin extends StatelessWidget {
               ),
             ),
             Positioned(
-              // group5tFE (66:2624)
-              left: 45*fem,
-              top: 83.3833007812*fem,
-              child: Align(
-                child: SizedBox(
-                  width: 300.04*fem,
-                  height: 35*fem,
-                  child: Image.asset(
-                    'assets/page-1/images/group-5-ZpG.png',
-                    width: 300.04*fem,
-                    height: 35*fem,
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
               // loginbuttonz3N (66:2633)
               left: 92.5190429688*fem,
               top: 542.3525390625*fem,
@@ -92,136 +78,136 @@ class MusicSpin extends StatelessWidget {
               ),
             ),
             Positioned(
-              // marginsSAG (66:2636)
-              left: 11.0991210938*fem,
-              top: 0.00390625*fem,
-              child: Container(
-                width: 368.01*fem,
-                height: 836.54*fem,
-                child: Column(
+              left: 45*fem,
+              top: 83.3833007812*fem,
+              child:
+              Container(
+                height: 34.83*fem,
+                decoration: BoxDecoration(
+                  border: Border.all(width: 1.5, color: Colors.black45),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(30),
+                  ),
+                  boxShadow: <BoxShadow>[
+                    BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 4.0,
+                        offset: Offset(0.0, 5)
+                    )
+                  ],
+                ),
+                child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
-                      // autogroupka1axeQ (P4LcB8GmJ4QrZfgfanka1a)
-                      width: double.infinity,
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            // amu3r (66:2640)
-                            margin: EdgeInsets.fromLTRB(0*fem, 6.33*fem, 14.18*fem, 0*fem),
-                            child: Text(
-                              '12:00 AM',
-                              style: SafeGoogleFont (
-                                'Radio Canada',
-                                fontSize: 12*ffem,
-                                fontWeight: FontWeight.w600,
-                                height: 1.2*ffem/fem,
-                                letterSpacing: 0.12*fem,
-                                color: Color(0xff000000),
-                                decoration: TextDecoration.none,
+                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                      child:OutlinedButton(
+                        onPressed: () {
+                          HapticFeedback.mediumImpact();
+                          GoRouter.of(context).go('/spin');
+                        },
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(30),
+                                bottomLeft: Radius.circular(30),
+                              )
+                          ),
+                          side: BorderSide.none,
+                          padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                        ),
+                        child:Container(
+                          // autogroupjnk6LJ8 (P4KbnJa4UxRCnNhDU2jnK6)
+                          margin: EdgeInsets.fromLTRB(5*fem, 0*fem, 0*fem, 0*fem),
+                          padding: EdgeInsets.fromLTRB(33.73*fem, 8.99*fem, 33.7*fem, 7.27*fem),
+                          height: double.infinity,
+                          child: Center(
+                            // stadiacontrollerfill0wght400gr (66:1581)
+                            child: SizedBox(
+                              width: 25.46*fem,
+                              height: 18.58*fem,
+                              child: Image.asset(
+                                'assets/page-1/images/movie-8ev.png',
+                                width: 25.46*fem,
+                                height: 18.58*fem,
                               ),
                             ),
                           ),
-                          Container(
-                            // applethingPzc (66:2645)
-                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 12.38*fem, 1*fem),
-                            width: 231.44*fem,
-                            height: 20.33*fem,
-                            decoration: BoxDecoration (
-                              color: Color(0xff1b1b1b),
-                              borderRadius: BorderRadius.only (
-                                bottomRight: Radius.circular(10*fem),
-                                bottomLeft: Radius.circular(10*fem),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            // signalW3e (66:2639)
-                            margin: EdgeInsets.fromLTRB(0*fem, 2.23*fem, 4.22*fem, 0*fem),
-                            width: 13*fem,
-                            height: 10.9*fem,
-                            child: Image.asset(
-                              'assets/page-1/images/signal-Urp.png',
-                              width: 13*fem,
-                              height: 10.9*fem,
-                            ),
-                          ),
-                          Container(
-                            // wifi2Gt (66:2637)
-                            margin: EdgeInsets.fromLTRB(0*fem, 2.55*fem, 5*fem, 0*fem),
-                            width: 14*fem,
-                            height: 9.74*fem,
-                            child: Image.asset(
-                              'assets/page-1/images/wifi-qpG.png',
-                              width: 14*fem,
-                              height: 9.74*fem,
-                            ),
-                          ),
-                          Container(
-                            // batteryM4G (66:2641)
-                            margin: EdgeInsets.fromLTRB(0*fem, 4.98*fem, 0*fem, 0*fem),
-                            width: 19.79*fem,
-                            height: 8.3*fem,
-                            child: Image.asset(
-                              'assets/page-1/images/battery-35W.png',
-                              width: 19.79*fem,
-                              height: 8.3*fem,
-                            ),
-                          ),
-                        ],
+                        ),
                       ),
                     ),
                     Container(
-                      // autogroupgpwwf4x (P4LcQY45ywTm68shDPgpwW)
-                      padding: EdgeInsets.fromLTRB(36.45*fem, 197.02*fem, 37.56*fem, 0*fem),
-                      width: double.infinity,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            // autogroupxsmnmtg (P4LcKxMPNhdDTRtFSTxsmN)
-                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 318.74*fem),
-                            padding: EdgeInsets.fromLTRB(1.1*fem, 0.99*fem, 1.16*fem, 0.99*fem),
-                            width: double.infinity,
-                            height: 294*fem,
-                            decoration: BoxDecoration (
-                              color: Color(0xffffffff),
-                              borderRadius: BorderRadius.circular(147*fem),
-                              border: Border (
-                              ),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Color(0x3f000000),
-                                  offset: Offset(0*fem, 4*fem),
-                                  blurRadius: 2*fem,
-                                ),
-                              ],
-                            ),
-                            child: Center(
-                              // ellipse4oqN (66:2668)
-                              child: SizedBox(
-                                width: 291.74*fem,
-                                height: 290.83*fem,
-                                child: Image.asset(
-                                  'assets/page-1/images/ellipse-4-pHz.png',
-                                  width: 291.74*fem,
-                                  height: 290.83*fem,
-                                ),
+                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                      child:OutlinedButton(
+                        onPressed: () {
+                          HapticFeedback.mediumImpact();
+                          GoRouter.of(context).go('/gamespin');
+                        },
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+
+                          ),
+                          side: BorderSide.none,
+                          padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                        ),
+                        child:Container(
+                          // autogroupjnk6LJ8 (P4KbnJa4UxRCnNhDU2jnK6)
+                          margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                          padding: EdgeInsets.fromLTRB(33.73*fem, 8.99*fem, 33.7*fem, 7.27*fem),
+                          height: double.infinity,
+                          child: Center(
+                            // stadiacontrollerfill0wght400gr (66:1581)
+                            child: SizedBox(
+                              width: 25.46*fem,
+                              height: 18.58*fem,
+                              child: Image.asset(
+                                'assets/page-1/images/stadiacontrollerfill0wght400grad0opsz24-1-4rN.png',
+                                width: 25.46*fem,
+                                height: 18.58*fem,
                               ),
                             ),
                           ),
-                          Container(
-                            // applebuttonWjn (66:2646)
-                            margin: EdgeInsets.fromLTRB(85.12*fem, 0*fem, 85.19*fem, 0*fem),
-                            width: double.infinity,
-                            height: 5.45*fem,
-                            decoration: BoxDecoration (
-                              borderRadius: BorderRadius.circular(5*fem),
-                              color: Color(0xff000000),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                      child:OutlinedButton(
+                        onPressed: () {
+                          HapticFeedback.mediumImpact();
+                          GoRouter.of(context).go('/musicspin');
+                        },
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: Color(0xffb0cef1),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                bottomRight: Radius.circular(30),
+                                topRight: Radius.circular(30),
+                              )
+                          ),
+                          side: BorderSide.none,
+                          padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                        ),
+                        child:Container(
+                          // autogroupjnk6LJ8 (P4KbnJa4UxRCnNhDU2jnK6)
+                          margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 5*fem, 0*fem),
+                          padding: EdgeInsets.fromLTRB(33.73*fem, 8.99*fem, 33.7*fem, 7.27*fem),
+                          height: double.infinity,
+                          child: Center(
+                            // stadiacontrollerfill0wght400gr (66:1581)
+                            child: SizedBox(
+                              width: 25.46*fem,
+                              height: 18.58*fem,
+                              child: Image.asset(
+                                'assets/page-1/images/headphonesfill0wght400grad0opsz24-1-9ni.png',
+                                width: 25.46*fem,
+                                height: 18.58*fem,
+                              ),
                             ),
                           ),
-                        ],
+                        ),
                       ),
                     ),
                   ],
