@@ -229,23 +229,7 @@ class MusicSpin extends StatelessWidget {
               ),
             ),
             Positioned(
-              // ellipse5924 (66:2669)
-              left: 0*fem,
-              top: 158.7841796875*fem,
-              child: Align(
-                child: SizedBox(
-                  width: 411.94*fem,
-                  height: 411.94*fem,
-                  child: Image.asset(
-                    'assets/page-1/images/ellipse-5-yit.png',
-                    width: 411.94*fem,
-                    height: 411.94*fem,
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
-              // ellipse6T2k (66:2670)
+              // ellipse6F56 (66:2437)
               left: 4.0986328125*fem,
               top: 174.5869140625*fem,
               child: Align(
@@ -253,7 +237,7 @@ class MusicSpin extends StatelessWidget {
                   width: 380.83*fem,
                   height: 380.33*fem,
                   child: Image.asset(
-                    'assets/page-1/images/ellipse-6-oDv.png',
+                    'assets/wheel2.png',
                     width: 380.83*fem,
                     height: 380.33*fem,
                   ),
@@ -261,74 +245,7 @@ class MusicSpin extends StatelessWidget {
               ),
             ),
             Positioned(
-              // ellipse7NfW (66:2671)
-              left: 4.0986328125*fem,
-              top: 174.5869140625*fem,
-              child: Align(
-                child: SizedBox(
-                  width: 380.83*fem,
-                  height: 380.33*fem,
-                  child: Image.asset(
-                    'assets/page-1/images/ellipse-7-G1r.png',
-                    width: 380.83*fem,
-                    height: 380.33*fem,
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
-              // addu9e (66:2672)
-              left: 47.546875*fem,
-              top: 218.3525390625*fem,
-              child: Align(
-                child: SizedBox(
-                  width: 294*fem,
-                  height: 294*fem,
-                  child: Container(
-                    decoration: BoxDecoration (
-                      borderRadius: BorderRadius.circular(147*fem),
-                      border: Border (
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Color(0x3f000000),
-                          offset: Offset(0*fem, 4*fem),
-                          blurRadius: 2*fem,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
-              // addPac (66:2673)
-              left: 158.8764648438*fem,
-              top: 329.7155761719*fem,
-              child: Align(
-                child: SizedBox(
-                  width: 71.27*fem,
-                  height: 71.27*fem,
-                  child: Container(
-                    decoration: BoxDecoration (
-                      borderRadius: BorderRadius.circular(35.6369628906*fem),
-                      color: Color(0xffffffff),
-                      border: Border (
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Color(0x3f000000),
-                          offset: Offset(0*fem, 4*fem),
-                          blurRadius: 2*fem,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
-              // ellipse3Hfz (66:2674)
+              // ellipse3NBe (66:2431)
               left: 164.2495117188*fem,
               top: 190.5295410156*fem,
               child: Align(
@@ -336,25 +253,9 @@ class MusicSpin extends StatelessWidget {
                   width: 60.63*fem,
                   height: 73.44*fem,
                   child: Image.asset(
-                    'assets/page-1/images/ellipse-3-iaG.png',
+                    'assets/pick2.png',
                     width: 60.63*fem,
                     height: 73.44*fem,
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
-              // ellipse8QVi (66:2675)
-              left: 176.2783203125*fem,
-              top: 204.5710449219*fem,
-              child: Align(
-                child: SizedBox(
-                  width: 37.44*fem,
-                  height: 45.35*fem,
-                  child: Image.asset(
-                    'assets/page-1/images/ellipse-8-hQg.png',
-                    width: 37.44*fem,
-                    height: 45.35*fem,
                   ),
                 ),
               ),
