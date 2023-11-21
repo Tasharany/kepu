@@ -27,11 +27,11 @@ class ProfileScreen extends StatelessWidget {
           children: [
             Positioned(
               // rectangle55pWg (66:2918)
-              left: 1*fem,
+              left: 0*fem,
               top: 0*fem,
               child: Align(
                 child: SizedBox(
-                  width: 390*fem,
+                  width: 391*fem,
                   height: 324.16*fem,
                   child: Container(
                     decoration: BoxDecoration (
@@ -69,7 +69,7 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              // logoutfill0wght400grad0opsz241 (184:6)
+              // logoutfill0wght400grad0opsz2411 (184:6)
               left: 354.9482421875*fem,
               top: 49.7583007812*fem,
               child: Align(
@@ -77,7 +77,7 @@ class ProfileScreen extends StatelessWidget {
                   width: 24*fem,
                   height: 23.25*fem,
                   child: Image.asset(
-                    'assets/page-1/images/logoutfill0wght400grad0opsz24-1.png',
+                    'assets/page-1/images/logout_FILL0_wght400_GRAD0_opsz24-1.png',
                     width: 24*fem,
                     height: 23.25*fem,
                   ),
@@ -266,7 +266,7 @@ class ProfileScreen extends StatelessWidget {
                               width: 73*fem,
                               height: 34*fem,
                               child: Image.asset(
-                                'assets/page-1/images/movie-5pp.png',
+                                'assets/page-1/images/movie-QX4.png',
                                 width: 73*fem,
                                 height: 34*fem,
                               ),
@@ -286,7 +286,7 @@ class ProfileScreen extends StatelessWidget {
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(5*fem),
                                       child: Image.asset(
-                                        'assets/page-1/images/rectangle-34-CjN.png',
+                                        'assets/page-1/images/rectangle-34-ZiA.png',
                                       ),
                                     ),
                                   ),
@@ -309,7 +309,7 @@ class ProfileScreen extends StatelessWidget {
                                   ),
                                   Container(
                                     // autogroupscdr9Rn (P4LYDA3co5o5PnmMhVScdr)
-                                    padding: EdgeInsets.fromLTRB(22.5*fem, 25.5*fem, 22.5*fem, 25.5*fem),
+                                    padding: EdgeInsets.fromLTRB(22.5*fem, 25.5*fem, 22.5*fem, 22.5*fem),
                                     width: double.infinity,
                                     decoration: BoxDecoration (
                                       color: Color(0xffffffff),
@@ -379,7 +379,7 @@ class ProfileScreen extends StatelessWidget {
                                   ),
                                   Container(
                                     // autogroupa1r6sec (P4LYYeV9CTkpEPxhipA1R6)
-                                    padding: EdgeInsets.fromLTRB(22.92*fem, 25.5*fem, 22.08*fem, 25.5*fem),
+                                    padding: EdgeInsets.fromLTRB(22.92*fem, 25.5*fem, 22.08*fem, 22.5*fem),
                                     width: double.infinity,
                                     decoration: BoxDecoration (
                                       color: Color(0xffffffff),
@@ -448,7 +448,7 @@ class ProfileScreen extends StatelessWidget {
                                   ),
                                   Container(
                                     // autogroupkbu6p5z (P4LYsyGH2vVBtBGPu3kbu6)
-                                    padding: EdgeInsets.fromLTRB(22.08*fem, 25.5*fem, 22.92*fem, 25.5*fem),
+                                    padding: EdgeInsets.fromLTRB(22.08*fem, 25.5*fem, 22.92*fem, 22.5*fem),
                                     width: double.infinity,
                                     decoration: BoxDecoration (
                                       color: Color(0xffffffff),
@@ -487,7 +487,7 @@ class ProfileScreen extends StatelessWidget {
                   width: 20.83*fem,
                   height: 18.35*fem,
                   child: Image.asset(
-                    'assets/page-1/images/favoritefill0wght400grad0opsz24-13.png',
+                    'assets/page-1/images/favoritefill0wght400grad0opsz24-13-hZC.png',
                     width: 20.83*fem,
                     height: 18.35*fem,
                   ),
