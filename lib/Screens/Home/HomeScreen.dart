@@ -372,25 +372,6 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-<<<<<<< Updated upstream
-            Container(
-              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3.48*fem, 0*fem),
-              child:OutlinedButton(
-                onPressed: () {
-                  HapticFeedback.mediumImpact();
-                  GoRouter.of(context).go('/pocketpouch');
-                },
-                style: OutlinedButton.styleFrom(
-                  backgroundColor: Color(0x3393d5b8),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(5*fem),
-                        topRight: Radius.circular(5*fem),
-                      )
-                  ),
-                  side: BorderSide(color: Color(0xff6ca68c)),
-                  padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
-=======
 
             Positioned(
               left: 45*fem,
@@ -409,7 +390,6 @@ class HomeScreen extends StatelessWidget {
                         offset: Offset(0.0, 5)
                     )
                   ],
->>>>>>> Stashed changes
                 ),
                 child:Container(
                   // autogroupjnk6LJ8 (P4KbnJa4UxRCnNhDU2jnK6)

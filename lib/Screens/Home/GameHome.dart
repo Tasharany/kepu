@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kepu/utils.dart';
@@ -46,7 +48,7 @@ class GameHome extends StatelessWidget {
                             width: 29.23*fem,
                             height: 21.33*fem,
                             child: Image.asset(
-                              'assets/page-1/images/movie-5yN.png',
+                              'assets/page-1/images/movie.png',
                               width: 29.23*fem,
                               height: 21.33*fem,
                             ),
@@ -63,6 +65,7 @@ class GameHome extends StatelessWidget {
                                 height: 1.2*ffem/fem,
                                 letterSpacing: 0.18*fem,
                                 color: Color(0xff000000),
+                                decoration: TextDecoration.none,
                               ),
                             ),
                           ),
@@ -77,7 +80,7 @@ class GameHome extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10*fem),
                         child: Image.asset(
-                          'assets/page-1/images/k-1-Ayr.png',
+                          'assets/page-1/images/k-1-fir.png',
                         ),
                       ),
                     ),
@@ -104,6 +107,7 @@ class GameHome extends StatelessWidget {
                                 height: 1.2*ffem/fem,
                                 letterSpacing: 0.15*fem,
                                 color: Color(0xff000000),
+                                decoration: TextDecoration.none,
                               ),
                             ),
                           ),
@@ -120,7 +124,7 @@ class GameHome extends StatelessWidget {
                                   width: 18.34*fem,
                                   height: 17.46*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/favoritefill0wght400grad0opsz24-1-uw2.png',
+                                    'assets/page-1/images/favoritefill0wght400grad0opsz24-1-6tS.png',
                                     width: 18.34*fem,
                                     height: 17.46*fem,
                                   ),
@@ -131,7 +135,7 @@ class GameHome extends StatelessWidget {
                                   width: 21.04*fem,
                                   height: 20*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/schedulefill0wght400grad0opsz24-1-RDn.png',
+                                    'assets/page-1/images/schedulefill0wght400grad0opsz24-1-8Rx.png',
                                     width: 21.04*fem,
                                     height: 20*fem,
                                   ),
@@ -141,7 +145,7 @@ class GameHome extends StatelessWidget {
                                   width: 21.04*fem,
                                   height: 20*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/forumfill0wght400grad0opsz24-1-PAt.png',
+                                    'assets/page-1/images/forumfill0wght400grad0opsz24-1-Api.png',
                                     width: 21.04*fem,
                                     height: 20*fem,
                                   ),
@@ -180,7 +184,7 @@ class GameHome extends StatelessWidget {
                             width: 29.23*fem,
                             height: 21.33*fem,
                             child: Image.asset(
-                              'assets/page-1/images/movie-Gag.png',
+                              'assets/page-1/images/movie.png',
                               width: 29.23*fem,
                               height: 21.33*fem,
                             ),
@@ -197,6 +201,7 @@ class GameHome extends StatelessWidget {
                                 height: 1.2*ffem/fem,
                                 letterSpacing: 0.18*fem,
                                 color: Color(0xff000000),
+                                decoration: TextDecoration.none,
                               ),
                             ),
                           ),
@@ -211,7 +216,7 @@ class GameHome extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10*fem),
                         child: Image.asset(
-                          'assets/page-1/images/k-1-qek.png',
+                          'assets/page-1/images/k-1-23L.png',
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -239,6 +244,7 @@ class GameHome extends StatelessWidget {
                                 height: 1.2*ffem/fem,
                                 letterSpacing: 0.15*fem,
                                 color: Color(0xff000000),
+                                decoration: TextDecoration.none,
                               ),
                             ),
                           ),
@@ -255,7 +261,7 @@ class GameHome extends StatelessWidget {
                                   width: 18.34*fem,
                                   height: 17.46*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/favoritefill0wght400grad0opsz24-1-Cs6.png',
+                                    'assets/page-1/images/favoritefill0wght400grad0opsz24-1-6tS.png',
                                     width: 18.34*fem,
                                     height: 17.46*fem,
                                   ),
@@ -266,7 +272,7 @@ class GameHome extends StatelessWidget {
                                   width: 21.04*fem,
                                   height: 20*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/schedulefill0wght400grad0opsz24-1-UdS.png',
+                                    'assets/page-1/images/schedulefill0wght400grad0opsz24-1-8Rx.png',
                                     width: 21.04*fem,
                                     height: 20*fem,
                                   ),
@@ -276,7 +282,7 @@ class GameHome extends StatelessWidget {
                                   width: 21.04*fem,
                                   height: 20*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/forumfill0wght400grad0opsz24-1-jcG.png',
+                                    'assets/page-1/images/forumfill0wght400grad0opsz24-1-Api.png',
                                     width: 21.04*fem,
                                     height: 20*fem,
                                   ),
@@ -309,14 +315,13 @@ class GameHome extends StatelessWidget {
                       height: 1.2*ffem/fem,
                       letterSpacing: 0.2*fem,
                       color: Color(0xff6ca68c),
+                      decoration: TextDecoration.none,
                     ),
                   ),
                 ),
               ),
             ),
             Positioned(
-<<<<<<< Updated upstream
-=======
               left: 45*fem,
               top: 83.3833007812*fem,
               child:
@@ -329,7 +334,7 @@ class GameHome extends StatelessWidget {
                   boxShadow: <BoxShadow>[
                     BoxShadow(
                         color: Colors.black26,
-                        blurRadius: 4.0,
+                        blurRadius: 4,
                         offset: Offset(0.0, 5)
                     )
                   ],
@@ -453,10 +458,9 @@ class GameHome extends StatelessWidget {
               ),
             ),
             Positioned(
->>>>>>> Stashed changes
               // bottomhub2f4 (60:305)
               left: 0*fem,
-              top: 747*fem,
+              top: 765*fem,
               child: Align(
                 child: SizedBox(
                   width: 390*fem,

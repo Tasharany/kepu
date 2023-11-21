@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kepu/utils.dart';
@@ -46,7 +48,7 @@ class MusicHome extends StatelessWidget {
                             width: 24.75*fem,
                             height: 24*fem,
                             child: Image.asset(
-                              'assets/page-1/images/movie-uWC.png',
+                              'assets/page-1/images/movie-2Ae.png',
                               width: 24.75*fem,
                               height: 24*fem,
                             ),
@@ -63,6 +65,7 @@ class MusicHome extends StatelessWidget {
                                 height: 1.2*ffem/fem,
                                 letterSpacing: 0.18*fem,
                                 color: Color(0xff000000),
+                                decoration: TextDecoration.none,
                               ),
                             ),
                           ),
@@ -77,7 +80,7 @@ class MusicHome extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10*fem),
                         child: Image.asset(
-                          'assets/page-1/images/k-1-kvQ.png',
+                          'assets/page-1/images/k-1-ZJS.png',
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -104,6 +107,7 @@ class MusicHome extends StatelessWidget {
                                 height: 1.2*ffem/fem,
                                 letterSpacing: 0.15*fem,
                                 color: Color(0xff000000),
+                                decoration: TextDecoration.none,
                               ),
                             ),
                           ),
@@ -119,7 +123,7 @@ class MusicHome extends StatelessWidget {
                                   width: 18.34*fem,
                                   height: 17.46*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/favoritefill0wght400grad0opsz24-1-xuS.png',
+                                    'assets/page-1/images/favoritefill0wght400grad0opsz24-1-czv.png',
                                     width: 18.34*fem,
                                     height: 17.46*fem,
                                   ),
@@ -130,7 +134,7 @@ class MusicHome extends StatelessWidget {
                                   width: 21.04*fem,
                                   height: 20*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/schedulefill0wght400grad0opsz24-1-EbE.png',
+                                    'assets/page-1/images/schedulefill0wght400grad0opsz24-1-P1C.png',
                                     width: 21.04*fem,
                                     height: 20*fem,
                                   ),
@@ -140,7 +144,7 @@ class MusicHome extends StatelessWidget {
                                   width: 21.04*fem,
                                   height: 20*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/forumfill0wght400grad0opsz24-1-A1J.png',
+                                    'assets/page-1/images/forumfill0wght400grad0opsz24-1-18n.png',
                                     width: 21.04*fem,
                                     height: 20*fem,
                                   ),
@@ -179,7 +183,7 @@ class MusicHome extends StatelessWidget {
                             width: 24.75*fem,
                             height: 24*fem,
                             child: Image.asset(
-                              'assets/page-1/images/movie-Lh2.png',
+                              'assets/page-1/images/movie-2Ae.png',
                               width: 24.75*fem,
                               height: 24*fem,
                             ),
@@ -196,6 +200,7 @@ class MusicHome extends StatelessWidget {
                                 height: 1.2*ffem/fem,
                                 letterSpacing: 0.18*fem,
                                 color: Color(0xff000000),
+                                decoration: TextDecoration.none,
                               ),
                             ),
                           ),
@@ -210,7 +215,7 @@ class MusicHome extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10*fem),
                         child: Image.asset(
-                          'assets/page-1/images/k-1-yCg.png',
+                          'assets/page-1/images/k-1-WoL.png',
                         ),
                       ),
                     ),
@@ -237,6 +242,7 @@ class MusicHome extends StatelessWidget {
                                 height: 1.2*ffem/fem,
                                 letterSpacing: 0.15*fem,
                                 color: Color(0xff000000),
+                                decoration: TextDecoration.none,
                               ),
                             ),
                           ),
@@ -253,7 +259,7 @@ class MusicHome extends StatelessWidget {
                                   width: 18.34*fem,
                                   height: 17.46*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/favoritefill0wght400grad0opsz24-1-1fS.png',
+                                    'assets/page-1/images/favoritefill0wght400grad0opsz24-1-czv.png',
                                     width: 18.34*fem,
                                     height: 17.46*fem,
                                   ),
@@ -264,7 +270,7 @@ class MusicHome extends StatelessWidget {
                                   width: 21.04*fem,
                                   height: 20*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/schedulefill0wght400grad0opsz24-1-5UG.png',
+                                    'assets/page-1/images/schedulefill0wght400grad0opsz24-1-P1C.png',
                                     width: 21.04*fem,
                                     height: 20*fem,
                                   ),
@@ -274,7 +280,7 @@ class MusicHome extends StatelessWidget {
                                   width: 21.04*fem,
                                   height: 20*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/forumfill0wght400grad0opsz24-1-avx.png',
+                                    'assets/page-1/images/forumfill0wght400grad0opsz24-1-18n.png',
                                     width: 21.04*fem,
                                     height: 20*fem,
                                   ),
@@ -307,14 +313,13 @@ class MusicHome extends StatelessWidget {
                       height: 1.2*ffem/fem,
                       letterSpacing: 0.2*fem,
                       color: Color(0xff7bb0f1),
+                      decoration: TextDecoration.none,
                     ),
                   ),
                 ),
               ),
             ),
             Positioned(
-<<<<<<< Updated upstream
-=======
               left: 45*fem,
               top: 83.3833007812*fem,
               child:
@@ -327,7 +332,7 @@ class MusicHome extends StatelessWidget {
                   boxShadow: <BoxShadow>[
                     BoxShadow(
                         color: Colors.black26,
-                        blurRadius: 4.0,
+                        blurRadius: 4,
                         offset: Offset(0.0, 5)
                     )
                   ],
@@ -451,10 +456,9 @@ class MusicHome extends StatelessWidget {
               ),
             ),
             Positioned(
->>>>>>> Stashed changes
               // bottomhub2f4 (60:305)
               left: 0*fem,
-              top: 747*fem,
+              top: 765*fem,
               child: Align(
                 child: SizedBox(
                   width: 390*fem,
