@@ -21,7 +21,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   Widget build(BuildContext context) {
     return Container(
       height: 50,
-      margin: const EdgeInsets.fromLTRB(8, 8, 8, 16),
+      margin: const EdgeInsets.fromLTRB(0, 8, 0, 0),
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
