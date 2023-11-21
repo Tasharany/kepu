@@ -50,7 +50,7 @@ class SignInBody extends StatelessWidget {
             Align(
                 alignment: Alignment.center,
                 child: GestureDetector(
-                  onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SignUp(),)),
+                  onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const SignUp(),)),
                   child: RichText(
                       text: const TextSpan(children: [
                     TextSpan(

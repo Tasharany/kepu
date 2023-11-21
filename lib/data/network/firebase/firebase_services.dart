@@ -1,9 +1,13 @@
+import 'dart:js';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:kepu/Services/auth.dart';
+import 'package:provider/provider.dart';
 import '../../../model/task_model.dart';
 import '../../../util/utils.dart';
 import '../../../view/home/home.dart';
@@ -142,6 +146,9 @@ class FirebaseService {
   }
   static Future<void> signInwWithGoogle()async{
     try{
+     // final provider = Provider.of<GoogleSignInProvider>( context as BuildContext,
+   //       listen: false);
+    //  provider.googleLogin();
       final GoogleSignIn googleSignIn = GoogleSignIn();
       googleSignIn.signIn().then((GoogleSignInAccount? googleSignInAccount) async {
         if (googleSignInAccount != null) {
