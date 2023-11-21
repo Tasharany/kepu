@@ -104,8 +104,6 @@ GoRouter router = GoRouter(initialLocation: '/', routes: [
     builder: (context, state) => ProfileEditScreen(),
     pageBuilder: defaultPageBuilder<ToDoListScreen>(ProfileEditScreen()),
   ),
-<<<<<<< Updated upstream
-=======
   GoRoute(
     path: '/home',
     builder: (context, state) => const HomeScreen(),
@@ -121,7 +119,6 @@ GoRouter router = GoRouter(initialLocation: '/', routes: [
     builder: (context, state) => MusicSpin(),
     pageBuilder: defaultPageBuilder<ToDoListScreen>(MusicSpin()),
   ),
->>>>>>> Stashed changes
 
 ]);
 
