@@ -460,7 +460,7 @@ class GameHome extends StatelessWidget {
             Positioned(
               // bottomhub2f4 (60:305)
               left: 0*fem,
-              top: 765*fem,
+              top: 747*fem,
               child: Align(
                 child: SizedBox(
                   width: 390*fem,
