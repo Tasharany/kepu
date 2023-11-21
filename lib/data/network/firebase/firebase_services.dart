@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
@@ -146,9 +144,6 @@ class FirebaseService {
   }
   static Future<void> signInwWithGoogle()async{
     try{
-     // final provider = Provider.of<GoogleSignInProvider>( context as BuildContext,
-   //       listen: false);
-    //  provider.googleLogin();
       final GoogleSignIn googleSignIn = GoogleSignIn();
       googleSignIn.signIn().then((GoogleSignInAccount? googleSignInAccount) async {
         if (googleSignInAccount != null) {
