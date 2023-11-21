@@ -49,7 +49,7 @@ class LoginScreen extends StatelessWidget {
                 Center(
                   child: Container(
                       margin: const EdgeInsets.only(top: 24, left: 24, right: 24),
-                      width: double.infinity,
+                      width: 250,
                       height: 72,
                       child: ElevatedButton.icon(
                         onPressed: () {
@@ -68,7 +68,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                         style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(14)),
+                                borderRadius: BorderRadius.circular(10)),
                             backgroundColor: const Color(0xFFFBCD71)),
                       )
 
@@ -77,7 +77,7 @@ class LoginScreen extends StatelessWidget {
                 Center(
                   child: Container(
                       margin: const EdgeInsets.only(top: 24, left: 24, right: 24),
-                      width: double.infinity,
+                      width: 250,
                       height: 72,
                       child: ElevatedButton(
                         onPressed: () {
@@ -89,7 +89,7 @@ class LoginScreen extends StatelessWidget {
                         },
                         style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(14)),
+                                borderRadius: BorderRadius.circular(10)),
                             backgroundColor: const Color(0xFF7F7F7F)),
                         child: const Text(
                           'Guest',

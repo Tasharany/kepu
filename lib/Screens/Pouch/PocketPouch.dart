@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kepu/utils.dart';
+
+import '../../Widgets/BottomNavBar.dart';
 
 class PocketPouch extends StatelessWidget {
   @override
@@ -52,89 +56,127 @@ class PocketPouch extends StatelessWidget {
                                 height: 1.2*ffem/fem,
                                 letterSpacing: 0.2*fem,
                                 color: Color(0xff125d9f),
+                                decoration: TextDecoration.none,
                               ),
                             ),
                           ),
                           Container(
                             // autogroupqgsnvx4 (P4KtUQbHnZ6ZzvgrXGQgsN)
-                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 88.11*fem, 0*fem),
+                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 75*fem, 0*fem),
                             height: 34.83*fem,
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Container(
-                                  // autogroupbqhazBE (P4KtcVCAK4mnYyP153bQHa)
                                   margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3.48*fem, 0*fem),
-                                  padding: EdgeInsets.fromLTRB(34.83*fem, 8.13*fem, 34.83*fem, 8.13*fem),
-                                  height: double.infinity,
-                                  decoration: BoxDecoration (
-                                    border: Border.all(color: Color(0xffb86b8e)),
-                                    color: Color(0x33ffcde4),
-                                    borderRadius: BorderRadius.only (
-                                      topLeft: Radius.circular(5*fem),
-                                      topRight: Radius.circular(5*fem),
+                                  child:OutlinedButton(
+                                    onPressed: () {
+                                      HapticFeedback.mediumImpact();
+                                      GoRouter.of(context).go('/pouch');
+                                    },
+                                    style: OutlinedButton.styleFrom(
+                                      backgroundColor: Color(0xfffffafd),
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.only(
+                                            topLeft: Radius.circular(5*fem),
+                                            topRight: Radius.circular(5*fem),
+                                          )
+                                      ),
+                                      side: BorderSide(color: Color(0xffb86b8e)),
+                                      padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
                                     ),
-                                  ),
-                                  child: Center(
-                                    // vectorafE (95:133)
-                                    child: SizedBox(
-                                      width: 23.22*fem,
-                                      height: 18.58*fem,
-                                      child: Image.asset(
-                                        'assets/page-1/images/vector-76k.png',
-                                        width: 23.22*fem,
-                                        height: 18.58*fem,
+                                    child:Container(
+                                      // autogroupjnk6LJ8 (P4KbnJa4UxRCnNhDU2jnK6)
+                                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3.48*fem, 0*fem),
+                                      padding: EdgeInsets.fromLTRB(33.73*fem, 8.99*fem, 33.7*fem, 7.27*fem),
+                                      height: double.infinity,
+                                      child: Center(
+                                        // stadiacontrollerfill0wght400gr (66:1581)
+                                        child: SizedBox(
+                                          width: 25.46*fem,
+                                          height: 18.58*fem,
+                                          child: Image.asset(
+                                            'assets/page-1/images/vector-dRL.png',
+                                            width: 25.46*fem,
+                                            height: 18.58*fem,
+                                          ),
+                                        ),
                                       ),
                                     ),
                                   ),
                                 ),
                                 Container(
-                                  // autogroupczauTU8 (P4KtguEUMPNxzrUnztCZAU)
                                   margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3.48*fem, 0*fem),
-                                  padding: EdgeInsets.fromLTRB(33.73*fem, 8.99*fem, 33.7*fem, 7.27*fem),
-                                  height: double.infinity,
-                                  decoration: BoxDecoration (
-                                    border: Border.all(color: Color(0xff6ca68c)),
-                                    color: Color(0xfff5fbf8),
-                                    borderRadius: BorderRadius.only (
-                                      topLeft: Radius.circular(5*fem),
-                                      topRight: Radius.circular(5*fem),
+                                  child:OutlinedButton(
+                                    onPressed: () {
+                                      HapticFeedback.mediumImpact();
+                                      GoRouter.of(context).go('/pocketpouch');
+                                    },
+                                    style: OutlinedButton.styleFrom(
+                                      backgroundColor: Color(0x3393d5b8),
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.only(
+                                            topLeft: Radius.circular(5*fem),
+                                            topRight: Radius.circular(5*fem),
+                                          )
+                                      ),
+                                      side: BorderSide(color: Color(0xff6ca68c)),
+                                      padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
                                     ),
-                                  ),
-                                  child: Center(
-                                    // stadiacontrollerfill0wght400gr (95:134)
-                                    child: SizedBox(
-                                      width: 25.46*fem,
-                                      height: 18.58*fem,
-                                      child: Image.asset(
-                                        'assets/page-1/images/stadiacontrollerfill0wght400grad0opsz24-1-xzY.png',
-                                        width: 25.46*fem,
-                                        height: 18.58*fem,
+                                    child:Container(
+                                      // autogroupjnk6LJ8 (P4KbnJa4UxRCnNhDU2jnK6)
+                                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3.48*fem, 0*fem),
+                                      padding: EdgeInsets.fromLTRB(33.73*fem, 8.99*fem, 33.7*fem, 7.27*fem),
+                                      height: double.infinity,
+                                      child: Center(
+                                        // stadiacontrollerfill0wght400gr (66:1581)
+                                        child: SizedBox(
+                                          width: 25.46*fem,
+                                          height: 18.58*fem,
+                                          child: Image.asset(
+                                            'assets/page-1/images/stadiacontrollerfill0wght400grad0opsz24-1-4rN.png',
+                                            width: 25.46*fem,
+                                            height: 18.58*fem,
+                                          ),
+                                        ),
                                       ),
                                     ),
                                   ),
                                 ),
                                 Container(
-                                  // autogrouptv12iHa (P4KtkjTRQVgNHqxoTutv12)
-                                  padding: EdgeInsets.fromLTRB(37.45*fem, 8.42*fem, 37.44*fem, 8.42*fem),
-                                  height: double.infinity,
-                                  decoration: BoxDecoration (
-                                    border: Border.all(color: Color(0xff7bb0f1)),
-                                    color: Color(0x337bb0f1),
-                                    borderRadius: BorderRadius.only (
-                                      topLeft: Radius.circular(5*fem),
-                                      topRight: Radius.circular(5*fem),
+                                  margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                                  child:OutlinedButton(
+                                    onPressed: () {
+                                      HapticFeedback.mediumImpact();
+                                      GoRouter.of(context).go('/chartpouch');
+                                    },
+                                    style: OutlinedButton.styleFrom(
+                                      backgroundColor: Color(0x337bb0f1),
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.only(
+                                            topLeft: Radius.circular(5*fem),
+                                            topRight: Radius.circular(5*fem),
+                                          )
+                                      ),
+                                      side: BorderSide(color: Color(0xff7bb0f1)),
+                                      padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
                                     ),
-                                  ),
-                                  child: Center(
-                                    // headphonesfill0wght400grad0ops (95:129)
-                                    child: SizedBox(
-                                      width: 18*fem,
-                                      height: 18*fem,
-                                      child: Image.asset(
-                                        'assets/page-1/images/headphonesfill0wght400grad0opsz24-1-YEp.png',
-                                        width: 18*fem,
-                                        height: 18*fem,
+                                    child:Container(
+                                      // autogroupjnk6LJ8 (P4KbnJa4UxRCnNhDU2jnK6)
+                                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3.48*fem, 0*fem),
+                                      padding: EdgeInsets.fromLTRB(33.73*fem, 8.99*fem, 33.7*fem, 7.27*fem),
+                                      height: double.infinity,
+                                      child: Center(
+                                        // stadiacontrollerfill0wght400gr (66:1581)
+                                        child: SizedBox(
+                                          width: 25.46*fem,
+                                          height: 18.58*fem,
+                                          child: Image.asset(
+                                            'assets/page-1/images/headphonesfill0wght400grad0opsz24-1.png',
+                                            width: 25.46*fem,
+                                            height: 18.58*fem,
+                                          ),
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -147,7 +189,7 @@ class PocketPouch extends StatelessWidget {
                     ),
                     Container(
                       // autogroupe244Qpc (P4KtujCS4486NS43AgE244)
-                      padding: EdgeInsets.fromLTRB(15.55*fem, 18.4*fem, 20.04*fem, 2.92*fem),
+                      padding: EdgeInsets.fromLTRB(14*fem, 18.4*fem, 20.04*fem, 2.92*fem),
                       width: double.infinity,
                       height: 725.78*fem,
                       decoration: BoxDecoration (
@@ -177,7 +219,7 @@ class PocketPouch extends StatelessWidget {
                                   width: 29.17*fem,
                                   height: 29.17*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/schedulefill0wght400grad0opsz24-1-RNk.png',
+                                    'assets/page-1/images/schedulefill0wght400grad0opsz24-1-sJS.png',
                                     width: 29.17*fem,
                                     height: 29.17*fem,
                                   ),
@@ -196,6 +238,7 @@ class PocketPouch extends StatelessWidget {
                                         height: 1.2*ffem/fem,
                                         letterSpacing: 0.4*fem,
                                         color: Color(0xff000000),
+                                        decoration: TextDecoration.none,
                                       ),
                                     ),
                                   ),
@@ -205,7 +248,7 @@ class PocketPouch extends StatelessWidget {
                                   width: 27.5*fem,
                                   height: 30.87*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/multi-selection-zR2.png',
+                                    'assets/page-1/images/multi-selection-Cjc.png',
                                     width: 27.5*fem,
                                     height: 30.87*fem,
                                   ),
@@ -215,13 +258,14 @@ class PocketPouch extends StatelessWidget {
                           ),
                           Container(
                             // frame2NqJ (95:139)
+
                             width: double.infinity,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Container(
                                   // autogrouprdxx5Up (P4KuXYW65NfdVxXL8eRdxx)
-                                  margin: EdgeInsets.fromLTRB(15.96*fem, 0*fem, 12.45*fem, 0*fem),
+                                  margin: EdgeInsets.fromLTRB(12.45*fem, 0*fem, 12.45*fem, 0*fem),
                                   width: double.infinity,
                                   child: Row(
                                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -233,7 +277,7 @@ class PocketPouch extends StatelessWidget {
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.circular(5*fem),
                                           child: Image.asset(
-                                            'assets/page-1/images/rectangle-32-YqJ.png',
+                                            'assets/page-1/images/rectangle-37-bg-Npz.png',
                                           ),
                                         ),
                                       ),
@@ -247,7 +291,7 @@ class PocketPouch extends StatelessWidget {
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.circular(5*fem),
                                           child: Image.asset(
-                                            'assets/page-1/images/rectangle-33-6oN.png',
+                                            'assets/page-1/images/rectangle-35-bg-3iJ.png',
                                           ),
                                         ),
                                       ),
@@ -261,7 +305,7 @@ class PocketPouch extends StatelessWidget {
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.circular(5*fem),
                                           child: Image.asset(
-                                            'assets/page-1/images/rectangle-34-QbN.png',
+                                            'assets/page-1/images/rectangle-34-S2N.png',
                                             fit: BoxFit.cover,
                                           ),
                                         ),
@@ -291,6 +335,7 @@ class PocketPouch extends StatelessWidget {
                                             height: 1.4285714286*ffem/fem,
                                             letterSpacing: 0.14*fem,
                                             color: Color(0xff000000),
+                                            decoration: TextDecoration.none,
                                           ),
                                         ),
                                       ),
@@ -307,6 +352,7 @@ class PocketPouch extends StatelessWidget {
                                             height: 1.4285714286*ffem/fem,
                                             letterSpacing: 0.14*fem,
                                             color: Color(0xff000000),
+                                            decoration: TextDecoration.none,
                                           ),
                                         ),
                                       ),
@@ -321,6 +367,7 @@ class PocketPouch extends StatelessWidget {
                                           height: 1.4285714286*ffem/fem,
                                           letterSpacing: 0.14*fem,
                                           color: Color(0xff000000),
+                                          decoration: TextDecoration.none,
                                         ),
                                       ),
                                     ],
@@ -328,7 +375,7 @@ class PocketPouch extends StatelessWidget {
                                 ),
                                 Container(
                                   // autogroupdpgkcS8 (P4KutT4vJZ5yRanirDdpGk)
-                                  margin: EdgeInsets.fromLTRB(15.96*fem, 0*fem, 12.45*fem, 0*fem),
+                                  margin: EdgeInsets.fromLTRB(12.45*fem, 0*fem, 12.45*fem, 0*fem),
                                   width: double.infinity,
                                   child: Row(
                                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -340,7 +387,7 @@ class PocketPouch extends StatelessWidget {
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.circular(5*fem),
                                           child: Image.asset(
-                                            'assets/page-1/images/rectangle-35-vsN.png',
+                                            'assets/page-1/images/rectangle-35-vQ2.png',
                                             fit: BoxFit.cover,
                                           ),
                                         ),
@@ -355,7 +402,7 @@ class PocketPouch extends StatelessWidget {
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.circular(5*fem),
                                           child: Image.asset(
-                                            'assets/page-1/images/rectangle-36-VvL.png',
+                                            'assets/page-1/images/rectangle-36-5QW.png',
                                             fit: BoxFit.cover,
                                           ),
                                         ),
@@ -370,7 +417,7 @@ class PocketPouch extends StatelessWidget {
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.circular(5*fem),
                                           child: Image.asset(
-                                            'assets/page-1/images/rectangle-37-ZtQ.png',
+                                            'assets/page-1/images/rectangle-37-DtE.png',
                                           ),
                                         ),
                                       ),
@@ -396,6 +443,7 @@ class PocketPouch extends StatelessWidget {
                                             height: 1.4285714286*ffem/fem,
                                             letterSpacing: 0.14*fem,
                                             color: Color(0xff000000),
+                                            decoration: TextDecoration.none,
                                           ),
                                         ),
                                       ),
@@ -412,6 +460,7 @@ class PocketPouch extends StatelessWidget {
                                             height: 1.4285714286*ffem/fem,
                                             letterSpacing: 0.14*fem,
                                             color: Color(0xff000000),
+                                            decoration: TextDecoration.none,
                                           ),
                                         ),
                                       ),
@@ -426,6 +475,7 @@ class PocketPouch extends StatelessWidget {
                                           height: 1.4285714286*ffem/fem,
                                           letterSpacing: 0.14*fem,
                                           color: Color(0xff000000),
+                                          decoration: TextDecoration.none,
                                         ),
                                       ),
                                     ],
@@ -433,7 +483,7 @@ class PocketPouch extends StatelessWidget {
                                 ),
                                 Container(
                                   // autogroupw2dimnC (P4KvC2PyBNu1chF4e2W2di)
-                                  margin: EdgeInsets.fromLTRB(15.96*fem, 0*fem, 12.45*fem, 0*fem),
+                                  margin: EdgeInsets.fromLTRB(12.45*fem, 0*fem, 12.45*fem, 0*fem),
                                   width: double.infinity,
                                   child: Row(
                                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -445,7 +495,7 @@ class PocketPouch extends StatelessWidget {
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.circular(5*fem),
                                           child: Image.asset(
-                                            'assets/page-1/images/rectangle-38-qFS.png',
+                                            'assets/page-1/images/rectangle-38-tdQ.png',
                                             fit: BoxFit.cover,
                                           ),
                                         ),
@@ -460,7 +510,7 @@ class PocketPouch extends StatelessWidget {
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.circular(5*fem),
                                           child: Image.asset(
-                                            'assets/page-1/images/rectangle-39-xbE.png',
+                                            'assets/page-1/images/rectangle-39-CNW.png',
                                             fit: BoxFit.cover,
                                           ),
                                         ),
@@ -475,7 +525,7 @@ class PocketPouch extends StatelessWidget {
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.circular(5*fem),
                                           child: Image.asset(
-                                            'assets/page-1/images/rectangle-40-2k4.png',
+                                            'assets/page-1/images/rectangle-40-5Rt.png',
                                             fit: BoxFit.cover,
                                           ),
                                         ),
@@ -502,6 +552,7 @@ class PocketPouch extends StatelessWidget {
                                             height: 1.4285714286*ffem/fem,
                                             letterSpacing: 0.14*fem,
                                             color: Color(0xff000000),
+                                            decoration: TextDecoration.none,
                                           ),
                                         ),
                                       ),
@@ -518,6 +569,7 @@ class PocketPouch extends StatelessWidget {
                                             height: 1.4285714286*ffem/fem,
                                             letterSpacing: 0.14*fem,
                                             color: Color(0xff000000),
+                                            decoration: TextDecoration.none,
                                           ),
                                         ),
                                       ),
@@ -536,6 +588,7 @@ class PocketPouch extends StatelessWidget {
                                             height: 1.4285714286*ffem/fem,
                                             letterSpacing: 0.14*fem,
                                             color: Color(0xff000000),
+                                            decoration: TextDecoration.none,
                                           ),
                                         ),
                                       ),
@@ -544,7 +597,7 @@ class PocketPouch extends StatelessWidget {
                                 ),
                                 Container(
                                   // autogrouptsxlKuW (P4KvV1uf4zQGev5cy2TSxL)
-                                  margin: EdgeInsets.fromLTRB(15.96*fem, 0*fem, 12.45*fem, 0*fem),
+                                  margin: EdgeInsets.fromLTRB(12.45*fem, 0*fem, 12.45*fem, 0*fem),
                                   width: double.infinity,
                                   child: Row(
                                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -556,7 +609,7 @@ class PocketPouch extends StatelessWidget {
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.circular(5*fem),
                                           child: Image.asset(
-                                            'assets/page-1/images/rectangle-41-3Pa.png',
+                                            'assets/page-1/images/rectangle-41-bg-J3t.png',
                                             fit: BoxFit.cover,
                                           ),
                                         ),
@@ -571,7 +624,7 @@ class PocketPouch extends StatelessWidget {
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.circular(5*fem),
                                           child: Image.asset(
-                                            'assets/page-1/images/rectangle-42-mEk.png',
+                                            'assets/page-1/images/rectangle-34-cUJ.png',
                                           ),
                                         ),
                                       ),
@@ -585,7 +638,7 @@ class PocketPouch extends StatelessWidget {
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.circular(5*fem),
                                           child: Image.asset(
-                                            'assets/page-1/images/rectangle-43-xPv.png',
+                                            'assets/page-1/images/rectangle-37-bg-Ghp.png',
                                             fit: BoxFit.cover,
                                           ),
                                         ),
@@ -595,16 +648,16 @@ class PocketPouch extends StatelessWidget {
                                 ),
                                 Container(
                                   // autogroupsa7ebPA (P4KvdWfW1o9uB2Vu8XSA7e)
-                                  margin: EdgeInsets.fromLTRB(37.1*fem, 0*fem, 32.41*fem, 0*fem),
+                                  margin: EdgeInsets.fromLTRB(13*fem, 0*fem, 0*fem, 0*fem),
                                   width: double.infinity,
                                   child: Row(
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     children: [
                                       Container(
                                         // movieftp (95:161)
-                                        margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 82.45*fem, 0*fem),
+                                        margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 16.95*fem, 0*fem),
                                         child: Text(
-                                          'movie',
+                                          'Elden Ring',
                                           textAlign: TextAlign.center,
                                           style: SafeGoogleFont (
                                             'Radio Canada',
@@ -613,14 +666,15 @@ class PocketPouch extends StatelessWidget {
                                             height: 1.4285714286*ffem/fem,
                                             letterSpacing: 0.14*fem,
                                             color: Color(0xff000000),
+                                            decoration: TextDecoration.none,
                                           ),
                                         ),
                                       ),
                                       Container(
                                         // movieXw2 (95:162)
-                                        margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 82.45*fem, 0*fem),
+                                        margin: EdgeInsets.fromLTRB(45*fem, 0*fem, 16.95*fem, 0*fem),
                                         child: Text(
-                                          'movie',
+                                          'Undertale',
                                           textAlign: TextAlign.center,
                                           style: SafeGoogleFont (
                                             'Radio Canada',
@@ -629,21 +683,26 @@ class PocketPouch extends StatelessWidget {
                                             height: 1.4285714286*ffem/fem,
                                             letterSpacing: 0.14*fem,
                                             color: Color(0xff000000),
+                                            decoration: TextDecoration.none,
                                           ),
                                         ),
                                       ),
-                                      Text(
-                                        // moviezZi (95:163)
-                                        'movie',
-                                        textAlign: TextAlign.center,
-                                        style: SafeGoogleFont (
-                                          'Radio Canada',
-                                          fontSize: 14*ffem,
-                                          fontWeight: FontWeight.w400,
-                                          height: 1.4285714286*ffem/fem,
-                                          letterSpacing: 0.14*fem,
-                                          color: Color(0xff000000),
+                                      Container(
+                                        // movieXw2 (95:162)
+                                        margin: EdgeInsets.fromLTRB(40*fem, 0*fem, 16.95*fem, 0*fem),
+                                        child: Text(
+                                          'The Room',
+                                          textAlign: TextAlign.center,
+                                          style: SafeGoogleFont (
+                                            'Radio Canada',
+                                            fontSize: 14*ffem,
+                                            fontWeight: FontWeight.w400,
+                                            height: 1.4285714286*ffem/fem,
+                                            letterSpacing: 0.14*fem,
+                                            color: Color(0xff000000),
+                                            decoration: TextDecoration.none,
                                         ),
+                                      ),
                                       ),
                                     ],
                                   ),
@@ -659,138 +718,16 @@ class PocketPouch extends StatelessWidget {
               ),
             ),
             Positioned(
-              // bottomhubHYp (95:168)
+              // bottomhub2f4 (60:305)
               left: 0*fem,
-              top: 84*fem,
+              top: 747*fem,
               child: Align(
                 child: SizedBox(
-                  width: 675*fem,
-                  height: 760*fem,
-                  child: Image.asset(
-                    'assets/page-1/images/bottom-hub-wS4.png',
-                    width: 675*fem,
-                    height: 760*fem,
+                  width: 390*fem,
+                  height: 97*fem,
+                  child: BottomNavBar(
+                    currentIndex: 2,
                   ),
-                ),
-              ),
-            ),
-            Positioned(
-              // marginsi8L (95:189)
-              left: 11.0991210938*fem,
-              top: 0.00390625*fem,
-              child: Container(
-                width: 368.01*fem,
-                height: 836.54*fem,
-                child: Stack(
-                  children: [
-                    Positioned(
-                      // wifimcQ (95:190)
-                      left: 329.2163085938*fem,
-                      top: 7.0717773438*fem,
-                      child: Align(
-                        child: SizedBox(
-                          width: 14*fem,
-                          height: 9.74*fem,
-                          child: Image.asset(
-                            'assets/page-1/images/wifi-2xU.png',
-                            width: 14*fem,
-                            height: 9.74*fem,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      // signalaJx (95:192)
-                      left: 312*fem,
-                      top: 6.3291015625*fem,
-                      child: Align(
-                        child: SizedBox(
-                          width: 13*fem,
-                          height: 10.9*fem,
-                          child: Image.asset(
-                            'assets/page-1/images/signal-cWG.png',
-                            width: 13*fem,
-                            height: 10.9*fem,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      // ampDJ (95:193)
-                      left: 0*fem,
-                      top: 6.3291015625*fem,
-                      child: Align(
-                        child: SizedBox(
-                          width: 54*fem,
-                          height: 15*fem,
-                          child: Text(
-                            '12:00 AM',
-                            style: SafeGoogleFont (
-                              'Radio Canada',
-                              fontSize: 12*ffem,
-                              fontWeight: FontWeight.w600,
-                              height: 1.2*ffem/fem,
-                              letterSpacing: 0.12*fem,
-                              color: Color(0xff000000),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      // batteryp6p (95:194)
-                      left: 348.2163085938*fem,
-                      top: 9.0024414062*fem,
-                      child: Align(
-                        child: SizedBox(
-                          width: 19.79*fem,
-                          height: 8.3*fem,
-                          child: Image.asset(
-                            'assets/page-1/images/battery-1qv.png',
-                            width: 19.79*fem,
-                            height: 8.3*fem,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      // autogroupy6jnpm2 (P4KxM3dz8ALfCP7HKjy6jN)
-                      left: 68.1789550781*fem,
-                      top: 0*fem,
-                      child: Container(
-                        width: 231.44*fem,
-                        height: 836.54*fem,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              // applethingi5i (95:198)
-                              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 810.76*fem),
-                              width: double.infinity,
-                              height: 20.33*fem,
-                              decoration: BoxDecoration (
-                                color: Color(0xff1b1b1b),
-                                borderRadius: BorderRadius.only (
-                                  bottomRight: Radius.circular(10*fem),
-                                  bottomLeft: Radius.circular(10*fem),
-                                ),
-                              ),
-                            ),
-                            Container(
-                              // applebuttonNAG (95:199)
-                              margin: EdgeInsets.fromLTRB(53.39*fem, 0*fem, 54.36*fem, 0*fem),
-                              width: double.infinity,
-                              height: 5.45*fem,
-                              decoration: BoxDecoration (
-                                borderRadius: BorderRadius.circular(5*fem),
-                                color: Color(0xff000000),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
                 ),
               ),
             ),

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:kepu/Screens/Home/HomeScreen.dart';
 import 'package:kepu/Screens/LoginScreen.dart';
 import 'package:kepu/Screens/MainScreen.dart';
 import 'package:kepu/Screens/MovieScreen.dart';
 import 'package:kepu/Screens/NavScreen.dart';
 import 'package:kepu/Screens/Profile/ProfileScreen.dart';
+import 'package:kepu/Screens/Profile/ProfileEditScreen.dart';
 import 'package:kepu/Screens/SearchScreen.dart';
 import 'package:kepu/Screens/TvShowScreen.dart';
 import 'package:kepu/Screens/ToDoListScreen.dart';
@@ -14,6 +16,7 @@ import 'package:kepu/Screens/Pouch/ChartPouch.dart';
 import 'package:get/get.dart';
 import 'package:kepu/view/home/home.dart';
 import 'package:kepu/view/sign%20in/sign_in.dart';
+import 'package:kepu/Screens/Spin/CinemaSpin.dart';
 
 
 GoRouter router = GoRouter(initialLocation: '/main', routes: [
@@ -43,12 +46,9 @@ GoRouter router = GoRouter(initialLocation: '/main', routes: [
     pageBuilder: defaultPageBuilder<ProfileScreen>(const ProfileScreen()),
   ),
   GoRoute(
-    //path: '/todo',
-   // builder: (context, state) => const ToDoListScreen(),
-   // pageBuilder: defaultPageBuilder<ToDoListScreen>(ToDoListScreen()), //for ToDolist, not same as HomeScreen
     path: '/todo',
-     builder: (context, state) => HomePage(),
-     pageBuilder: defaultPageBuilder<HomePage>(HomePage()), //for ToDolist, not same as HomeScreen
+    builder: (context, state) => const ToDoListScreen(),
+    pageBuilder: defaultPageBuilder<ToDoListScreen>(const ToDoListScreen()),
   ),
   GoRoute(
     path: '/movie/:id',

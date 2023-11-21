@@ -44,6 +44,7 @@ class CinemaPouch extends StatelessWidget {
                       height: 1.2*ffem/fem,
                       letterSpacing: 0.2*fem,
                       color: Color(0xff125d9f),
+                      decoration: TextDecoration.none,
                     ),
                   ),
                 ),
@@ -68,27 +69,39 @@ class CinemaPouch extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
-                            // autogrouph2apEcU (P4KbhyMwj6RhvuYFTjh2ap)
                             margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3.48*fem, 0*fem),
-                            padding: EdgeInsets.fromLTRB(34.83*fem, 8.13*fem, 34.83*fem, 8.13*fem),
-                            height: double.infinity,
-                            decoration: BoxDecoration (
-                              border: Border.all(color: Color(0xffb86b8e)),
-                              color: Color(0xfffffafd),
-                              borderRadius: BorderRadius.only (
-                                topLeft: Radius.circular(5*fem),
-                                topRight: Radius.circular(5*fem),
+                            child:OutlinedButton(
+                              onPressed: () {
+                                HapticFeedback.mediumImpact();
+                                GoRouter.of(context).go('/pouch');
+                              },
+                              style: OutlinedButton.styleFrom(
+                                backgroundColor: Color(0xfffffafd),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(5*fem),
+                                      topRight: Radius.circular(5*fem),
+                                    )
+                                ),
+                                side: BorderSide(color: Color(0xffb86b8e)),
+                                padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
                               ),
-                            ),
-                            child: Center(
-                              // vectorfBz (66:1580)
-                              child: SizedBox(
-                                width: 23.22*fem,
-                                height: 18.58*fem,
-                                child: Image.asset(
-                                  'assets/page-1/images/movie-8ev.png',
-                                  width: 23.22*fem,
-                                  height: 18.58*fem,
+                              child:Container(
+                                // autogroupjnk6LJ8 (P4KbnJa4UxRCnNhDU2jnK6)
+                                margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3.48*fem, 0*fem),
+                                padding: EdgeInsets.fromLTRB(33.73*fem, 8.99*fem, 33.7*fem, 7.27*fem),
+                                height: double.infinity,
+                                child: Center(
+                                  // stadiacontrollerfill0wght400gr (66:1581)
+                                  child: SizedBox(
+                                    width: 25.46*fem,
+                                    height: 18.58*fem,
+                                    child: Image.asset(
+                                      'assets/page-1/images/movie-8ev.png',
+                                      width: 25.46*fem,
+                                      height: 18.58*fem,
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
@@ -223,6 +236,7 @@ class CinemaPouch extends StatelessWidget {
                                         height: 1.2*ffem/fem,
                                         letterSpacing: 0.4*fem,
                                         color: Color(0xff000000),
+                                        decoration: TextDecoration.none,
                                       ),
                                     ),
                                   ),
@@ -322,6 +336,7 @@ class CinemaPouch extends StatelessWidget {
                                             height: 1.2142857143*ffem/fem,
                                             letterSpacing: 0.14*fem,
                                             color: Color(0xff000000),
+                                            decoration: TextDecoration.none,
                                           ),
                                         ),
                                       ),
@@ -338,6 +353,7 @@ class CinemaPouch extends StatelessWidget {
                                             height: 1.4285714286*ffem/fem,
                                             letterSpacing: 0.14*fem,
                                             color: Color(0xff000000),
+                                            decoration: TextDecoration.none,
                                           ),
                                         ),
                                       ),
@@ -352,6 +368,7 @@ class CinemaPouch extends StatelessWidget {
                                           height: 1.4285714286*ffem/fem,
                                           letterSpacing: 0.14*fem,
                                           color: Color(0xff000000),
+                                          decoration: TextDecoration.none,
                                         ),
                                       ),
                                     ],
@@ -424,6 +441,7 @@ class CinemaPouch extends StatelessWidget {
                                           height: 1.4285714286*ffem/fem,
                                           letterSpacing: 0.14*fem,
                                           color: Color(0xff000000),
+                                          decoration: TextDecoration.none,
                                         ),
                                       ),
                                       SizedBox(
@@ -440,6 +458,7 @@ class CinemaPouch extends StatelessWidget {
                                           height: 1.4285714286*ffem/fem,
                                           letterSpacing: 0.14*fem,
                                           color: Color(0xff000000),
+                                          decoration: TextDecoration.none,
                                         ),
                                       ),
                                       SizedBox(
@@ -460,6 +479,7 @@ class CinemaPouch extends StatelessWidget {
                                             height: 1.4285714286*ffem/fem,
                                             letterSpacing: 0.14*fem,
                                             color: Color(0xff000000),
+                                            decoration: TextDecoration.none,
                                           ),
                                         ),
                                       ),
@@ -538,6 +558,7 @@ class CinemaPouch extends StatelessWidget {
                                             height: 1.2142857143*ffem/fem,
                                             letterSpacing: 0.14*fem,
                                             color: Color(0xff000000),
+                                            decoration: TextDecoration.none,
                                           ),
                                         ),
                                       ),
@@ -554,6 +575,7 @@ class CinemaPouch extends StatelessWidget {
                                             height: 1.4285714286*ffem/fem,
                                             letterSpacing: 0.14*fem,
                                             color: Color(0xff000000),
+                                            decoration: TextDecoration.none,
                                           ),
                                         ),
                                       ),
@@ -568,6 +590,7 @@ class CinemaPouch extends StatelessWidget {
                                           height: 1.4285714286*ffem/fem,
                                           letterSpacing: 0.14*fem,
                                           color: Color(0xff000000),
+                                          decoration: TextDecoration.none,
                                         ),
                                       ),
                                     ],
@@ -627,16 +650,16 @@ class CinemaPouch extends StatelessWidget {
                                 ),
                                 Container(
                                   // autogroup3jl8Wnp (P4KdozgxTMin9jNius3jL8)
-                                  margin: EdgeInsets.fromLTRB(34.59*fem, 0*fem, 26.91*fem, 0*fem),
+                                  margin: EdgeInsets.fromLTRB(15*fem, 0*fem, 0*fem, 0*fem),
                                   width: double.infinity,
                                   child: Row(
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     children: [
                                       Container(
                                         // movieqq6 (66:1644)
-                                        margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 82.45*fem, 0*fem),
+                                        margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
                                         child: Text(
-                                          'movie',
+                                          'Scary Movie',
                                           textAlign: TextAlign.center,
                                           style: SafeGoogleFont (
                                             'Radio Canada',
@@ -645,14 +668,15 @@ class CinemaPouch extends StatelessWidget {
                                             height: 1.4285714286*ffem/fem,
                                             letterSpacing: 0.14*fem,
                                             color: Color(0xff000000),
+                                            decoration: TextDecoration.none,
                                           ),
                                         ),
                                       ),
                                       Container(
                                         // movieZWC (66:1645)
-                                        margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 82.45*fem, 0*fem),
+                                        margin: EdgeInsets.fromLTRB(60*fem, 0*fem, 30*fem, 0*fem),
                                         child: Text(
-                                          'movie',
+                                          'Sing 2',
                                           textAlign: TextAlign.center,
                                           style: SafeGoogleFont (
                                             'Radio Canada',
@@ -661,20 +685,25 @@ class CinemaPouch extends StatelessWidget {
                                             height: 1.4285714286*ffem/fem,
                                             letterSpacing: 0.14*fem,
                                             color: Color(0xff000000),
+                                            decoration: TextDecoration.none,
                                           ),
                                         ),
                                       ),
-                                      Text(
-                                        // moviegap (66:1646)
-                                        'movie',
-                                        textAlign: TextAlign.center,
-                                        style: SafeGoogleFont (
-                                          'Radio Canada',
-                                          fontSize: 14*ffem,
-                                          fontWeight: FontWeight.w400,
-                                          height: 1.4285714286*ffem/fem,
-                                          letterSpacing: 0.14*fem,
-                                          color: Color(0xff000000),
+                                      Container(
+                                        // movieqq6 (66:1644)
+                                        margin: EdgeInsets.fromLTRB(40*fem, 0*fem, 0*fem, 0*fem),
+                                        child: Text(
+                                          'Turning Red',
+                                          textAlign: TextAlign.center,
+                                          style: SafeGoogleFont (
+                                            'Radio Canada',
+                                            fontSize: 14*ffem,
+                                            fontWeight: FontWeight.w400,
+                                            height: 1.4285714286*ffem/fem,
+                                            letterSpacing: 0.14*fem,
+                                            color: Color(0xff000000),
+                                            decoration: TextDecoration.none,
+                                          ),
                                         ),
                                       ),
                                     ],

@@ -45,7 +45,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ),
           IconButton(
             icon: Icon(
-              // todoList (home_screen)
+              //same function as home button
               FontAwesome5.th_list,
               color: widget.currentIndex == 1 ? Colors.blue : inactive_accent,
             ),
@@ -59,6 +59,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ),
           IconButton(
             icon: Icon(
+              //UniconsLine.search,
               FontAwesome5.plus_circle,
               color: widget.currentIndex == 2 ? Colors.blue : inactive_accent,
             ),
@@ -71,6 +72,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             },
           ),IconButton(
             icon: Icon(
+              // UniconsLine.heart,
               FontAwesome5.fan,
               color: widget.currentIndex == 3 ? Colors.blue : inactive_accent,
             ),
@@ -84,6 +86,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ),
           IconButton(
             icon: Icon(
+             // UniconsLine.heart,
               Typicons.user_outline,
               color: widget.currentIndex == 4 ? Colors.blue : inactive_accent,
             ),
