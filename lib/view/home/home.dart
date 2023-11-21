@@ -10,7 +10,6 @@ class HomePage extends StatelessWidget {
   HomePage({super.key});
   final controller = Get.put(HomeController());
   @override
-
   Widget build(BuildContext context) {
     return Material(
       child: Stack(
@@ -38,10 +37,6 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
-
-
-
-
 }
 
 

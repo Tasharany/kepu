@@ -94,7 +94,6 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
-    - assets/icons/
     - assets/images/
     - assets/page-1/images/wifi.png
     - assets/page-1/images/donefill0wght400grad0opsz24-1.png

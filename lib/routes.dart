@@ -47,8 +47,8 @@ GoRouter router = GoRouter(initialLocation: '/main', routes: [
   ),
   GoRoute(
     path: '/todo',
-    builder: (context, state) => const ToDoListScreen(),
-    pageBuilder: defaultPageBuilder<ToDoListScreen>(const ToDoListScreen()),
+    builder: (context, state) => HomePage(),
+    pageBuilder: defaultPageBuilder<HomePage>(HomePage()),
   ),
   GoRoute(
     path: '/movie/:id',
