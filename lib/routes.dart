@@ -20,6 +20,7 @@ import 'package:kepu/Screens/Spin/CinemaSpin.dart';
 import 'package:kepu/Screens/Home/CinemaHome.dart';
 import 'package:kepu/Screens/Home/GameHome.dart';
 import 'package:kepu/Screens/Home/MusicHome.dart';
+import 'package:kepu/view/sign%20up/sign_up.dart';
 import 'package:kepu/view/splash/splash_screen.dart';
 
 
@@ -51,8 +52,8 @@ GoRouter router = GoRouter(initialLocation: '/', routes: [
   ),
   GoRoute(
     path: '/todo',
-    builder: (context, state) => HomePage(),
-    pageBuilder: defaultPageBuilder<HomePage>(HomePage()), // routed to the To-do list screen
+    builder: (context, state) => SignUp(),
+    pageBuilder: defaultPageBuilder<SignUp>(SignUp()), // routed to the To-do list screen
   ),
   GoRoute(
     path: '/movie/:id',
