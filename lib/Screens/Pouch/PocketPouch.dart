@@ -4,6 +4,8 @@ import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kepu/utils.dart';
 
+import '../../Widgets/BottomNavBar.dart';
+
 class PocketPouch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -659,17 +661,15 @@ class PocketPouch extends StatelessWidget {
               ),
             ),
             Positioned(
-              // bottomhubHYp (95:168)
+              // bottomhub2f4 (60:305)
               left: 0*fem,
-              top: 84*fem,
+              top: 747*fem,
               child: Align(
                 child: SizedBox(
-                  width: 675*fem,
-                  height: 760*fem,
-                  child: Image.asset(
-                    'assets/page-1/images/bottom-hub-wS4.png',
-                    width: 675*fem,
-                    height: 760*fem,
+                  width: 390*fem,
+                  height: 97*fem,
+                  child: BottomNavBar(
+                    currentIndex: 2,
                   ),
                 ),
               ),

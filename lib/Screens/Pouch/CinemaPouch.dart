@@ -68,27 +68,39 @@ class CinemaPouch extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
-                            // autogrouph2apEcU (P4KbhyMwj6RhvuYFTjh2ap)
                             margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3.48*fem, 0*fem),
-                            padding: EdgeInsets.fromLTRB(34.83*fem, 8.13*fem, 34.83*fem, 8.13*fem),
-                            height: double.infinity,
-                            decoration: BoxDecoration (
-                              border: Border.all(color: Color(0xffb86b8e)),
-                              color: Color(0xfffffafd),
-                              borderRadius: BorderRadius.only (
-                                topLeft: Radius.circular(5*fem),
-                                topRight: Radius.circular(5*fem),
+                            child:OutlinedButton(
+                              onPressed: () {
+                                HapticFeedback.mediumImpact();
+                                GoRouter.of(context).go('/pouch');
+                              },
+                              style: OutlinedButton.styleFrom(
+                                backgroundColor: Color(0xfffffafd),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(5*fem),
+                                      topRight: Radius.circular(5*fem),
+                                    )
+                                ),
+                                side: BorderSide(color: Color(0xffb86b8e)),
+                                padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
                               ),
-                            ),
-                            child: Center(
-                              // vectorfBz (66:1580)
-                              child: SizedBox(
-                                width: 23.22*fem,
-                                height: 18.58*fem,
-                                child: Image.asset(
-                                  'assets/page-1/images/movie-8ev.png',
-                                  width: 23.22*fem,
-                                  height: 18.58*fem,
+                              child:Container(
+                                // autogroupjnk6LJ8 (P4KbnJa4UxRCnNhDU2jnK6)
+                                margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3.48*fem, 0*fem),
+                                padding: EdgeInsets.fromLTRB(33.73*fem, 8.99*fem, 33.7*fem, 7.27*fem),
+                                height: double.infinity,
+                                child: Center(
+                                  // stadiacontrollerfill0wght400gr (66:1581)
+                                  child: SizedBox(
+                                    width: 25.46*fem,
+                                    height: 18.58*fem,
+                                    child: Image.asset(
+                                      'assets/page-1/images/movie-8ev.png',
+                                      width: 25.46*fem,
+                                      height: 18.58*fem,
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
