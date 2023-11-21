@@ -101,6 +101,11 @@ GoRouter router = GoRouter(initialLocation: '/main', routes: [
     builder: (context, state) => ProfileEditScreen(),
     pageBuilder: defaultPageBuilder<ToDoListScreen>(ProfileEditScreen()),
   ),
+  GoRoute(
+    path: '/home',
+    builder: (context, state) => const HomeScreen(),
+    pageBuilder: defaultPageBuilder<ToDoListScreen>(const HomeScreen()),
+  ),
 
 ]);
 

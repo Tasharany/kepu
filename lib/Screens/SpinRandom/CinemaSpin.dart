@@ -3,7 +3,58 @@ import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kepu/utils.dart';
-import '../../Widgets/BottomNavBar.dart';
+import '../../../../../Widgets/BottomNavBar.dart';
+
+class CinemaSpin extends StatefulWidget {
+  @override
+  _CinemaSpinState createState() => _CinemaSpinState();
+}
+
+class _CinemaSpinState extends State<CinemaSpin>
+    with SingleTickerProviderStateMixin {
+  AnimationController _controller;
+  double _spinValue = 0.0;
+  String _selectedMovie = '';
+  List<String> _movies = [
+    "Movie 1",
+    "Movie 2",
+    "Movie 3",
+    // Add more movie titles here
+  ];
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: Duration(seconds: 2), // Adjust duration as needed
+    );
+  }
+
+  void _spinContainer() {
+    if (_controller.isAnimating) return;
+
+    final Random random = Random();
+    double randomSpin = random.nextDouble() * 5 + 5; // Random spinning rounds
+
+    setState(() {
+      _spinValue = randomSpin * pi * 2;
+    });
+
+    _controller.forward(from: 0.0).whenComplete(() {
+      setState(() {
+        int randomIndex = random.nextInt(_movies.length);
+        _selectedMovie = _movies[randomIndex];
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
 
 class CinemaSpin extends StatelessWidget {
   @override
@@ -231,7 +282,7 @@ class CinemaSpin extends StatelessWidget {
             Positioned(
               // bottomhub2f4 (60:305)
               left: 0*fem,
-              top: 765*fem,
+              top: 747*fem,
               child: Align(
                 child: SizedBox(
                   width: 390*fem,

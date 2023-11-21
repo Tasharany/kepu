@@ -722,7 +722,7 @@ class CinemaPouch extends StatelessWidget {
             Positioned(
               // bottomhub2f4 (60:305)
               left: 0*fem,
-              top: 747*fem,
+              top: 765*fem,
               child: Align(
                 child: SizedBox(
                   width: 390*fem,
@@ -730,28 +730,6 @@ class CinemaPouch extends StatelessWidget {
                   child: BottomNavBar(
                     currentIndex: 2,
                   ),
-                ),
-              ),
-            ),
-            Positioned(
-              // margins7w2 (66:1610)
-              left: 11.0991210938*fem,
-              top: 0.00390625*fem,
-              child: Container(
-                width: 368.01*fem,
-                height: 836.54*fem,
-                child: Stack(
-                  children: [
-                    Positioned(
-                      // autogroupnoekRTr (P4KfK32Fztd9BACAdTnoek)
-                      left: 68.1789550781*fem,
-                      top: 0*fem,
-                      child: Container(
-                        width: 231.44*fem,
-                        height: 836.54*fem,
-                      ),
-                    ),
-                  ],
                 ),
               ),
             ),

@@ -3,9 +3,60 @@ import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kepu/utils.dart';
-import '../../Widgets/BottomNavBar.dart';
+import '../../../../../Widgets/BottomNavBar.dart';
 
-class CinemaSpin extends StatelessWidget {
+class GameSpin extends StatefulWidget {
+  @override
+  _GameSpinState createState() => _GameSpinState();
+}
+
+class _GameSpinState extends State<GameSpin>
+    with SingleTickerProviderStateMixin {
+  AnimationController _controller;
+  double _spinValue = 0.0;
+  String _selectedGame = '';
+  List<String> _games = [
+    "Game 1",
+    "Game 2",
+    "Game 3",
+    // Add more movie titles here
+  ];
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: Duration(seconds: 2), // Adjust duration as needed
+    );
+  }
+
+  void _spinContainer() {
+    if (_controller.isAnimating) return;
+
+    final Random random = Random();
+    double randomSpin = random.nextDouble() * 5 + 5; // Random spinning rounds
+
+    setState(() {
+      _spinValue = randomSpin * pi * 2;
+    });
+
+    _controller.forward(from: 0.0).whenComplete(() {
+      setState(() {
+        int randomIndex = random.nextInt(_games.length);
+        _selectedGame = _games[randomIndex];
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+
+class GameSpin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double baseWidth = 390;
@@ -14,7 +65,7 @@ class CinemaSpin extends StatelessWidget {
     return Container(
       width: double.infinity,
       child: Container(
-        // randomQqr (66:2349)
+        // randomtsN (66:2568)
         width: double.infinity,
         height: 844*fem,
         decoration: BoxDecoration (
@@ -23,7 +74,7 @@ class CinemaSpin extends StatelessWidget {
         child: Stack(
           children: [
             Positioned(
-              // randomplayXvU (66:2378)
+              // randomplay2Tn (66:2569)
               left: 134.0400390625*fem,
               top: 49.3833007812*fem,
               child: Align(
@@ -39,7 +90,7 @@ class CinemaSpin extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                       height: 1.2*ffem/fem,
                       letterSpacing: 0.2*fem,
-                      color: Color(0xffb86b8e),
+                      color: Color(0xff6ca68c),
                       decoration: TextDecoration.none,
                     ),
                   ),
@@ -47,23 +98,21 @@ class CinemaSpin extends StatelessWidget {
               ),
             ),
             Positioned(
-              // group51Kr (66:2419)
-              left: 45*fem,
-              top: 83.3833007812*fem,
+              // bottomhub2f4 (60:305)
+              left: 0*fem,
+              top: 747*fem,
               child: Align(
                 child: SizedBox(
-                  width: 300.04*fem,
-                  height: 35*fem,
-                  child: Image.asset(
-                    'assets/page-1/images/group-5-WbW.png',
-                    width: 300.04*fem,
-                    height: 35*fem,
+                  width: 390*fem,
+                  height: 97*fem,
+                  child: BottomNavBar(
+                    currentIndex: 2,
                   ),
                 ),
               ),
             ),
             Positioned(
-              // loginbuttonug8 (66:2428)
+              // loginbuttonQjE (66:2579)
               left: 92.5190429688*fem,
               top: 542.3525390625*fem,
               child: Container(
@@ -92,7 +141,7 @@ class CinemaSpin extends StatelessWidget {
               ),
             ),
             Positioned(
-              // marginsMHE (66:2388)
+              // marginsetU (66:2582)
               left: 11.0991210938*fem,
               top: 0.00390625*fem,
               child: Container(
@@ -102,13 +151,13 @@ class CinemaSpin extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
-                      // autogrouphyg85U8 (P4LWfHThbwyWCKopbPhyG8)
+                      // autogroupa4jnB7i (P4Lczbuf3d5xkzVdnwA4jN)
                       width: double.infinity,
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
-                            // amcix (66:2392)
+                            // amidS (66:2586)
                             margin: EdgeInsets.fromLTRB(0*fem, 6.33*fem, 14.18*fem, 0*fem),
                             child: Text(
                               '12:00 AM',
@@ -124,7 +173,7 @@ class CinemaSpin extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            // applethingj2t (66:2397)
+                            // applethingDq6 (66:2591)
                             margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 12.38*fem, 1*fem),
                             width: 231.44*fem,
                             height: 20.33*fem,
@@ -137,34 +186,34 @@ class CinemaSpin extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            // signald8G (66:2391)
+                            // signaljoS (66:2585)
                             margin: EdgeInsets.fromLTRB(0*fem, 2.23*fem, 4.22*fem, 0*fem),
                             width: 13*fem,
                             height: 10.9*fem,
                             child: Image.asset(
-                              'assets/page-1/images/signal-qeU.png',
+                              'assets/page-1/images/signal-V9v.png',
                               width: 13*fem,
                               height: 10.9*fem,
                             ),
                           ),
                           Container(
-                            // wifiwPr (66:2389)
+                            // wifiefW (66:2583)
                             margin: EdgeInsets.fromLTRB(0*fem, 2.55*fem, 5*fem, 0*fem),
                             width: 14*fem,
                             height: 9.74*fem,
                             child: Image.asset(
-                              'assets/page-1/images/wifi-28c.png',
+                              'assets/page-1/images/wifi-8vg.png',
                               width: 14*fem,
                               height: 9.74*fem,
                             ),
                           ),
                           Container(
-                            // battery4UU (66:2393)
+                            // batteryNbW (66:2587)
                             margin: EdgeInsets.fromLTRB(0*fem, 4.98*fem, 0*fem, 0*fem),
                             width: 19.79*fem,
                             height: 8.3*fem,
                             child: Image.asset(
-                              'assets/page-1/images/battery-dMN.png',
+                              'assets/page-1/images/battery-Q7W.png',
                               width: 19.79*fem,
                               height: 8.3*fem,
                             ),
@@ -173,14 +222,14 @@ class CinemaSpin extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      // autogroupfp1rBJC (P4LWvH2igYiNzdxYmLFp1r)
+                      // autogroupeiovHCg (P4LdE6XB1xkYssdVM5eiov)
                       padding: EdgeInsets.fromLTRB(36.45*fem, 197.02*fem, 37.56*fem, 0*fem),
                       width: double.infinity,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
-                            // autogroupjs6chnL (P4LWqHB3f1oRPsEyNgjs6c)
+                            // autogroupoylyogp (P4Ld9MA5qoge4LkPj4oyLY)
                             margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 318.74*fem),
                             padding: EdgeInsets.fromLTRB(1.1*fem, 0.99*fem, 1.16*fem, 0.99*fem),
                             width: double.infinity,
@@ -199,12 +248,12 @@ class CinemaSpin extends StatelessWidget {
                               ],
                             ),
                             child: Center(
-                              // ellipse4ZZe (66:2433)
+                              // ellipse45eL (66:2614)
                               child: SizedBox(
                                 width: 291.74*fem,
                                 height: 290.83*fem,
                                 child: Image.asset(
-                                  'assets/page-1/images/ellipse-4.png',
+                                  'assets/page-1/images/ellipse-4-Csv.png',
                                   width: 291.74*fem,
                                   height: 290.83*fem,
                                 ),
@@ -212,7 +261,7 @@ class CinemaSpin extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            // applebuttonguA (66:2398)
+                            // applebutton1Xz (66:2592)
                             margin: EdgeInsets.fromLTRB(85.12*fem, 0*fem, 85.19*fem, 0*fem),
                             width: double.infinity,
                             height: 5.45*fem,
@@ -229,21 +278,23 @@ class CinemaSpin extends StatelessWidget {
               ),
             ),
             Positioned(
-              // bottomhub2f4 (60:305)
+              // bottomhubjyn (66:2593)
               left: 0*fem,
-              top: 765*fem,
+              top: 747*fem,
               child: Align(
                 child: SizedBox(
                   width: 390*fem,
                   height: 97*fem,
-                  child: BottomNavBar(
-                    currentIndex: 2,
+                  child: Image.asset(
+                    'assets/page-1/images/bottom-hub-q6c.png',
+                    width: 390*fem,
+                    height: 97*fem,
                   ),
                 ),
               ),
             ),
             Positioned(
-              // ellipse5iqr (66:2436)
+              // ellipse5eqr (66:2615)
               left: 0*fem,
               top: 158.7841796875*fem,
               child: Align(
@@ -251,7 +302,7 @@ class CinemaSpin extends StatelessWidget {
                   width: 411.94*fem,
                   height: 411.94*fem,
                   child: Image.asset(
-                    'assets/page-1/images/ellipse-5.png',
+                    'assets/page-1/images/ellipse-5-wRn.png',
                     width: 411.94*fem,
                     height: 411.94*fem,
                   ),
@@ -259,7 +310,7 @@ class CinemaSpin extends StatelessWidget {
               ),
             ),
             Positioned(
-              // ellipse6F56 (66:2437)
+              // ellipse6NWx (66:2616)
               left: 4.0986328125*fem,
               top: 174.5869140625*fem,
               child: Align(
@@ -267,7 +318,7 @@ class CinemaSpin extends StatelessWidget {
                   width: 380.83*fem,
                   height: 380.33*fem,
                   child: Image.asset(
-                    'assets/page-1/images/ellipse-6.png',
+                    'assets/page-1/images/ellipse-6-nyr.png',
                     width: 380.83*fem,
                     height: 380.33*fem,
                   ),
@@ -275,7 +326,7 @@ class CinemaSpin extends StatelessWidget {
               ),
             ),
             Positioned(
-              // ellipse7k1r (66:2438)
+              // ellipse7V5n (66:2617)
               left: 4.0986328125*fem,
               top: 174.5869140625*fem,
               child: Align(
@@ -283,7 +334,7 @@ class CinemaSpin extends StatelessWidget {
                   width: 380.83*fem,
                   height: 380.33*fem,
                   child: Image.asset(
-                    'assets/page-1/images/ellipse-7.png',
+                    'assets/page-1/images/ellipse-7-6LU.png',
                     width: 380.83*fem,
                     height: 380.33*fem,
                   ),
@@ -291,7 +342,7 @@ class CinemaSpin extends StatelessWidget {
               ),
             ),
             Positioned(
-              // addSQU (66:2441)
+              // addCkt (66:2618)
               left: 47.546875*fem,
               top: 218.3525390625*fem,
               child: Align(
@@ -316,7 +367,7 @@ class CinemaSpin extends StatelessWidget {
               ),
             ),
             Positioned(
-              // addhrC (66:2439)
+              // add77A (66:2619)
               left: 158.8764648438*fem,
               top: 329.7155761719*fem,
               child: Align(
@@ -342,7 +393,7 @@ class CinemaSpin extends StatelessWidget {
               ),
             ),
             Positioned(
-              // ellipse3NBe (66:2431)
+              // ellipse3C8c (66:2620)
               left: 164.2495117188*fem,
               top: 190.5295410156*fem,
               child: Align(
@@ -350,7 +401,7 @@ class CinemaSpin extends StatelessWidget {
                   width: 60.63*fem,
                   height: 73.44*fem,
                   child: Image.asset(
-                    'assets/page-1/images/ellipse-3.png',
+                    'assets/page-1/images/ellipse-3-BDn.png',
                     width: 60.63*fem,
                     height: 73.44*fem,
                   ),
@@ -358,7 +409,7 @@ class CinemaSpin extends StatelessWidget {
               ),
             ),
             Positioned(
-              // ellipse8t9z (66:2440)
+              // ellipse8KDE (66:2621)
               left: 176.2783203125*fem,
               top: 204.5710449219*fem,
               child: Align(
@@ -366,7 +417,7 @@ class CinemaSpin extends StatelessWidget {
                   width: 37.44*fem,
                   height: 45.35*fem,
                   child: Image.asset(
-                    'assets/page-1/images/ellipse-8.png',
+                    'assets/page-1/images/ellipse-8-ieQ.png',
                     width: 37.44*fem,
                     height: 45.35*fem,
                   ),
