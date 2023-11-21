@@ -91,6 +91,16 @@ GoRouter router = GoRouter(initialLocation: '/main', routes: [
     builder: (context, state) => MusicHome(),
     pageBuilder: defaultPageBuilder<ToDoListScreen>(MusicHome()),
   ),
+  GoRoute(
+    path: '/spin',
+    builder: (context, state) => CinemaSpin(),
+    pageBuilder: defaultPageBuilder<ToDoListScreen>(CinemaSpin()),
+  ),
+  GoRoute(
+    path: '/editprofile',
+    builder: (context, state) => ProfileEditScreen(),
+    pageBuilder: defaultPageBuilder<ToDoListScreen>(ProfileEditScreen()),
+  ),
 
 ]);
 
