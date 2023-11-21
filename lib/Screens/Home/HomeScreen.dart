@@ -372,6 +372,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
+<<<<<<< Updated upstream
             Container(
               margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3.48*fem, 0*fem),
               child:OutlinedButton(
@@ -389,6 +390,26 @@ class HomeScreen extends StatelessWidget {
                   ),
                   side: BorderSide(color: Color(0xff6ca68c)),
                   padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+=======
+
+            Positioned(
+              left: 45*fem,
+              top: 83.3833007812*fem,
+              child:
+              Container(
+                height: 34.83*fem,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(30),
+                  ),
+                  boxShadow: <BoxShadow>[
+                    BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 4.0,
+                        offset: Offset(0.0, 5)
+                    )
+                  ],
+>>>>>>> Stashed changes
                 ),
                 child:Container(
                   // autogroupjnk6LJ8 (P4KbnJa4UxRCnNhDU2jnK6)

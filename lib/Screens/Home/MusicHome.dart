@@ -313,6 +313,145 @@ class MusicHome extends StatelessWidget {
               ),
             ),
             Positioned(
+<<<<<<< Updated upstream
+=======
+              left: 45*fem,
+              top: 83.3833007812*fem,
+              child:
+              Container(
+                height: 34.83*fem,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(30),
+                  ),
+                  boxShadow: <BoxShadow>[
+                    BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 4.0,
+                        offset: Offset(0.0, 5)
+                    )
+                  ],
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                      child:OutlinedButton(
+                        onPressed: () {
+                          HapticFeedback.mediumImpact();
+                          GoRouter.of(context).go('/cinemahome');
+                        },
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(30),
+                                bottomLeft: Radius.circular(30),
+                              )
+                          ),
+                          side: BorderSide(color: Colors.black87, width: 1),
+                          padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                        ),
+                        child:Container(
+                          // autogroupjnk6LJ8 (P4KbnJa4UxRCnNhDU2jnK6)
+                          margin: EdgeInsets.fromLTRB(5*fem, 0*fem, 0*fem, 0*fem),
+                          padding: EdgeInsets.fromLTRB(33.73*fem, 8.99*fem, 33.7*fem, 7.27*fem),
+                          height: double.infinity,
+                          child: Center(
+                            // stadiacontrollerfill0wght400gr (66:1581)
+                            child: SizedBox(
+                              width: 25.46*fem,
+                              height: 18.58*fem,
+                              child: Image.asset(
+                                'assets/page-1/images/movie-8ev.png',
+                                width: 25.46*fem,
+                                height: 18.58*fem,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                      child:OutlinedButton(
+                        onPressed: () {
+                          HapticFeedback.mediumImpact();
+                          GoRouter.of(context).go('/gamehome');
+                        },
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+
+                          ),
+                          side: BorderSide(color: Colors.black87, width: 1),
+                          padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                        ),
+                        child:Container(
+                          // autogroupjnk6LJ8 (P4KbnJa4UxRCnNhDU2jnK6)
+                          margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                          padding: EdgeInsets.fromLTRB(33.73*fem, 8.99*fem, 33.7*fem, 7.27*fem),
+                          height: double.infinity,
+                          child: Center(
+                            // stadiacontrollerfill0wght400gr (66:1581)
+                            child: SizedBox(
+                              width: 25.46*fem,
+                              height: 18.58*fem,
+                              child: Image.asset(
+                                'assets/page-1/images/stadiacontrollerfill0wght400grad0opsz24-1-4rN.png',
+                                width: 25.46*fem,
+                                height: 18.58*fem,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                      child:OutlinedButton(
+                        onPressed: () {
+                          HapticFeedback.mediumImpact();
+                          GoRouter.of(context).go('/musichome');
+                        },
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: Color(0xffb0cef1),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                bottomRight: Radius.circular(30),
+                                topRight: Radius.circular(30),
+                              )
+                          ),
+                          side: BorderSide(color: Colors.black87, width: 1),
+                          padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                        ),
+                        child:Container(
+                          // autogroupjnk6LJ8 (P4KbnJa4UxRCnNhDU2jnK6)
+                          margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 5*fem, 0*fem),
+                          padding: EdgeInsets.fromLTRB(33.73*fem, 8.99*fem, 33.7*fem, 7.27*fem),
+                          height: double.infinity,
+                          child: Center(
+                            // stadiacontrollerfill0wght400gr (66:1581)
+                            child: SizedBox(
+                              width: 25.46*fem,
+                              height: 18.58*fem,
+                              child: Image.asset(
+                                'assets/page-1/images/headphonesfill0wght400grad0opsz24-1-9ni.png',
+                                width: 25.46*fem,
+                                height: 18.58*fem,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Positioned(
+>>>>>>> Stashed changes
               // bottomhub2f4 (60:305)
               left: 0*fem,
               top: 747*fem,
