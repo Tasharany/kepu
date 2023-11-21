@@ -17,6 +17,8 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
+  List<String> buttons = ["assets/BottomNav/cottage_FILL0_wght400_GRAD0_opsz24 2.png"];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -41,7 +43,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           IconButton(
-            icon: Image.asset("assets/BottomNav/cottage_FILL0_wght400_GRAD0_opsz24 2.png",
+            icon: Image.asset(
+              buttons[0],
               height: 41,
               width: 41,
             ),
@@ -49,14 +52,15 @@ class _BottomNavBarState extends State<BottomNavBar> {
               HapticFeedback.mediumImpact();
               setState(() {
                 widget.currentIndex = 0;
+                buttons[0] = "assets/BottomNav/Activecottage_FILL0_wght400_GRAD0_opsz24 2.png";
               });
               GoRouter.of(context).go('/main');
             },
           ),
           IconButton(
             icon: Image.asset("assets/BottomNav/todo_FILL0_wght400_GRAD0_opsz24 1.png",
-              height: 41,
-              width: 41,
+              height: 40,
+              width: 40,
               ),
             onPressed: () {
               HapticFeedback.mediumImpact();
