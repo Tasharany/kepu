@@ -54,8 +54,8 @@ GoRouter router = GoRouter(initialLocation: '/', routes: [
   ),
   GoRoute(
     path: '/todo',
-    builder: (context, state) => SignUp(),
-    pageBuilder: defaultPageBuilder<SignUp>(SignUp()), // routed to the To-do list screen
+    builder: (context, state) =>  HomePage(),
+    pageBuilder: defaultPageBuilder<HomePage>(HomePage()), // routed to the To-do list screen
   ),
   GoRoute(
     path: '/movie/:id',
