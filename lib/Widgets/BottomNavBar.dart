@@ -23,8 +23,19 @@ class _BottomNavBarState extends State<BottomNavBar> {
       height: 50,
       margin: const EdgeInsets.fromLTRB(8, 8, 8, 16),
       decoration: BoxDecoration(
-          color: accent_t.withOpacity(0.95),
-          borderRadius: BorderRadius.circular(12)),
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+          ),
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+                color: Colors.black54,
+                blurRadius: 15.0,
+                offset: Offset(0.0, -5)
+            )
+          ]
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -58,11 +69,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             },
           ),
           IconButton(
-            icon: Icon(
-              //UniconsLine.search,
-              FontAwesome5.plus_circle,
-              color: widget.currentIndex == 2 ? Colors.blue : inactive_accent,
-            ),
+            icon: Image.asset("assets/add.png"),
             onPressed: () {
               HapticFeedback.mediumImpact();
               setState(() {
@@ -81,7 +88,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
               setState(() {
                 widget.currentIndex = 3;
               });
-              GoRouter.of(context).go('/search');
+              GoRouter.of(context).go('/spin');
             },
           ),
           IconButton(
