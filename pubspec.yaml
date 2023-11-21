@@ -102,6 +102,12 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/pick.png
+    - assets/pick1.png
+    - assets/pick2.png
+    - assets/wheel.png
+    - assets/wheel1.png
+    - assets/wheel2.png
     - assets/BottomNav/Activecottage_FILL0_wght400_GRAD0_opsz24 2.png
     - assets/BottomNav/Activectodo_FILL0_wght400_GRAD0_opsz24 1.png
     - assets/BottomNav/Activeperson_FILL0_wght400_GRAD0_opsz24 1.png
