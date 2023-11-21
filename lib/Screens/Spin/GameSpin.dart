@@ -223,7 +223,7 @@ class GameSpin extends StatelessWidget {
                   width: 390*fem,
                   height: 97*fem,
                   child: BottomNavBar(
-                    currentIndex: 2,
+                    currentIndex: 3,
                   ),
                 ),
               ),

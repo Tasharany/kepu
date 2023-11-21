@@ -43,8 +43,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           IconButton(
-            icon: Image.asset(
-              buttons[0],
+            icon: Image(
+              image: widget.currentIndex == 0 ?
+              AssetImage('assets/BottomNav/Activecottage_FILL0_wght400_GRAD0_opsz24 2.png') :
+              AssetImage('assets/BottomNav/cottage_FILL0_wght400_GRAD0_opsz24 2.png'),
               height: 41,
               width: 41,
             ),
@@ -52,16 +54,18 @@ class _BottomNavBarState extends State<BottomNavBar> {
               HapticFeedback.mediumImpact();
               setState(() {
                 widget.currentIndex = 0;
-                buttons[0] = "assets/BottomNav/Activecottage_FILL0_wght400_GRAD0_opsz24 2.png";
               });
               GoRouter.of(context).go('/main');
             },
           ),
           IconButton(
-            icon: Image.asset("assets/BottomNav/todo_FILL0_wght400_GRAD0_opsz24 1.png",
-              height: 40,
-              width: 40,
-              ),
+            icon: Image(
+                image: widget.currentIndex == 1 ?
+                AssetImage('assets/BottomNav/Activectodo_FILL0_wght400_GRAD0_opsz24 1.png') :
+                AssetImage('assets/BottomNav/todo_FILL0_wght400_GRAD0_opsz24 1.png'),
+                height: 40,
+                width: 40,
+                ),
             onPressed: () {
               HapticFeedback.mediumImpact();
               setState(() {
@@ -71,7 +75,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
             },
           ),
           IconButton(
-            icon: Image.asset("assets/BottomNav/add.png",
+            icon: Image(
+              image: widget.currentIndex == 2 ?
+              AssetImage('assets/BottomNav/appActive.png') :
+              AssetImage('assets/BottomNav/add.png'),
               height: 60,
               width: 60,
             ),
@@ -83,7 +90,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
               GoRouter.of(context).go('/pouch');
             },
           ),IconButton(
-            icon: Image.asset("assets/BottomNav/toys_fan_FILL0_wght400_GRAD0_opsz24 1.png",
+            icon: Image(
+              image: widget.currentIndex == 3 ?
+              AssetImage('assets/BottomNav/Activetoys_fan_FILL0_wght400_GRAD0_opsz24 1.png') :
+              AssetImage('assets/BottomNav/toys_fan_FILL0_wght400_GRAD0_opsz24 1.png'),
               height: 41,
               width: 41,
             ),
@@ -96,7 +106,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
             },
           ),
           IconButton(
-            icon: Image.asset("assets/BottomNav/person_FILL0_wght400_GRAD0_opsz24 1.png",
+            icon: Image(
+              image: widget.currentIndex == 4 ?
+              AssetImage('assets/BottomNav/Activectodo_FILL0_wght400_GRAD0_opsz24 1.png') :
+              AssetImage('assets/BottomNav/person_FILL0_wght400_GRAD0_opsz24 1.png'),
               height: 41,
               width: 41,
             ),
