@@ -105,9 +105,6 @@ class ChartPouch extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                SizedBox(
-                                  width: 3.48*fem,
-                                ),
                                 Container(
                                   margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3.48*fem, 0*fem),
                                   child:OutlinedButton(
@@ -145,9 +142,6 @@ class ChartPouch extends StatelessWidget {
                                       ),
                                     ),
                                   ),
-                                ),
-                                SizedBox(
-                                  width: 3.48*fem,
                                 ),
                                 Container(
                                   margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3.48*fem, 0*fem),
@@ -615,8 +609,6 @@ class ChartPouch extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-
-
                                 Container(
                                   // autogroupzpqtEYk (P4LB8GBGRmAWCLABeozpQt
                                   width: size.width,

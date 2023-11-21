@@ -639,16 +639,16 @@ class CinemaPouch extends StatelessWidget {
                                 ),
                                 Container(
                                   // autogroup3jl8Wnp (P4KdozgxTMin9jNius3jL8)
-                                  margin: EdgeInsets.fromLTRB(34.59*fem, 0*fem, 26.91*fem, 0*fem),
+                                  margin: EdgeInsets.fromLTRB(15*fem, 0*fem, 0*fem, 0*fem),
                                   width: double.infinity,
                                   child: Row(
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     children: [
                                       Container(
                                         // movieqq6 (66:1644)
-                                        margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 82.45*fem, 0*fem),
+                                        margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
                                         child: Text(
-                                          'movie',
+                                          'Scary Movie',
                                           textAlign: TextAlign.center,
                                           style: SafeGoogleFont (
                                             'Radio Canada',
@@ -662,9 +662,9 @@ class CinemaPouch extends StatelessWidget {
                                       ),
                                       Container(
                                         // movieZWC (66:1645)
-                                        margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 82.45*fem, 0*fem),
+                                        margin: EdgeInsets.fromLTRB(60*fem, 0*fem, 30*fem, 0*fem),
                                         child: Text(
-                                          'movie',
+                                          'Sing 2',
                                           textAlign: TextAlign.center,
                                           style: SafeGoogleFont (
                                             'Radio Canada',
@@ -676,17 +676,20 @@ class CinemaPouch extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      Text(
-                                        // moviegap (66:1646)
-                                        'movie',
-                                        textAlign: TextAlign.center,
-                                        style: SafeGoogleFont (
-                                          'Radio Canada',
-                                          fontSize: 14*ffem,
-                                          fontWeight: FontWeight.w400,
-                                          height: 1.4285714286*ffem/fem,
-                                          letterSpacing: 0.14*fem,
-                                          color: Color(0xff000000),
+                                      Container(
+                                        // movieqq6 (66:1644)
+                                        margin: EdgeInsets.fromLTRB(40*fem, 0*fem, 0*fem, 0*fem),
+                                        child: Text(
+                                          'Turning Red',
+                                          textAlign: TextAlign.center,
+                                          style: SafeGoogleFont (
+                                            'Radio Canada',
+                                            fontSize: 14*ffem,
+                                            fontWeight: FontWeight.w400,
+                                            height: 1.4285714286*ffem/fem,
+                                            letterSpacing: 0.14*fem,
+                                            color: Color(0xff000000),
+                                          ),
                                         ),
                                       ),
                                     ],
