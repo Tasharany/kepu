@@ -172,7 +172,7 @@ class PocketPouch extends StatelessWidget {
                                           width: 25.46*fem,
                                           height: 18.58*fem,
                                           child: Image.asset(
-                                            'assets/page-1/images/headphonesfill0wght400grad0opsz24-1-9ni.png',
+                                            'assets/page-1/images/headphonesfill0wght400grad0opsz24-1.png',
                                             width: 25.46*fem,
                                             height: 18.58*fem,
                                           ),
