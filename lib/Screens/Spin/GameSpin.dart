@@ -229,7 +229,7 @@ class GameSpin extends StatelessWidget {
             Positioned(
               // bottomhubjyn (66:2593)
               left: 0*fem,
-              top: 765*fem,
+              top: 747*fem,
               child: Align(
                 child: SizedBox(
                   width: 390*fem,

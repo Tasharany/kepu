@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
-import 'package:flutter/services.dart';
-import 'package:go_router/go_router.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kepu/utils.dart';
@@ -48,7 +46,7 @@ class MusicHome extends StatelessWidget {
                             width: 24.75*fem,
                             height: 24*fem,
                             child: Image.asset(
-                              'assets/page-1/images/movie-2Ae.png',
+                              'assets/page-1/images/movie-uWC.png',
                               width: 24.75*fem,
                               height: 24*fem,
                             ),
@@ -65,7 +63,6 @@ class MusicHome extends StatelessWidget {
                                 height: 1.2*ffem/fem,
                                 letterSpacing: 0.18*fem,
                                 color: Color(0xff000000),
-                                decoration: TextDecoration.none,
                               ),
                             ),
                           ),
@@ -80,7 +77,7 @@ class MusicHome extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10*fem),
                         child: Image.asset(
-                          'assets/page-1/images/k-1-ZJS.png',
+                          'assets/page-1/images/k-1-kvQ.png',
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -107,7 +104,6 @@ class MusicHome extends StatelessWidget {
                                 height: 1.2*ffem/fem,
                                 letterSpacing: 0.15*fem,
                                 color: Color(0xff000000),
-                                decoration: TextDecoration.none,
                               ),
                             ),
                           ),
@@ -123,7 +119,7 @@ class MusicHome extends StatelessWidget {
                                   width: 18.34*fem,
                                   height: 17.46*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/favoritefill0wght400grad0opsz24-1-czv.png',
+                                    'assets/page-1/images/favoritefill0wght400grad0opsz24-1-xuS.png',
                                     width: 18.34*fem,
                                     height: 17.46*fem,
                                   ),
@@ -134,7 +130,7 @@ class MusicHome extends StatelessWidget {
                                   width: 21.04*fem,
                                   height: 20*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/schedulefill0wght400grad0opsz24-1-P1C.png',
+                                    'assets/page-1/images/schedulefill0wght400grad0opsz24-1-EbE.png',
                                     width: 21.04*fem,
                                     height: 20*fem,
                                   ),
@@ -144,7 +140,7 @@ class MusicHome extends StatelessWidget {
                                   width: 21.04*fem,
                                   height: 20*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/forumfill0wght400grad0opsz24-1-18n.png',
+                                    'assets/page-1/images/forumfill0wght400grad0opsz24-1-A1J.png',
                                     width: 21.04*fem,
                                     height: 20*fem,
                                   ),
@@ -183,7 +179,7 @@ class MusicHome extends StatelessWidget {
                             width: 24.75*fem,
                             height: 24*fem,
                             child: Image.asset(
-                              'assets/page-1/images/movie-2Ae.png',
+                              'assets/page-1/images/movie-Lh2.png',
                               width: 24.75*fem,
                               height: 24*fem,
                             ),
@@ -200,7 +196,6 @@ class MusicHome extends StatelessWidget {
                                 height: 1.2*ffem/fem,
                                 letterSpacing: 0.18*fem,
                                 color: Color(0xff000000),
-                                decoration: TextDecoration.none,
                               ),
                             ),
                           ),
@@ -215,7 +210,7 @@ class MusicHome extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10*fem),
                         child: Image.asset(
-                          'assets/page-1/images/k-1-WoL.png',
+                          'assets/page-1/images/k-1-yCg.png',
                         ),
                       ),
                     ),
@@ -242,7 +237,6 @@ class MusicHome extends StatelessWidget {
                                 height: 1.2*ffem/fem,
                                 letterSpacing: 0.15*fem,
                                 color: Color(0xff000000),
-                                decoration: TextDecoration.none,
                               ),
                             ),
                           ),
@@ -259,7 +253,7 @@ class MusicHome extends StatelessWidget {
                                   width: 18.34*fem,
                                   height: 17.46*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/favoritefill0wght400grad0opsz24-1-czv.png',
+                                    'assets/page-1/images/favoritefill0wght400grad0opsz24-1-1fS.png',
                                     width: 18.34*fem,
                                     height: 17.46*fem,
                                   ),
@@ -270,7 +264,7 @@ class MusicHome extends StatelessWidget {
                                   width: 21.04*fem,
                                   height: 20*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/schedulefill0wght400grad0opsz24-1-P1C.png',
+                                    'assets/page-1/images/schedulefill0wght400grad0opsz24-1-5UG.png',
                                     width: 21.04*fem,
                                     height: 20*fem,
                                   ),
@@ -280,7 +274,7 @@ class MusicHome extends StatelessWidget {
                                   width: 21.04*fem,
                                   height: 20*fem,
                                   child: Image.asset(
-                                    'assets/page-1/images/forumfill0wght400grad0opsz24-1-18n.png',
+                                    'assets/page-1/images/forumfill0wght400grad0opsz24-1-avx.png',
                                     width: 21.04*fem,
                                     height: 20*fem,
                                   ),
@@ -313,149 +307,15 @@ class MusicHome extends StatelessWidget {
                       height: 1.2*ffem/fem,
                       letterSpacing: 0.2*fem,
                       color: Color(0xff7bb0f1),
-                      decoration: TextDecoration.none,
                     ),
                   ),
                 ),
               ),
             ),
             Positioned(
-              left: 45*fem,
-              top: 83.3833007812*fem,
-              child:
-              Container(
-                height: 34.83*fem,
-                decoration: BoxDecoration(
-                  boxShadow: <BoxShadow>[
-                    BoxShadow(
-                        color: Colors.black26,
-                        blurRadius: 7.0,
-                        offset: Offset(0.0, 4)
-                    )
-                  ],
-                ),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
-                      child:OutlinedButton(
-                        onPressed: () {
-                          HapticFeedback.mediumImpact();
-                          GoRouter.of(context).go('/cinemahome');
-                        },
-                        style: OutlinedButton.styleFrom(
-                          backgroundColor: Colors.white,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(30),
-                                bottomLeft: Radius.circular(30),
-                              )
-                          ),
-                          side: BorderSide(color: Colors.black87, width: 1),
-                          padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
-                        ),
-                        child:Container(
-                          // autogroupjnk6LJ8 (P4KbnJa4UxRCnNhDU2jnK6)
-                          margin: EdgeInsets.fromLTRB(5*fem, 0*fem, 0*fem, 0*fem),
-                          padding: EdgeInsets.fromLTRB(33.73*fem, 8.99*fem, 33.7*fem, 7.27*fem),
-                          height: double.infinity,
-                          child: Center(
-                            // stadiacontrollerfill0wght400gr (66:1581)
-                            child: SizedBox(
-                              width: 25.46*fem,
-                              height: 18.58*fem,
-                              child: Image.asset(
-                                'assets/page-1/images/movie-8ev.png',
-                                width: 25.46*fem,
-                                height: 18.58*fem,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
-                      child:OutlinedButton(
-                        onPressed: () {
-                          HapticFeedback.mediumImpact();
-                          GoRouter.of(context).go('/gamehome');
-                        },
-                        style: OutlinedButton.styleFrom(
-                          backgroundColor: Colors.white,
-                          shape: RoundedRectangleBorder(
-
-                          ),
-                          side: BorderSide(color: Colors.black87, width: 1),
-                          padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
-                        ),
-                        child:Container(
-                          // autogroupjnk6LJ8 (P4KbnJa4UxRCnNhDU2jnK6)
-                          margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
-                          padding: EdgeInsets.fromLTRB(33.73*fem, 8.99*fem, 33.7*fem, 7.27*fem),
-                          height: double.infinity,
-                          child: Center(
-                            // stadiacontrollerfill0wght400gr (66:1581)
-                            child: SizedBox(
-                              width: 25.46*fem,
-                              height: 18.58*fem,
-                              child: Image.asset(
-                                'assets/page-1/images/stadiacontrollerfill0wght400grad0opsz24-1-4rN.png',
-                                width: 25.46*fem,
-                                height: 18.58*fem,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
-                      child:OutlinedButton(
-                        onPressed: () {
-                          HapticFeedback.mediumImpact();
-                          GoRouter.of(context).go('/musichome');
-                        },
-                        style: OutlinedButton.styleFrom(
-                          backgroundColor: Color(0xffb0cef1),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.only(
-                                bottomRight: Radius.circular(30),
-                                topRight: Radius.circular(30),
-                              )
-                          ),
-                          side: BorderSide(color: Colors.black87, width: 1),
-                          padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
-                        ),
-                        child:Container(
-                          // autogroupjnk6LJ8 (P4KbnJa4UxRCnNhDU2jnK6)
-                          margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 5*fem, 0*fem),
-                          padding: EdgeInsets.fromLTRB(33.73*fem, 8.99*fem, 33.7*fem, 7.27*fem),
-                          height: double.infinity,
-                          child: Center(
-                            // stadiacontrollerfill0wght400gr (66:1581)
-                            child: SizedBox(
-                              width: 25.46*fem,
-                              height: 18.58*fem,
-                              child: Image.asset(
-                                'assets/page-1/images/headphonesfill0wght400grad0opsz24-1-9ni.png',
-                                width: 25.46*fem,
-                                height: 18.58*fem,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Positioned(
               // bottomhub2f4 (60:305)
               left: 0*fem,
-              top: 765*fem,
+              top: 747*fem,
               child: Align(
                 child: SizedBox(
                   width: 390*fem,
