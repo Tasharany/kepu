@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kepu/view/home/components/back_decoration.dart';
 import 'package:kepu/view_model/responsive.dart';
-
 import 'components/signin_body.dart';
 class SignIn extends StatelessWidget {
   const SignIn({super.key});
@@ -11,13 +10,13 @@ class SignIn extends StatelessWidget {
       body: Stack(
         fit: StackFit.expand,
         children: [
-         BackColors(),
+         const BackColors(),
           SafeArea(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: !Responsive.isTablet(context)?  CrossAxisAlignment.start : CrossAxisAlignment.center,
               children: [
-                if(Responsive.isTablet(context)) SizedBox(width: 60,),
+                if(Responsive.isTablet(context)) const SizedBox(width: 60,),
                 Expanded(child: SignInBody()),
                 if(Responsive.isTablet(context)) Expanded(child: Image.asset(
                     'assets/images/2.png'
