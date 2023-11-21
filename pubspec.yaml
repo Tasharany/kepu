@@ -72,7 +72,13 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner: ^2.4.6
+  flutter_launcher_icons: ^0.11.0
 
+flutter_icons:
+  android: "launcher_icon"
+  image_path_android: "assets/launcher_icon"
+  adaptive_icon_background: "#00000"
+  adaptive_icon_foreground: "assets/launcher_icon/mipmap-xxxhdpi/ic_launcher.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -95,6 +101,12 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/launcher_icon/mipmap-hdpi/ic_launcher.png
+    - assets/launcher_icon/mipmap-mdpi/ic_launcher.png
+    - assets/launcher_icon/mipmap-xhdpi/ic_launcher.png
+    - assets/launcher_icon/mipmap-xxhdpi/ic_launcher.png
+    - assets/launcher_icon/mipmap-xxxhdpi/ic_launcher.png
+    - assets/launcher_icon/foreground.png
     - assets/page-1/images/wifi.png
     - assets/page-1/images/donefill0wght400grad0opsz24-1.png
     - assets/page-1/images/ellipse-13.png
@@ -850,8 +862,3 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
 
-flutter_icons:
-    android: "launcher_icon"
-    image_path_android: "assets/icon.png"
-    adaptive_icon_background: "assets/launcher_icon/background.png"
-    adaptive_icon_foreground: "assets/launcher_icon/foreground.png"
