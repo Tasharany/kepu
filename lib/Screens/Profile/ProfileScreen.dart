@@ -286,7 +286,7 @@ class ProfileScreen extends StatelessWidget {
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(5*fem),
                                       child: Image.asset(
-                                        'assets/page-1/images/rectangle-34-ZiA.png',
+                                        'assets/page-1/images/Rectangle_34_round.png',
                                       ),
                                     ),
                                   ),
@@ -300,7 +300,7 @@ class ProfileScreen extends StatelessWidget {
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(5*fem),
                                       child: Image.asset(
-                                        'assets/page-1/images/rectangle-49.png',
+                                        'assets/page-1/images/Rectangle_49_round.png',
                                       ),
                                     ),
                                   ),
@@ -346,7 +346,7 @@ class ProfileScreen extends StatelessWidget {
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(5*fem),
                                       child: Image.asset(
-                                        'assets/page-1/images/rectangle-47.png',
+                                        'assets/page-1/images/Rectangle_47_round.png',
                                       ),
                                     ),
                                   ),
@@ -415,7 +415,7 @@ class ProfileScreen extends StatelessWidget {
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(5*fem),
                                       child: Image.asset(
-                                        'assets/page-1/images/rectangle-48.png',
+                                        'assets/page-1/images/Rectangle_48_round.png',
                                       ),
                                     ),
                                   ),
