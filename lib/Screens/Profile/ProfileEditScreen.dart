@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kepu/utils.dart';
@@ -67,13 +69,13 @@ class ProfileEditScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              // arrowbackfill0wght400grad0opsz (66:3027)
-              left: 26.0991210938*fem,
-              top: 53.3833007812*fem,
-              child: Align(
-                child: SizedBox(
-                  width: 16*fem,
-                  height: 16*fem,
+              top: 40*fem,
+              child: TextButton(
+                onPressed: () {
+                  HapticFeedback.mediumImpact();
+                  GoRouter.of(context).go('/profile');
+                },
+                child: Align(
                   child: Image.asset(
                     'assets/page-1/images/arrowbackfill0wght400grad0opsz24-2.png',
                     width: 16*fem,
@@ -81,6 +83,8 @@ class ProfileEditScreen extends StatelessWidget {
                   ),
                 ),
               ),
+
+
             ),
             Positioned(
               // ellipse91PJ (66:2954)

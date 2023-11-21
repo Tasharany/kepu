@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kepu/utils.dart';
@@ -116,52 +118,82 @@ class ProfileScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
-                      // loginbuttonU7N (66:2797)
                       margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 15*fem, 0*fem),
                       width: 100*fem,
                       height: double.infinity,
-                      decoration: BoxDecoration (
-                        border: Border.all(color: Color(0xfffbcd71)),
-                        color: Color(0xfff7f7f7),
-                        borderRadius: BorderRadius.circular(4*fem),
-                      ),
                       child: Center(
                         child: Center(
-                          child: Text(
-                            'edit',
-                            textAlign: TextAlign.center,
-                            style: SafeGoogleFont (
-                              'Radio Canada',
-                              fontSize: 14*ffem,
-                              fontWeight: FontWeight.w600,
-                              height: 1.2*ffem/fem,
-                              color: Color(0xff000000),
-                              decoration: TextDecoration.none,
+                          child:
+                          Container(
+                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                            padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                            child:OutlinedButton(
+                              onPressed: () {
+                                HapticFeedback.mediumImpact();
+                                GoRouter.of(context).go('/editprofile');
+                              },
+                              style: OutlinedButton.styleFrom(
+                                fixedSize: Size(100, 30),
+                                backgroundColor: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(4*fem),
+                                ),
+                                side: BorderSide(color: Color(0xfffbcd71), width: 3),
+                                padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                              ),
+                              child: Text(
+                                'edit',
+                                textAlign: TextAlign.center,
+                                style: SafeGoogleFont (
+                                  'Radio Canada',
+                                  fontSize: 14*ffem,
+                                  fontWeight: FontWeight.w600,
+                                  height: 1.2*ffem/fem,
+                                  color: Color(0xff000000),
+                                  decoration: TextDecoration.none,
+                                ),
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ),
                     Container(
-                      // loginbuttoniXW (66:2801)
+                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
                       width: 100*fem,
                       height: double.infinity,
-                      decoration: BoxDecoration (
-                        color: Color(0xfffbcd71),
-                        borderRadius: BorderRadius.circular(4*fem),
-                      ),
                       child: Center(
                         child: Center(
-                          child: Text(
-                            'settings',
-                            textAlign: TextAlign.center,
-                            style: SafeGoogleFont (
-                              'Radio Canada',
-                              fontSize: 14*ffem,
-                              fontWeight: FontWeight.w600,
-                              height: 1.2*ffem/fem,
-                              color: Color(0xff000000),
-                              decoration: TextDecoration.none,
+                          child:
+                          Container(
+                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                            padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                            child:OutlinedButton(
+                              onPressed: () {
+                                HapticFeedback.mediumImpact();
+                                // GoRouter.of(context).go('/editprofile');
+                              },
+                              style: OutlinedButton.styleFrom(
+                                fixedSize: Size(100, 30),
+                                backgroundColor: Color(0xfffbcd71),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(4*fem),
+                                ),
+                                side: BorderSide(color: Color(0xfffbcd71), width: 3),
+                                padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                              ),
+                              child: Text(
+                                'settings',
+                                textAlign: TextAlign.center,
+                                style: SafeGoogleFont (
+                                  'Radio Canada',
+                                  fontSize: 14*ffem,
+                                  fontWeight: FontWeight.w600,
+                                  height: 1.2*ffem/fem,
+                                  color: Color(0xff000000),
+                                  decoration: TextDecoration.none,
+                                ),
+                              ),
                             ),
                           ),
                         ),

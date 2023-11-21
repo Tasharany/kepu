@@ -6,6 +6,7 @@ import 'package:kepu/Screens/MainScreen.dart';
 import 'package:kepu/Screens/MovieScreen.dart';
 import 'package:kepu/Screens/NavScreen.dart';
 import 'package:kepu/Screens/Profile/ProfileScreen.dart';
+import 'package:kepu/Screens/Profile/ProfileEditScreen.dart';
 import 'package:kepu/Screens/SearchScreen.dart';
 import 'package:kepu/Screens/TvShowScreen.dart';
 import 'package:kepu/Screens/ToDoListScreen.dart';
@@ -72,6 +73,11 @@ GoRouter router = GoRouter(initialLocation: '/', routes: [
     path: '/spin',
     builder: (context, state) => CinemaSpin(),
     pageBuilder: defaultPageBuilder<ToDoListScreen>(CinemaSpin()),
+  ),
+  GoRoute(
+    path: '/editprofile',
+    builder: (context, state) => ProfileEditScreen(),
+    pageBuilder: defaultPageBuilder<ToDoListScreen>(ProfileEditScreen()),
   ),
 
 ]);
