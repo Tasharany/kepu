@@ -20,19 +20,19 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
-      margin: const EdgeInsets.fromLTRB(0, 0, 0, 16),
+      height: 97,
+      margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
       decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(20),
-          topRight: Radius.circular(20),
+          topLeft: Radius.circular(10),
+          topRight: Radius.circular(10),
           ),
           boxShadow: <BoxShadow>[
             BoxShadow(
                 color: Colors.black54,
-                blurRadius: 15.0,
-                offset: Offset(0.0, -5)
+                blurRadius: 4.0,
+                offset: Offset(0.0, -4)
             )
           ]
       ),
@@ -41,10 +41,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           IconButton(
-            icon: Icon(
-             // UniconsLine.home_alt,
-              Octicons.home,
-              color: widget.currentIndex == 0 ? Colors.blue : inactive_accent,
+            icon: Image.asset("assets/BottomNav/cottage_FILL0_wght400_GRAD0_opsz24 2.png",
+              height: 41,
+              width: 41,
             ),
             onPressed: () {
               HapticFeedback.mediumImpact();
@@ -55,11 +54,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
             },
           ),
           IconButton(
-            icon: Icon(
-              //same function as home button
-              FontAwesome5.th_list,
-              color: widget.currentIndex == 1 ? Colors.blue : inactive_accent,
-            ),
+            icon: Image.asset("assets/BottomNav/todo_FILL0_wght400_GRAD0_opsz24 1.png",
+              height: 41,
+              width: 41,
+              ),
             onPressed: () {
               HapticFeedback.mediumImpact();
               setState(() {
@@ -69,7 +67,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
             },
           ),
           IconButton(
-            icon: Image.asset("assets/add.png"),
+            icon: Image.asset("assets/BottomNav/add.png",
+              height: 60,
+              width: 60,
+            ),
             onPressed: () {
               HapticFeedback.mediumImpact();
               setState(() {
@@ -78,10 +79,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
               GoRouter.of(context).go('/pouch');
             },
           ),IconButton(
-            icon: Icon(
-              // UniconsLine.heart,
-              FontAwesome5.fan,
-              color: widget.currentIndex == 3 ? Colors.blue : inactive_accent,
+            icon: Image.asset("assets/BottomNav/toys_fan_FILL0_wght400_GRAD0_opsz24 1.png",
+              height: 41,
+              width: 41,
             ),
             onPressed: () {
               HapticFeedback.mediumImpact();
@@ -92,10 +92,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
             },
           ),
           IconButton(
-            icon: Icon(
-             // UniconsLine.heart,
-              Typicons.user_outline,
-              color: widget.currentIndex == 4 ? Colors.blue : inactive_accent,
+            icon: Image.asset("assets/BottomNav/person_FILL0_wght400_GRAD0_opsz24 1.png",
+              height: 41,
+              width: 41,
             ),
             onPressed: () {
               HapticFeedback.mediumImpact();

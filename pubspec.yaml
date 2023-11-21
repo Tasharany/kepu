@@ -72,7 +72,6 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner: ^2.4.6
-  flutter_launcher_icons: ^0.11.0
 
 flutter_icons:
   android: "launcher_icon"
@@ -101,6 +100,16 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/BottomNav/Activecottage_FILL0_wght400_GRAD0_opsz24 2.png
+    - assets/BottomNav/Activectodo_FILL0_wght400_GRAD0_opsz24 1.png
+    - assets/BottomNav/Activeperson_FILL0_wght400_GRAD0_opsz24 1.png
+    - assets/BottomNav/add.png
+    - assets/BottomNav/appActive.png
+    - assets/BottomNav/cottage_FILL0_wght400_GRAD0_opsz24 2.png
+    - assets/BottomNav/person_FILL0_wght400_GRAD0_opsz24 1.png
+    - assets/BottomNav/todo_FILL0_wght400_GRAD0_opsz24 1.png
+    - assets/BottomNav/toys_fan_FILL0_wght400_GRAD0_opsz24 1.png
+    - assets/BottomNav/Activetoys_fan_FILL0_wght400_GRAD0_opsz24 1.png
     - assets/launcher_icon/mipmap-hdpi/ic_launcher.png
     - assets/launcher_icon/mipmap-mdpi/ic_launcher.png
     - assets/launcher_icon/mipmap-xhdpi/ic_launcher.png
