@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/services.dart';
@@ -13,6 +15,7 @@ class CinemaSpin extends StatelessWidget {
     double baseWidth = 390;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
+    StreamController<int> controller = StreamController<int>();
     return Container(
       width: double.infinity,
       child: Container(
@@ -237,7 +240,8 @@ class CinemaSpin extends StatelessWidget {
                 child: SizedBox(
                   width: 380.83*fem,
                   height: 380.33*fem,
-                  child: Image.asset(
+                  child:
+                  Image.asset(
                     'assets/wheel.png',
                     width: 380.83*fem,
                     height: 380.33*fem,
