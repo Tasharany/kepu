@@ -24,11 +24,11 @@ class ProfileEditScreen extends StatelessWidget {
           children: [
             Positioned(
               // rectangle55yoz (66:2951)
-              left: 1*fem,
+              left: 0*fem,
               top: 0*fem,
               child: Align(
                 child: SizedBox(
-                  width: 390*fem,
+                  width: 391*fem,
                   height: 324.16*fem,
                   child: Container(
                     decoration: BoxDecoration (
@@ -74,7 +74,7 @@ class ProfileEditScreen extends StatelessWidget {
                   width: 16*fem,
                   height: 16*fem,
                   child: Image.asset(
-                    'assets/page-1/images/arrowbackfill0wght400grad0opsz24-3-swa.png',
+                    'assets/page-1/images/arrowbackfill0wght400grad0opsz24-2.png',
                     width: 16*fem,
                     height: 16*fem,
                   ),
@@ -157,7 +157,7 @@ class ProfileEditScreen extends StatelessWidget {
                           width: 73*fem,
                           height: 34*fem,
                           child: Image.asset(
-                            'assets/page-1/images/group-18-o9E.png',
+                            'assets/page-1/images/group-18.png',
                             width: 73*fem,
                             height: 34*fem,
                           ),
@@ -173,7 +173,7 @@ class ProfileEditScreen extends StatelessWidget {
                           width: 73*fem,
                           height: 34*fem,
                           child: Image.asset(
-                            'assets/page-1/images/group-17-h2L.png',
+                            'assets/page-1/images/group-17.png',
                             width: 73*fem,
                             height: 34*fem,
                           ),
@@ -196,7 +196,7 @@ class ProfileEditScreen extends StatelessWidget {
                               width: 73*fem,
                               height: 34*fem,
                               child: Image.asset(
-                                'assets/page-1/images/movie-BNL.png',
+                                'assets/page-1/images/movie-QX4.png',
                                 width: 73*fem,
                                 height: 34*fem,
                               ),
@@ -216,7 +216,7 @@ class ProfileEditScreen extends StatelessWidget {
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(5*fem),
                                       child: Image.asset(
-                                        'assets/page-1/images/rectangle-34-jhE.png',
+                                        'assets/page-1/images/Rectangle_34_round.png',
                                       ),
                                     ),
                                   ),
@@ -230,7 +230,7 @@ class ProfileEditScreen extends StatelessWidget {
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(5*fem),
                                       child: Image.asset(
-                                        'assets/page-1/images/rectangle-49-eBE.png',
+                                        'assets/page-1/images/Rectangle_49_round.png',
                                       ),
                                     ),
                                   ),
@@ -239,7 +239,7 @@ class ProfileEditScreen extends StatelessWidget {
                                   ),
                                   Container(
                                     // autogroupxgqt27N (P4La5BmwrFjTwFo24CxGQt)
-                                    padding: EdgeInsets.fromLTRB(22.5*fem, 25.5*fem, 22.5*fem, 25.5*fem),
+                                    padding: EdgeInsets.fromLTRB(22.5*fem, 25.5*fem, 22.5*fem, 22.5*fem),
                                     width: double.infinity,
                                     decoration: BoxDecoration (
                                       color: Color(0xffffffff),
@@ -251,7 +251,7 @@ class ProfileEditScreen extends StatelessWidget {
                                         width: 19*fem,
                                         height: 19*fem,
                                         child: Image.asset(
-                                          'assets/page-1/images/addfill0wght400grad0opsz24-6-CNp.png',
+                                          'assets/page-1/images/addfill0wght400grad0opsz24-6.png',
                                           width: 19*fem,
                                           height: 19*fem,
                                         ),
@@ -276,7 +276,7 @@ class ProfileEditScreen extends StatelessWidget {
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(5*fem),
                                       child: Image.asset(
-                                        'assets/page-1/images/rectangle-47-KgG.png',
+                                        'assets/page-1/images/Rectangle_47_round.png',
                                       ),
                                     ),
                                   ),
@@ -297,7 +297,7 @@ class ProfileEditScreen extends StatelessWidget {
                                         width: 19*fem,
                                         height: 19*fem,
                                         child: Image.asset(
-                                          'assets/page-1/images/addfill0wght400grad0opsz24-4-esW.png',
+                                          'assets/page-1/images/addfill0wght400grad0opsz24-6.png',
                                           width: 19*fem,
                                           height: 19*fem,
                                         ),
@@ -309,7 +309,7 @@ class ProfileEditScreen extends StatelessWidget {
                                   ),
                                   Container(
                                     // autogroup45nlxYk (P4LaP6Rmrv1EW22fYC45NL)
-                                    padding: EdgeInsets.fromLTRB(22.92*fem, 25.5*fem, 22.08*fem, 25.5*fem),
+                                    padding: EdgeInsets.fromLTRB(22.92*fem, 25.5*fem, 22.08*fem, 22.5*fem),
                                     width: double.infinity,
                                     decoration: BoxDecoration (
                                       color: Color(0xffffffff),
@@ -321,7 +321,7 @@ class ProfileEditScreen extends StatelessWidget {
                                         width: 19*fem,
                                         height: 19*fem,
                                         child: Image.asset(
-                                          'assets/page-1/images/addfill0wght400grad0opsz24-7-rZa.png',
+                                          'assets/page-1/images/addfill0wght400grad0opsz24-6.png',
                                           width: 19*fem,
                                           height: 19*fem,
                                         ),
@@ -345,7 +345,7 @@ class ProfileEditScreen extends StatelessWidget {
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(5*fem),
                                       child: Image.asset(
-                                        'assets/page-1/images/rectangle-48-6gt.png',
+                                        'assets/page-1/images/Rectangle_48_round.png',
                                       ),
                                     ),
                                   ),
@@ -366,7 +366,7 @@ class ProfileEditScreen extends StatelessWidget {
                                         width: 19*fem,
                                         height: 19*fem,
                                         child: Image.asset(
-                                          'assets/page-1/images/addfill0wght400grad0opsz24-5-yHE.png',
+                                          'assets/page-1/images/addfill0wght400grad0opsz24-6.png',
                                           width: 19*fem,
                                           height: 19*fem,
                                         ),
@@ -378,7 +378,7 @@ class ProfileEditScreen extends StatelessWidget {
                                   ),
                                   Container(
                                     // autogrouppuvgsBr (P4LahLQP1QjjSS3ciMPUvG)
-                                    padding: EdgeInsets.fromLTRB(22.08*fem, 25.5*fem, 22.92*fem, 25.5*fem),
+                                    padding: EdgeInsets.fromLTRB(22.08*fem, 25.5*fem, 22.92*fem, 22.5*fem),
                                     width: double.infinity,
                                     decoration: BoxDecoration (
                                       color: Color(0xffffffff),
@@ -390,7 +390,7 @@ class ProfileEditScreen extends StatelessWidget {
                                         width: 19*fem,
                                         height: 19*fem,
                                         child: Image.asset(
-                                          'assets/page-1/images/addfill0wght400grad0opsz24-8-D32.png',
+                                          'assets/page-1/images/addfill0wght400grad0opsz24-6.png',
                                           width: 19*fem,
                                           height: 19*fem,
                                         ),
@@ -417,7 +417,7 @@ class ProfileEditScreen extends StatelessWidget {
                   width: 20.83*fem,
                   height: 18.35*fem,
                   child: Image.asset(
-                    'assets/page-1/images/favoritefill0wght400grad0opsz24-13-tjN.png',
+                    'assets/page-1/images/favoritefill0wght400grad0opsz24-13.png',
                     width: 20.83*fem,
                     height: 18.35*fem,
                   ),
@@ -440,78 +440,15 @@ class ProfileEditScreen extends StatelessWidget {
                       width: double.infinity,
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            // amG7W (66:2999)
-                            margin: EdgeInsets.fromLTRB(0*fem, 6.33*fem, 14.18*fem, 0*fem),
-                            child: Text(
-                              '12:00 AM',
-                              style: SafeGoogleFont (
-                                'Radio Canada',
-                                fontSize: 12*ffem,
-                                fontWeight: FontWeight.w600,
-                                height: 1.2*ffem/fem,
-                                letterSpacing: 0.12*fem,
-                                color: Color(0xff000000),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            // applethingATn (66:3004)
-                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 12.38*fem, 1*fem),
-                            width: 231.44*fem,
-                            height: 20.33*fem,
-                            decoration: BoxDecoration (
-                              color: Color(0xff1b1b1b),
-                              borderRadius: BorderRadius.only (
-                                bottomRight: Radius.circular(10*fem),
-                                bottomLeft: Radius.circular(10*fem),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            // signalGmi (66:2998)
-                            margin: EdgeInsets.fromLTRB(0*fem, 2.23*fem, 4.22*fem, 0*fem),
-                            width: 13*fem,
-                            height: 10.9*fem,
-                            child: Image.asset(
-                              'assets/page-1/images/signal-ZYY.png',
-                              width: 13*fem,
-                              height: 10.9*fem,
-                            ),
-                          ),
-                          Container(
-                            // wifiC9a (66:2996)
-                            margin: EdgeInsets.fromLTRB(0*fem, 2.55*fem, 5*fem, 0*fem),
-                            width: 14*fem,
-                            height: 9.74*fem,
-                            child: Image.asset(
-                              'assets/page-1/images/wifi-aLc.png',
-                              width: 14*fem,
-                              height: 9.74*fem,
-                            ),
-                          ),
-                          Container(
-                            // battery7nL (66:3000)
-                            margin: EdgeInsets.fromLTRB(0*fem, 4.98*fem, 0*fem, 0*fem),
-                            width: 19.79*fem,
-                            height: 8.3*fem,
-                            child: Image.asset(
-                              'assets/page-1/images/battery-Nqa.png',
-                              width: 19.79*fem,
-                              height: 8.3*fem,
-                            ),
-                          ),
-                        ],
                       ),
                     ),
                     Container(
                       // logoutfill0wght400grad0opsz241 (171:2)
-                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 1.16*fem, 84.67*fem),
+                      margin: EdgeInsets.fromLTRB(0*fem, 20*fem, 1.16*fem, 84.67*fem),
                       width: 24*fem,
                       height: 23.25*fem,
                       child: Image.asset(
-                        'assets/page-1/images/logoutfill0wght400grad0opsz24-1-v3E.png',
+                        'assets/page-1/images/logout_FILL0_wght400_GRAD0_opsz24-1.png',
                         width: 24*fem,
                         height: 23.25*fem,
                       ),
@@ -564,7 +501,7 @@ class ProfileEditScreen extends StatelessWidget {
             Positioned(
               // bottomhub2f4 (60:305)
               left: 0*fem,
-              top: 747*fem,
+              top: 746*fem,
               child: Align(
                 child: SizedBox(
                   width: 390*fem,
