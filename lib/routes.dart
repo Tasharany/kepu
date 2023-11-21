@@ -10,6 +10,8 @@ import 'package:kepu/Screens/SearchScreen.dart';
 import 'package:kepu/Screens/TvShowScreen.dart';
 import 'package:kepu/Screens/ToDoListScreen.dart';
 import 'package:kepu/Screens/Pouch/CinemaPouch.dart';
+import 'package:kepu/Screens/Pouch/PocketPouch.dart';
+import 'package:kepu/Screens/Pouch/ChartPouch.dart';
 
 GoRouter router = GoRouter(initialLocation: '/', routes: [
   GoRoute(
@@ -54,6 +56,16 @@ GoRouter router = GoRouter(initialLocation: '/', routes: [
     path: '/pouch',
     builder: (context, state) => CinemaPouch(),
     pageBuilder: defaultPageBuilder<ToDoListScreen>(CinemaPouch()),
+  ),
+  GoRoute(
+    path: '/pocketpouch',
+    builder: (context, state) => PocketPouch(),
+    pageBuilder: defaultPageBuilder<ToDoListScreen>(PocketPouch()),
+  ),
+  GoRoute(
+    path: '/chartpouch',
+    builder: (context, state) => ChartPouch(),
+    pageBuilder: defaultPageBuilder<ToDoListScreen>(ChartPouch()),
   ),
 
 ]);
