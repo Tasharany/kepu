@@ -1,553 +1,352 @@
+import 'dart:ui';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
-import 'dart:ui';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:kepu/utils.dart';
+import 'package:kepu/Screens/WatchListScreen.dart';
+import 'package:kepu/Services/auth.dart';
+import 'package:kepu/Services/consts.dart';
+import 'package:kepu/Widgets/BottomNavBar.dart';
+import 'package:provider/provider.dart';
+import 'package:kepu/Widgets/LoadingScreen.dart';
 
-import '../../Widgets/BottomNavBar.dart';
-
-class ProfileScreen extends StatelessWidget {
+class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
 
   @override
+  State<ProfileScreen> createState() => _ProfileScreenState();
+}
+
+class _ProfileScreenState extends State<ProfileScreen> {
+  ScrollController _scrollController = ScrollController();
+  bool isVisible = true;
+  bool isLoading = true;
+  late List watchlist;
+  List completed = [];
+  List watching = [];
+  List onhold = [];
+  List dropped = [];
+
+  @override
+  void initState() {
+    super.initState();
+    fetchData();
+    _scrollController = ScrollController();
+    _scrollController.addListener(listen);
+  }
+
+  @override
+  void dispose() {
+    _scrollController.removeListener(listen);
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  void listen() {
+    final direction = _scrollController.position.userScrollDirection;
+    if (direction == ScrollDirection.forward) {
+      show();
+    } else if (direction == ScrollDirection.reverse) {
+      hide();
+    }
+  }
+
+  void show() {
+    if (!isVisible) {
+      (setState(
+        () => isVisible = true,
+      ));
+    }
+  }
+
+  void hide() {
+    if (isVisible) {
+      (setState(
+        () => isVisible = false,
+      ));
+    }
+  }
+
+  void fetchData() async {
+    watchlist = await FireBaseServices().getWatchList();
+    for (int i = 0; i < watchlist.length; i++) {
+      if (watchlist[i]["status"] == "Completed") {
+        completed.add(watchlist[i]);
+      } else if (watchlist[i]["status"] == "Watching") {
+        watching.add(watchlist[i]);
+      } else if (watchlist[i]["status"] == "On-Hold") {
+        onhold.add(watchlist[i]);
+      } else if (watchlist[i]["status"] == "Dropped") {
+        dropped.add(watchlist[i]);
+      }
+    }
+    setState(() {
+      isLoading = false;
+    });
+  }
+
+  final User _user = FirebaseAuth.instance.currentUser!;
+
+  @override
   Widget build(BuildContext context) {
-    double baseWidth = 390;
-    double fem = MediaQuery.of(context).size.width / baseWidth;
-    double ffem = fem * 0.97;
-    return Container(
-      width: double.infinity,
-      child: Container(
-        // profileVjJ (66:2748)
-        width: double.infinity,
-        height: 844*fem,
-        decoration: BoxDecoration (
-          color: Color(0xfff7f7f7),
-        ),
-        child: Stack(
-          children: [
-            Positioned(
-              // rectangle55pWg (66:2918)
-              left: 0*fem,
-              top: 0*fem,
-              child: Align(
-                child: SizedBox(
-                  width: 391*fem,
-                  height: 324.16*fem,
-                  child: Container(
-                    decoration: BoxDecoration (
-                      color: Color(0xff3ea4de),
-                      borderRadius: BorderRadius.only (
-                        bottomRight: Radius.circular(10*fem),
-                        bottomLeft: Radius.circular(10*fem),
-                      ),
-                    ),
-                  ),
-                ),
+    return Scaffold(
+      bottomNavigationBar: AnimatedBuilder(
+          animation: _scrollController,
+          builder: ((context, child) {
+            return AnimatedContainer(
+              duration: const Duration(milliseconds: 800),
+              curve: Curves.fastLinearToSlowEaseIn,
+              height: isVisible ? 75 : 0,
+              child: BottomNavBar(
+                currentIndex: 2,
               ),
-            ),
-            Positioned(
-              // usernameic4 (66:2749)
-              left: 137.0400390625*fem,
-              top: 49.3833007812*fem,
-              child: Align(
-                child: SizedBox(
-                  width: 118*fem,
-                  height: 24*fem,
-                  child: Text(
-                    '@username',
-                    textAlign: TextAlign.center,
-                    style: SafeGoogleFont (
-                      'Radio Canada',
-                      fontSize: 20*ffem,
-                      fontWeight: FontWeight.w700,
-                      height: 1.2*ffem/fem,
-                      letterSpacing: 0.2*fem,
-                      color: Color(0xff000000),
-                      decoration: TextDecoration.none,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
-              // logoutfill0wght400grad0opsz2411 (184:6)
-              left: 354.9482421875*fem,
-              top: 49.7583007812*fem,
-              child: Align(
-                child: SizedBox(
-                  width: 24*fem,
-                  height: 23.25*fem,
-                  child: Image.asset(
-                    'assets/page-1/images/logout_FILL0_wght400_GRAD0_opsz24-1.png',
-                    width: 24*fem,
-                    height: 23.25*fem,
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
-              // ellipse978Q (66:2795)
-              left: 131*fem,
-              top: 123.3833007812*fem,
-              child: Align(
-                child: SizedBox(
-                  width: 130*fem,
-                  height: 130*fem,
-                  child: Container(
-                    decoration: BoxDecoration (
-                      borderRadius: BorderRadius.circular(65*fem),
-                      color: Color(0xffd9d9d9),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
-              // group15dMe (66:2807)
-              left: 88.5400390625*fem,
-              top: 268.3833007812*fem,
-              child: Container(
-                width: 215*fem,
-                height: 30*fem,
-                decoration: BoxDecoration (
-                  borderRadius: BorderRadius.circular(4*fem),
-                ),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 15*fem, 0*fem),
-                      width: 100*fem,
-                      height: double.infinity,
-                      child: Center(
-                        child: Center(
-                          child:
-                          Container(
-                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
-                            padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
-                            child:OutlinedButton(
-                              onPressed: () {
-                                HapticFeedback.mediumImpact();
-                                GoRouter.of(context).go('/editprofile');
-                              },
-                              style: OutlinedButton.styleFrom(
-                                fixedSize: Size(100, 30),
-                                backgroundColor: Colors.white,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(4*fem),
-                                ),
-                                side: BorderSide(color: Color(0xfffbcd71), width: 3),
-                                padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
-                              ),
-                              child: Text(
-                                'edit',
-                                textAlign: TextAlign.center,
-                                style: SafeGoogleFont (
-                                  'Radio Canada',
-                                  fontSize: 14*ffem,
-                                  fontWeight: FontWeight.w600,
-                                  height: 1.2*ffem/fem,
-                                  color: Color(0xff000000),
-                                  decoration: TextDecoration.none,
-                                ),
-                              ),
+            );
+          })),
+      backgroundColor: background_primary,
+      extendBody: true,
+      body: isLoading
+          ? LoadingScreen()
+          : Container(
+              child: ListView(
+                controller: _scrollController,
+                physics: BouncingScrollPhysics(),
+                scrollDirection: Axis.vertical,
+                padding: const EdgeInsets.only(top: 0),
+                children: [
+                  Stack(
+                    alignment: Alignment.bottomLeft,
+                    children: [
+                      Container(
+                        height: 300,
+                        width: MediaQuery.of(context).size.width,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              _user.photoURL.toString(),
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        child: ClipRect(
+                          child: BackdropFilter(
+                            filter: ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
+                            child: Container(
+                              color: Colors.black.withOpacity(0.1),
                             ),
                           ),
                         ),
                       ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
-                      width: 100*fem,
-                      height: double.infinity,
-                      child: Center(
-                        child: Center(
-                          child:
+                      Container(
+                        height: 300,
+                        width: MediaQuery.of(context).size.width,
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment.center,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                              Colors.transparent,
+                              background_primary.withOpacity(0.50),
+                              background_primary.withOpacity(0.75),
+                              background_primary.withOpacity(1.00),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
                           Container(
-                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
-                            padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
-                            child:OutlinedButton(
-                              onPressed: () {
-                                HapticFeedback.mediumImpact();
-                                // GoRouter.of(context).go('/editprofile');
-                              },
-                              style: OutlinedButton.styleFrom(
-                                fixedSize: Size(100, 30),
-                                backgroundColor: Color(0xfffbcd71),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(4*fem),
-                                ),
-                                side: BorderSide(color: Color(0xfffbcd71), width: 3),
-                                padding: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 0*fem),
+                            margin: const EdgeInsets.only(left: 20, bottom: 20),
+                            height: 100,
+                            width: 100,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              image: DecorationImage(
+                                  image:
+                                      NetworkImage(_user.photoURL.toString()),
+                                  fit: BoxFit.cover),
+                            ),
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width,
+                            margin: const EdgeInsets.only(left: 20, bottom: 20),
+                            child: Text(
+                              _user.displayName.toString(),
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 24,
                               ),
-                              child: Text(
-                                'settings',
-                                textAlign: TextAlign.center,
-                                style: SafeGoogleFont (
-                                  'Radio Canada',
-                                  fontSize: 14*ffem,
-                                  fontWeight: FontWeight.w600,
-                                  height: 1.2*ffem/fem,
-                                  color: Color(0xff000000),
-                                  decoration: TextDecoration.none,
-                                ),
-                              ),
+                              textAlign: TextAlign.left,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: GestureDetector(
+                          onTap: () {
+                            final provider = Provider.of<GoogleSignInProvider>(
+                                context,
+                                listen: false);
+                            provider.logout();
+                            GoRouter.of(context).pushReplacement('/');
+                          },
+                          child: Container(
+                            height: 50,
+                            width: 50,
+                            margin: EdgeInsets.only(
+                              right: 25,
+                              bottom: 200,
+                            ),
+                            decoration: BoxDecoration(
+                                color: Color(0xFF14303B).withOpacity(0.25),
+                                border: Border.all(
+                                    color: Color(0xFF14303B).withOpacity(0.25),
+                                    width: 1.5),
+                                borderRadius: BorderRadius.circular(6)),
+                            child: Icon(
+                              Icons.logout_rounded,
+                              color: Colors.white,
                             ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Positioned(
-              // quitdontquitnoodlesPtY (66:2796)
-              left: 104*fem,
-              top: 352.6657714844*fem,
-              child: Center(
-                child: Align(
-                  child: SizedBox(
-                    width: 184*fem,
-                    height: 20*fem,
-                    child: Text(
-                      '“quit, don’t quit, noodles”',
-                      textAlign: TextAlign.center,
-                      style: SafeGoogleFont (
-                        'Radio Canada',
-                        fontSize: 16*ffem,
-                        fontWeight: FontWeight.w400,
-                        height: 1.2*ffem/fem,
-                        color: Color(0xff000000),
-                        decoration: TextDecoration.none,
-                      ),
-                    ),
+                    ],
                   ),
-                ),
-              ),
-            ),
-            Positioned(
-              // rectangle46UQC (66:2881)
-              left: 42.740234375*fem,
-              top: 401.1708984375*fem,
-              child: Align(
-                child: SizedBox(
-                  width: 306.6*fem,
-                  height: 54.77*fem,
-                  child: Container(
-                    decoration: BoxDecoration (
-                      borderRadius: BorderRadius.circular(10*fem),
-                      color: Color(0x333ea4de),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
-              // iconsnfn (95:21)
-              left: 61.2915039062*fem,
-              top: 489.55859375*fem,
-              child: Container(
-                width: 267.42*fem,
-                height: 214.23*fem,
-                child: Stack(
-                  children: [
-                    Positioned(
-                      // group18v1J (95:22)
-                      left: 0*fem,
-                      top: 158*fem,
-                      child: Align(
-                        child: SizedBox(
-                          width: 73*fem,
-                          height: 34*fem,
-                          child: Image.asset(
-                            'assets/page-1/images/group-18.png',
-                            width: 73*fem,
-                            height: 34*fem,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      // group1735v (95:25)
-                      left: 0*fem,
-                      top: 88*fem,
-                      child: Align(
-                        child: SizedBox(
-                          width: 73*fem,
-                          height: 34*fem,
-                          child: Image.asset(
-                            'assets/page-1/images/group-17.png',
-                            width: 73*fem,
-                            height: 34*fem,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      // group169ek (95:28)
-                      left: 0*fem,
-                      top: 0*fem,
-                      child: Container(
-                        width: 267.42*fem,
-                        height: 214.23*fem,
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                  Container(
+                    margin: EdgeInsets.only(right: 8, left: 8),
+                    alignment: Alignment.topLeft,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Column(
                           children: [
-                            Container(
-                              // movie5HW (95:38)
-                              margin: EdgeInsets.fromLTRB(0*fem, 18*fem, 0*fem, 0*fem),
-                              width: 73*fem,
-                              height: 34*fem,
-                              child: Image.asset(
-                                'assets/page-1/images/movie-QX4.png',
-                                width: 73*fem,
-                                height: 34*fem,
-                              ),
+                            GestureDetector(
+                              onTap: () {
+                                if (watching.length == 0) {
+                                  HapticFeedback.mediumImpact();
+                                } else {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => WatchListScreen(
+                                        watchList: watching,
+                                        status: "Watching",
+                                      ),
+                                    ),
+                                  );
+                                }
+                              },
+                              child: WatchListTile(
+                                  watching.length.toString(), "Watching"),
                             ),
-                            Container(
-                              // autogroupj6qcnhi (P4LY5k6JYF3Kb3dpY4j6Qc)
-                              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 1*fem, 0*fem),
-                              width: 64*fem,
-                              height: double.infinity,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Container(
-                                    // rectangle34KBr (95:30)
-                                    width: 64*fem,
-                                    height: 70*fem,
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(5*fem),
-                                      child: Image.asset(
-                                        'assets/page-1/images/Rectangle_34_round.png',
+                            GestureDetector(
+                              onTap: () {
+                                if (completed.length == 0) {
+                                  HapticFeedback.mediumImpact();
+                                } else {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => WatchListScreen(
+                                        watchList: completed,
+                                        status: "Completed",
                                       ),
                                     ),
-                                  ),
-                                  SizedBox(
-                                    height: 2.12*fem,
-                                  ),
-                                  Container(
-                                    // rectangle49S1a (95:29)
-                                    width: 64*fem,
-                                    height: 70*fem,
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(5*fem),
-                                      child: Image.asset(
-                                        'assets/page-1/images/Rectangle_49_round.png',
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 2.12*fem,
-                                  ),
-                                  Container(
-                                    // autogroupscdr9Rn (P4LYDA3co5o5PnmMhVScdr)
-                                    padding: EdgeInsets.fromLTRB(22.5*fem, 25.5*fem, 22.5*fem, 22.5*fem),
-                                    width: double.infinity,
-                                    decoration: BoxDecoration (
-                                      color: Color(0xffffffff),
-                                      borderRadius: BorderRadius.circular(5*fem),
-                                    ),
-                                    child: Center(
-                                      // addfill0wght400grad0opsz246scg (95:42)
-                                      child: SizedBox(
-                                        width: 19*fem,
-                                        height: 19*fem,
-                                        child: Image.asset(
-                                          'assets/page-1/images/addfill0wght400grad0opsz24-6.png',
-                                          width: 19*fem,
-                                          height: 19*fem,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              // autogroupa8s6zSQ (P4LYLZzw3vYqCXttrvA8s6)
-                              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 1.42*fem, 0*fem),
-                              width: 64*fem,
-                              height: double.infinity,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Container(
-                                    // rectangle477mv (95:31)
-                                    width: 64*fem,
-                                    height: 70*fem,
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(5*fem),
-                                      child: Image.asset(
-                                        'assets/page-1/images/Rectangle_47_round.png',
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 2.12*fem,
-                                  ),
-                                  Container(
-                                    // autogroupassn3Qg (P4LYUyvaiGgn8ENM6saSsn)
-                                    padding: EdgeInsets.fromLTRB(22.5*fem, 23.38*fem, 22.5*fem, 27.62*fem),
-                                    width: double.infinity,
-                                    decoration: BoxDecoration (
-                                      color: Color(0xffffffff),
-                                      borderRadius: BorderRadius.circular(5*fem),
-                                    ),
-                                    child: Center(
-                                      // addfill0wght400grad0opsz244Ztp (95:40)
-                                      child: SizedBox(
-                                        width: 19*fem,
-                                        height: 19*fem,
-                                        child: Image.asset(
-                                          'assets/page-1/images/addfill0wght400grad0opsz24-4.png',
-                                          width: 19*fem,
-                                          height: 19*fem,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 2.12*fem,
-                                  ),
-                                  Container(
-                                    // autogroupa1r6sec (P4LYYeV9CTkpEPxhipA1R6)
-                                    padding: EdgeInsets.fromLTRB(22.92*fem, 25.5*fem, 22.08*fem, 22.5*fem),
-                                    width: double.infinity,
-                                    decoration: BoxDecoration (
-                                      color: Color(0xffffffff),
-                                      borderRadius: BorderRadius.circular(5*fem),
-                                    ),
-                                    child: Center(
-                                      // addfill0wght400grad0opsz247Cwn (95:44)
-                                      child: SizedBox(
-                                        width: 19*fem,
-                                        height: 19*fem,
-                                        child: Image.asset(
-                                          'assets/page-1/images/addfill0wght400grad0opsz24-7.png',
-                                          width: 19*fem,
-                                          height: 19*fem,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              // autogroupnkggWha (P4LYgeFpSWpMC2i2M3nKgg)
-                              width: 64*fem,
-                              height: double.infinity,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Container(
-                                    // rectangle48rFe (95:32)
-                                    width: 64*fem,
-                                    height: 70*fem,
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(5*fem),
-                                      child: Image.asset(
-                                        'assets/page-1/images/Rectangle_48_round.png',
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 2.12*fem,
-                                  ),
-                                  Container(
-                                    // autogrouphrapNjn (P4LYoe4AH4Vh2i7RtkhrAp)
-                                    padding: EdgeInsets.fromLTRB(22.5*fem, 23.38*fem, 22.5*fem, 27.62*fem),
-                                    width: double.infinity,
-                                    decoration: BoxDecoration (
-                                      color: Color(0xffffffff),
-                                      borderRadius: BorderRadius.circular(5*fem),
-                                    ),
-                                    child: Center(
-                                      // addfill0wght400grad0opsz245uji (95:48)
-                                      child: SizedBox(
-                                        width: 19*fem,
-                                        height: 19*fem,
-                                        child: Image.asset(
-                                          'assets/page-1/images/addfill0wght400grad0opsz24-5.png',
-                                          width: 19*fem,
-                                          height: 19*fem,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 2.12*fem,
-                                  ),
-                                  Container(
-                                    // autogroupkbu6p5z (P4LYsyGH2vVBtBGPu3kbu6)
-                                    padding: EdgeInsets.fromLTRB(22.08*fem, 25.5*fem, 22.92*fem, 22.5*fem),
-                                    width: double.infinity,
-                                    decoration: BoxDecoration (
-                                      color: Color(0xffffffff),
-                                      borderRadius: BorderRadius.circular(5*fem),
-                                    ),
-                                    child: Center(
-                                      // addfill0wght400grad0opsz248Yng (95:46)
-                                      child: SizedBox(
-                                        width: 19*fem,
-                                        height: 19*fem,
-                                        child: Image.asset(
-                                          'assets/page-1/images/addfill0wght400grad0opsz24-8.png',
-                                          width: 19*fem,
-                                          height: 19*fem,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
+                                  );
+                                }
+                              },
+                              child: WatchListTile(
+                                  completed.length.toString(), "Completed"),
                             ),
                           ],
                         ),
-                      ),
+                        Column(
+                          children: [
+                            GestureDetector(
+                                onTap: () {
+                                  if (onhold.length == 0) {
+                                    HapticFeedback.mediumImpact();
+                                  } else {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => WatchListScreen(
+                                          watchList: onhold,
+                                          status: "On Hold",
+                                        ),
+                                      ),
+                                    );
+                                  }
+                                },
+                                child: WatchListTile(
+                                    onhold.length.toString(), "On Hold")),
+                            GestureDetector(
+                                onTap: () {
+                                  if (dropped.length == 0) {
+                                    HapticFeedback.mediumImpact();
+                                  } else {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => WatchListScreen(
+                                          watchList: dropped,
+                                          status: "Dropped",
+                                        ),
+                                      ),
+                                    );
+                                  }
+                                },
+                                child: WatchListTile(
+                                    dropped.length.toString(), "Dropped")),
+                          ],
+                        )
+                      ],
                     ),
-                  ],
-                ),
-              ),
-            ),
-            Positioned(
-              // favoritefill0wght400grad0opsz2 (66:2895)
-              left: 185.6235351562*fem,
-              top: 419.2077636719*fem,
-              child: Align(
-                child: SizedBox(
-                  width: 20.83*fem,
-                  height: 18.35*fem,
-                  child: Image.asset(
-                    'assets/page-1/images/favoritefill0wght400grad0opsz24-13-hZC.png',
-                    width: 20.83*fem,
-                    height: 18.35*fem,
                   ),
-                ),
+                ],
               ),
             ),
-            Positioned(
-              // bottomhub2f4 (60:305)
-              left: 0*fem,
-              top: 765*fem,
-              child: Align(
-                child: SizedBox(
-                  width: 390*fem,
-                  height: 97*fem,
-                  child: BottomNavBar(
-                    currentIndex: 4,
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
 
+Widget WatchListTile(String count, String title) {
+  return Container(
+    height: 110,
+    width: 160,
+    margin: const EdgeInsets.all(8),
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(10),
+      color: Color(0xFF14303B).withOpacity(0.25),
+      border: Border.all(color: Color(0xFF14303B).withOpacity(0.5), width: 1),
+    ),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          margin: const EdgeInsets.only(top: 8, left: 8),
+          child: Text(
+            count,
+            style: TextStyle(
+              color: accent_secondary,
+              fontSize: 36,
+            ),
+          ),
+        ),
+        Container(
+          margin: const EdgeInsets.only(top: 4, left: 8),
+          child: Text(
+            title,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
+}

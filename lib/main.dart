@@ -5,8 +5,7 @@ import 'package:kepu/routes.dart';
 import 'package:kepu/view/splash/splash_screen.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
-import 'package:get/get.dart'; // for todolist
-import 'package:firebase_database/firebase_database.dart';
+import 'package:get/get.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,7 +29,6 @@ class _AppState extends State<App> {
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
         routerConfig: router,
-
       ),
     );
   }
@@ -38,7 +36,6 @@ class _AppState extends State<App> {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-
           useMaterial3: true,
         ),
         home: const SplashView()

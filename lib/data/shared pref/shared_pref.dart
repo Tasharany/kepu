@@ -10,8 +10,6 @@ class UserPref{
     pref.setString('NODE', node);
     pref.setString('TOKEN', token);
 
-
-
   }
 
   static Future<Map<dynamic,dynamic>> getUser() async {
@@ -24,7 +22,5 @@ class UserPref{
       'TOKEN' : pref.getString('TOKEN')!,
     };
   }
-
-
 
 }

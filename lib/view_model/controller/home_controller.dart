@@ -27,24 +27,11 @@ class HomeController extends GetxController {
   RxList model = [].obs;
   final ScrollController scrollController=ScrollController();
 
-
   HomeController(){
     if (userData['NAME'] == null) {
       getUserData();
     }
   }
-
-
-
-
-
-
-
-
-
-
-
-
 
   getUserData() async {
     userData.value = await UserPref.getUser();

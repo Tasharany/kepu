@@ -20,9 +20,10 @@ import 'package:kepu/Screens/Spin/CinemaSpin.dart';
 import 'package:kepu/Screens/Home/CinemaHome.dart';
 import 'package:kepu/Screens/Home/GameHome.dart';
 import 'package:kepu/Screens/Home/MusicHome.dart';
+import 'package:kepu/view/splash/splash_screen.dart';
 
 
-GoRouter router = GoRouter(initialLocation: '/main', routes: [
+GoRouter router = GoRouter(initialLocation: '/', routes: [
   GoRoute(
     path: '/',
     builder: (context, state) => const NavScreen(),

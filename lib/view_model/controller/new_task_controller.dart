@@ -127,7 +127,7 @@ class NewTaskController extends GetxController {
         status: 'unComplete'))
         .then((value) {
 
-          // homeController.getTasks();
+           homeController.getTasks();
 
       Duration dif=pickedDate!.difference(DateTime(DateTime.now().year,DateTime.now().month,DateTime.now().day));
       homeController.list[dif.inDays].add(value);
