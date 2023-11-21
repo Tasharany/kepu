@@ -13,7 +13,7 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     // TODO: implement initState
     super.initState();
-   //homeController.getTasks();
+  // homeController.getTasks();
     SplashServices.checkLogin();
   }
   @override

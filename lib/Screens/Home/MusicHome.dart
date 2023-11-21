@@ -326,11 +326,14 @@ class MusicHome extends StatelessWidget {
               Container(
                 height: 34.83*fem,
                 decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(30),
+                  ),
                   boxShadow: <BoxShadow>[
                     BoxShadow(
                         color: Colors.black26,
-                        blurRadius: 7.0,
-                        offset: Offset(0.0, 4)
+                        blurRadius: 4,
+                        offset: Offset(0.0, 5)
                     )
                   ],
                 ),

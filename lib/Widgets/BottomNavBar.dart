@@ -54,7 +54,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                 widget.currentIndex = 0;
                 buttons[0] = "assets/BottomNav/Activecottage_FILL0_wght400_GRAD0_opsz24 2.png";
               });
-              GoRouter.of(context).go('/home');
+              GoRouter.of(context).go('/main');
             },
           ),
           IconButton(
