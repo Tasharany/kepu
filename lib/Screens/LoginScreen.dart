@@ -24,7 +24,7 @@ class LoginScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  height: 200,
+                  height: 182.09,
                   child: Image.asset(
                     'assets/stillicon.png',
                     fit: BoxFit.cover,
@@ -39,7 +39,7 @@ class LoginScreen extends StatelessWidget {
                 ),
 
                 Container(
-                  height: 100,
+                  height: 78.6,
                   child: Image.asset(
                     'assets/kepu.png',
                     fit: BoxFit.cover,
@@ -49,8 +49,8 @@ class LoginScreen extends StatelessWidget {
                 Center(
                   child: Container(
                       margin: const EdgeInsets.only(top: 24, left: 24, right: 24),
-                      width: 250,
-                      height: 72,
+                      width: 205.03,
+                      height: 50,
                       child: ElevatedButton.icon(
                         onPressed: () {
                           final provider = Provider.of<GoogleSignInProvider>(
@@ -60,15 +60,16 @@ class LoginScreen extends StatelessWidget {
                         },
                         icon: const FaIcon(
                           FontAwesomeIcons.google,
-                          color: Colors.white,
+                          size : 16,
+                          color: Colors.black,
                         ),
                         label: Text(
                           sign_in_text,
-                          style: const TextStyle(color: Colors.white, fontSize: 20),
+                          style: const TextStyle(color: Colors.black, fontSize: 17),
                         ),
                         style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10)),
+                                borderRadius: BorderRadius.circular(4)),
                             backgroundColor: const Color(0xFFFBCD71)),
                       )
 
@@ -76,24 +77,22 @@ class LoginScreen extends StatelessWidget {
                 ),
                 Center(
                   child: Container(
-                      margin: const EdgeInsets.only(top: 24, left: 24, right: 24),
-                      width: 250,
-                      height: 72,
+                      margin: const EdgeInsets.only(top: 5, left: 24, right: 24),
                       child: ElevatedButton(
                         onPressed: () {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) =>
-                                      const HomeScreen()));
+                                  builder: (context) => const HomeScreen()));
                         },
                         style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                            backgroundColor: const Color(0xFF7F7F7F)),
+                            backgroundColor: Colors.transparent,
+                            shadowColor: Colors.transparent,
+                            elevation: 0.0,
+                        ),
                         child: const Text(
                           'Guest',
-                          style: TextStyle(color: Colors.white, fontSize: 20),
+                          style: TextStyle(color: Colors.blueAccent, fontSize: 16, decoration: TextDecoration.underline),
                         ),
                       )),
                 ),

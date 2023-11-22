@@ -67,6 +67,7 @@ dependencies:
   flutter_svg: ^2.0.7
   connectivity: ^3.0.6
   animated_bottom_navigation_bar: ^1.2.0
+  flutter_fortune_wheel: ^1.3.0
 
 dev_dependencies:
   flutter_test:
@@ -102,6 +103,12 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/pick.png
+    - assets/pick1.png
+    - assets/pick2.png
+    - assets/wheel.png
+    - assets/wheel1.png
+    - assets/wheel2.png
     - assets/BottomNav/Activecottage_FILL0_wght400_GRAD0_opsz24 2.png
     - assets/BottomNav/Activectodo_FILL0_wght400_GRAD0_opsz24 1.png
     - assets/BottomNav/Activeperson_FILL0_wght400_GRAD0_opsz24 1.png
