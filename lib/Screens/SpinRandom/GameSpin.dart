@@ -56,7 +56,7 @@ class _GameSpinState extends State<GameSpin>
   }
 
 
-class GameSpin extends StatelessWidget {
+//class GameSpin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double baseWidth = 390;
@@ -436,4 +436,3 @@ class GameSpin extends StatelessWidget {
     // TODO: implement build
     throw UnimplementedError();
   }
-}

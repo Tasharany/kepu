@@ -1,6 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:kepu/Widgets/BottomNavBar.dart';
 import 'package:kepu/utils.dart';
-import '../../../../../Widgets/BottomNavBar.dart';
+
 
 class MusicSpin extends StatefulWidget {
   @override
@@ -9,7 +12,7 @@ class MusicSpin extends StatefulWidget {
 
 class _MusicSpinState extends State<MusicSpin>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
+  late AnimationController _controller;
   double _spinValue = 0.0;
   String _selectedMusic = '';
   List<String> _music = [
@@ -53,7 +56,7 @@ class _MusicSpinState extends State<MusicSpin>
   }
 
 
-class MusicSpin extends StatelessWidget {
+//class MusicSpin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double baseWidth = 390;
@@ -427,3 +430,9 @@ class MusicSpin extends StatelessWidget {
     );
   }
 }
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    throw UnimplementedError();
+  }

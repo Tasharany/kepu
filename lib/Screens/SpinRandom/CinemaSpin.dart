@@ -62,7 +62,7 @@ class _CinemaSpinState extends State<CinemaSpin>
   }
 }
 
-class CinemaSpin1 extends StatelessWidget {
+//class CinemaSpin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double baseWidth = 390;
@@ -435,10 +435,6 @@ class CinemaSpin1 extends StatelessWidget {
       ),
     );
   }
-}
 
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
-  }
+
+
