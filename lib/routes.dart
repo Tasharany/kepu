@@ -4,7 +4,6 @@ import 'package:kepu/Screens/Home/HomeScreen.dart';
 import 'package:kepu/Screens/LoginScreen.dart';
 import 'package:kepu/Screens/MainScreen.dart';
 import 'package:kepu/Screens/MovieScreen.dart';
-import 'package:kepu/Screens/NavScreen.dart';
 import 'package:kepu/Screens/Profile/ProfileScreen.dart';
 import 'package:kepu/Screens/Profile/ProfileEditScreen.dart';
 import 'package:kepu/Screens/SearchScreen.dart';
@@ -13,24 +12,16 @@ import 'package:kepu/Screens/ToDoListScreen.dart';
 import 'package:kepu/Screens/Pouch/CinemaPouch.dart';
 import 'package:kepu/Screens/Pouch/PocketPouch.dart';
 import 'package:kepu/Screens/Pouch/ChartPouch.dart';
-import 'package:get/get.dart';
 import 'package:kepu/view/home/home.dart';
-import 'package:kepu/view/sign%20in/sign_in.dart';
 import 'package:kepu/Screens/Spin/CinemaSpin.dart';
 import 'package:kepu/Screens/Home/CinemaHome.dart';
 import 'package:kepu/Screens/Home/GameHome.dart';
 import 'package:kepu/Screens/Home/MusicHome.dart';
-import 'package:kepu/view/sign%20up/sign_up.dart';
-import 'package:kepu/view/splash/splash_screen.dart';
 import 'package:kepu/Screens/Spin/GameSpin.dart';
 import 'package:kepu/Screens/Spin/MusicSpin.dart';
 
 
-GoRouter router = GoRouter(initialLocation: '/', routes: [
-  GoRoute(
-    path: '/',
-    builder: (context, state) => const NavScreen(),
-  ),
+GoRouter router = GoRouter(initialLocation: '/login', routes: [
   GoRoute(
     path: '/login',
     builder: (context, state) => const LoginScreen(),

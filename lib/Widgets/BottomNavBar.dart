@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:unicons/unicons.dart';
 import 'package:flutter/services.dart';
-import 'package:kepu/Services/consts.dart';
-import 'package:flutter/widgets.dart';
-import 'package:fluttericon/octicons_icons.dart';
-import 'package:fluttericon/font_awesome5_icons.dart';
-import 'package:fluttericon/typicons_icons.dart';
 
 class BottomNavBar extends StatefulWidget {
   BottomNavBar({Key? key, required this.currentIndex}) : super(key: key);

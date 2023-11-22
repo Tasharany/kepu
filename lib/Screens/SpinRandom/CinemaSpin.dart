@@ -1,9 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
-import 'dart:ui';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:kepu/Widgets/BottomNavBar.dart';
 import 'package:kepu/utils.dart';
-import '../../../../../Widgets/BottomNavBar.dart';
+
 
 class CinemaSpin extends StatefulWidget {
   @override
@@ -12,7 +12,7 @@ class CinemaSpin extends StatefulWidget {
 
 class _CinemaSpinState extends State<CinemaSpin>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
+  late AnimationController _controller;
   double _spinValue = 0.0;
   String _selectedMovie = '';
   List<String> _movies = [
@@ -55,8 +55,14 @@ class _CinemaSpinState extends State<CinemaSpin>
     super.dispose();
   }
 
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    throw UnimplementedError();
+  }
+}
 
-class CinemaSpin extends StatelessWidget {
+class CinemaSpin1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double baseWidth = 390;
@@ -430,3 +436,9 @@ class CinemaSpin extends StatelessWidget {
     );
   }
 }
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    throw UnimplementedError();
+  }

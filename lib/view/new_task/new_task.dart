@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:kepu/res/constants.dart';
 import 'package:kepu/view/new_task/components/task_button.dart';
 import 'package:kepu/view_model/controller/new_task_controller.dart';
 import 'package:kepu/view_model/responsive.dart';
-import '../home/components/back_decoration.dart';
 import 'components/category_input.dart';
 import 'components/date_time.dart';
 import 'components/description_input.dart';

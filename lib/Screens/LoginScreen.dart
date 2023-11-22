@@ -3,7 +3,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:kepu/Services/auth.dart';
 import 'package:kepu/Services/consts.dart';
 import 'package:provider/provider.dart';
-import 'package:lottie/lottie.dart';
 import 'package:kepu/Screens/Home/HomeScreen.dart';
 //replaced this screen with coverScreen
 class LoginScreen extends StatelessWidget {

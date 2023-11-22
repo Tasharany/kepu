@@ -1,9 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
-import 'dart:ui';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:kepu/Widgets/BottomNavBar.dart';
 import 'package:kepu/utils.dart';
-import '../../../../../Widgets/BottomNavBar.dart';
+
 
 class GameSpin extends StatefulWidget {
   @override
@@ -12,7 +12,7 @@ class GameSpin extends StatefulWidget {
 
 class _GameSpinState extends State<GameSpin>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
+  late AnimationController _controller;
   double _spinValue = 0.0;
   String _selectedGame = '';
   List<String> _games = [
@@ -428,5 +428,12 @@ class GameSpin extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    throw UnimplementedError();
   }
 }

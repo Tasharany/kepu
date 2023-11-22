@@ -1,11 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
-import 'dart:ui';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:kepu/utils.dart';
 import '../../Widgets/BottomNavBar.dart';
 
