@@ -50,11 +50,11 @@ GoRouter router = GoRouter(initialLocation: '/login', routes: [
   ),
   GoRoute(
     path: '/movie/:id',
-    builder: (context, state) => MovieScreen(state.params['id']!),
+    builder: (context, state) => MovieScreen(state.pathParameters['id']!),
   ),
   GoRoute(
     path: '/tv/:id',
-    builder: (context, state) => TVShowScreen(state.params['id']!),
+    builder: (context, state) => TVShowScreen(state.pathParameters['id']!),
   ),
   GoRoute(
     path: '/pouch',
