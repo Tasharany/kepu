@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -54,7 +55,7 @@ class FirebaseService {
               'Error',
               Utils.extractFirebaseError(error.toString()),
               const Icon(
-                FontAwesomeIcons.triangleExclamation,
+                FontAwesome5.exclamation_triangle,
                 color: Colors.red,
               ));
           signUpController.setLoading(false);
@@ -64,7 +65,7 @@ class FirebaseService {
             'Error',
             Utils.extractFirebaseError(error.toString()),
             const Icon(
-              FontAwesomeIcons.triangleExclamation,
+              FontAwesome5.exclamation_triangle,
               color: Colors.red,
             ));
         signUpController.setLoading(false);
@@ -74,7 +75,7 @@ class FirebaseService {
           'Error',
           Utils.extractFirebaseError(e.toString()),
           const Icon(
-            FontAwesomeIcons.triangleExclamation,
+            FontAwesome5.exclamation_triangle,
             color: Colors.red,
           ));
       signUpController.setLoading(true);
@@ -113,7 +114,7 @@ class FirebaseService {
               'Error',
               Utils.extractFirebaseError(error.toString()),
               const Icon(
-                FontAwesomeIcons.triangleExclamation,
+                FontAwesome5.exclamation_triangle,
                 color: Colors.red,
               ));
           signInController.setLoading(false);
@@ -123,7 +124,7 @@ class FirebaseService {
             'Error',
             Utils.extractFirebaseError(error.toString()),
             const Icon(
-              FontAwesomeIcons.triangleExclamation,
+              FontAwesome5.exclamation_triangle,
               color: Colors.red,
             ));
         signInController.setLoading(false);
@@ -133,7 +134,7 @@ class FirebaseService {
           'Error',
           Utils.extractFirebaseError(e.toString()),
           const Icon(
-            FontAwesomeIcons.triangleExclamation,
+            FontAwesome5.exclamation_triangle,
             color: Colors.red,
           ));
       signInController.setLoading(true);
@@ -164,7 +165,7 @@ class FirebaseService {
                   'Login',
                   'Successfully Login',
                   const Icon(
-                    FontAwesomeIcons.triangleExclamation,
+                    FontAwesome5.exclamation_triangle,
                     color: Colors.red,
                   ));
               UserPref.setUser(
@@ -178,7 +179,7 @@ class FirebaseService {
                   'Error',
                   Utils.extractFirebaseError(error.toString()),
                   const Icon(
-                    FontAwesomeIcons.triangleExclamation,
+                    FontAwesome5.exclamation_triangle,
                     color: Colors.red,
                   ));
               return;
@@ -188,7 +189,7 @@ class FirebaseService {
                 'Error',
                 Utils.extractFirebaseError(error.toString()),
                 const Icon(
-                  FontAwesomeIcons.triangleExclamation,
+                  FontAwesome5.exclamation_triangle,
                   color: Colors.red,
                 ));
             return;
@@ -199,7 +200,7 @@ class FirebaseService {
             'Error',
             Utils.extractFirebaseError(error.toString()),
             const Icon(
-              FontAwesomeIcons.triangleExclamation,
+              FontAwesome5.exclamation_triangle,
               color: Colors.red,
             ));
         return;
@@ -209,7 +210,7 @@ class FirebaseService {
           'Error',
           Utils.extractFirebaseError(e.toString()),
           const Icon(
-            FontAwesomeIcons.triangleExclamation,
+            FontAwesome5.exclamation_triangle,
             color: Colors.red,
           ));
     }

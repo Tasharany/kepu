@@ -19,15 +19,16 @@ import 'package:kepu/Screens/Home/GameHome.dart';
 import 'package:kepu/Screens/Home/MusicHome.dart';
 import 'package:kepu/Screens/Spin/GameSpin.dart';
 import 'package:kepu/Screens/Spin/MusicSpin.dart';
+import 'Screens/DetailScreen.dart';
 
-import 'Widgets/first_example.dart';
+
 
 
 GoRouter router = GoRouter(initialLocation: '/', routes: [
   GoRoute(
     path: '/',
-    builder: (context, state) =>  FirstExample(),
-    pageBuilder: defaultPageBuilder<FirstExample>(FirstExample()),
+    builder: (context, state) =>  DetailScreen(),
+    pageBuilder: defaultPageBuilder<DetailScreen>(DetailScreen()),
   ),
 
   GoRoute(
@@ -39,7 +40,6 @@ GoRouter router = GoRouter(initialLocation: '/', routes: [
     path: '/main',
     builder: (context, state) => const MainScreen(),
     pageBuilder: defaultPageBuilder<MainScreen>(const MainScreen()),
-    //pageBuilder: defaultPageBuilder<MainScreen>(const HomeScreen()),
   ),
   GoRoute(
     path: '/search',
@@ -67,57 +67,57 @@ GoRouter router = GoRouter(initialLocation: '/', routes: [
   GoRoute(
     path: '/pouch',
     builder: (context, state) => CinemaPouch(),
-    pageBuilder: defaultPageBuilder<ToDoListScreen>(CinemaPouch()),
+    pageBuilder: defaultPageBuilder<CinemaPouch>(CinemaPouch()),
   ),
   GoRoute(
     path: '/pocketpouch',
     builder: (context, state) => PocketPouch(),
-    pageBuilder: defaultPageBuilder<ToDoListScreen>(PocketPouch()),
+    pageBuilder: defaultPageBuilder<PocketPouch>(PocketPouch()),
   ),
   GoRoute(
     path: '/chartpouch',
     builder: (context, state) => ChartPouch(),
-    pageBuilder: defaultPageBuilder<ToDoListScreen>(ChartPouch()),
+    pageBuilder: defaultPageBuilder<ChartPouch>(ChartPouch()),
   ),
   GoRoute(
     path: '/cinemahome',
     builder: (context, state) => CinemaHome(),
-    pageBuilder: defaultPageBuilder<ToDoListScreen>(CinemaHome()),
+    pageBuilder: defaultPageBuilder<CinemaHome>(CinemaHome()),
   ),
   GoRoute(
     path: '/gamehome',
     builder: (context, state) => GameHome(),
-    pageBuilder: defaultPageBuilder<ToDoListScreen>(GameHome()),
+    pageBuilder: defaultPageBuilder<GameHome>(GameHome()),
   ),
   GoRoute(
     path: '/musichome',
     builder: (context, state) => MusicHome(),
-    pageBuilder: defaultPageBuilder<ToDoListScreen>(MusicHome()),
+    pageBuilder: defaultPageBuilder<MusicHome>(MusicHome()),
   ),
   GoRoute(
     path: '/spin',
     builder: (context, state) => CinemaSpin(),
-    pageBuilder: defaultPageBuilder<ToDoListScreen>(CinemaSpin()),
+    pageBuilder: defaultPageBuilder<CinemaSpin>(CinemaSpin()),
   ),
   GoRoute(
     path: '/editprofile',
     builder: (context, state) => ProfileEditScreen(),
-    pageBuilder: defaultPageBuilder<ToDoListScreen>(ProfileEditScreen()),
+    pageBuilder: defaultPageBuilder<ProfileEditScreen>(ProfileEditScreen()),
   ),
   GoRoute(
     path: '/home',
-    builder: (context, state) => const HomeScreen(),
-    pageBuilder: defaultPageBuilder<ToDoListScreen>(const HomeScreen()),
+    builder: (context, state) => const DetailScreen(),
+    pageBuilder: defaultPageBuilder<DetailScreen>(const DetailScreen()),
   ),
   GoRoute(
     path: '/gamespin',
     builder: (context, state) => GameSpin(),
-    pageBuilder: defaultPageBuilder<ToDoListScreen>(GameSpin()),
+    pageBuilder: defaultPageBuilder<GameSpin>(GameSpin()),
   ),
   GoRoute(
     path: '/musicspin',
     builder: (context, state) => MusicSpin(),
-    pageBuilder: defaultPageBuilder<ToDoListScreen>(MusicSpin()),
+    pageBuilder: defaultPageBuilder<MusicSpin>(MusicSpin()),
   ),
 
 ]);

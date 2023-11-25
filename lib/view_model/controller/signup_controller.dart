@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
@@ -28,15 +29,15 @@ class SignupController extends GetxController{
   }
   void createAccount(){
     if(!correctName.value){
-      Utils.showSnackBar('Warning', 'Enter Correct Name', const Icon(FontAwesomeIcons.triangleExclamation,color: Colors.pink,));
+      Utils.showSnackBar('Warning', 'Enter Correct Name', const Icon(FontAwesome5.exclamation_triangle,color: Colors.pink,));
       return;
     }
     if(!correctEmail.value){
-      Utils.showSnackBar('Warning', 'Enter Correct Email', const Icon(FontAwesomeIcons.triangleExclamation,color: Colors.pink,));
+      Utils.showSnackBar('Warning', 'Enter Correct Email', const Icon(FontAwesome5.exclamation_triangle,color: Colors.pink,));
       return;
     }
     if(password.value.text.toString().length<6){
-      Utils.showSnackBar('Warning', 'Password length should greater than 5', const Icon(FontAwesomeIcons.triangleExclamation,color: Colors.pink,));
+      Utils.showSnackBar('Warning', 'Password length should greater than 5', const Icon(FontAwesome5.exclamation_triangle,color: Colors.pink,));
       return;
     }
     FirebaseService.createAccount();

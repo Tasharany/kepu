@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import '../../data/network/firebase/firebase_services.dart';
 import '../../util/utils.dart';
+import 'package:fluttericon/font_awesome5_icons.dart';
 
 
 class SignInController extends GetxController{
@@ -17,11 +18,11 @@ class SignInController extends GetxController{
 
   void loginAccount(){
     if(!correctEmail.value){
-      Utils.showSnackBar('Warning', 'Enter Correct Email', const Icon(FontAwesomeIcons.triangleExclamation,color: Colors.pink,));
+      Utils.showSnackBar('Warning', 'Enter Correct Email', const Icon(FontAwesome5.exclamation,color: Colors.pink,));
       return;
     }
     if(password.value.text.toString().length<6){
-      Utils.showSnackBar('Warning', 'Password length should greater than 5', const Icon(FontAwesomeIcons.triangleExclamation,color: Colors.pink,));
+      Utils.showSnackBar('Warning', 'Password length should greater than 5', const Icon(FontAwesome5.exclamation,color: Colors.pink,));
       return;
     }
 

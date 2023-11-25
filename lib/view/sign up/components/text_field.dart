@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:kepu/view/sign%20up/components/textfield_sufiix.dart';
-
 import '../../../view_model/controller/signin_controller.dart';
 import '../../../view_model/controller/signup_controller.dart';
 
@@ -77,7 +77,7 @@ class InputField extends StatelessWidget {
                               size: 13,
                             )
                           : const TextFieldSufix(
-                              icon: FontAwesomeIcons.eyeLowVision,
+                              icon: FontAwesome5.eye_slash,
                               size: 13,
                             ),
                     )
