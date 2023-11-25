@@ -20,8 +20,16 @@ import 'package:kepu/Screens/Home/MusicHome.dart';
 import 'package:kepu/Screens/Spin/GameSpin.dart';
 import 'package:kepu/Screens/Spin/MusicSpin.dart';
 
+import 'Widgets/first_example.dart';
 
-GoRouter router = GoRouter(initialLocation: '/login', routes: [
+
+GoRouter router = GoRouter(initialLocation: '/', routes: [
+  GoRoute(
+    path: '/',
+    builder: (context, state) =>  FirstExample(),
+    pageBuilder: defaultPageBuilder<FirstExample>(FirstExample()),
+  ),
+
   GoRoute(
     path: '/login',
     builder: (context, state) => const LoginScreen(),

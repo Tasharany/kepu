@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:kepu/view_model/controller/home_controller.dart';
 import '../../../res/constants.dart';
 import '../../../view_model/responsive.dart';
+import 'floating_action.dart';
 
 class CustomAppBar extends StatelessWidget {
    CustomAppBar({super.key});
@@ -35,21 +36,7 @@ class CustomAppBar extends StatelessWidget {
           ),
            const Spacer(flex: 10,),
           Container(
-            height: 50,
-            width: 50,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: darkAccentBlue,
-                boxShadow: const [
-                  BoxShadow(
-                      color: lightAccentBlue,
-                      blurRadius: 20,
-                      offset: Offset(0, 10)
-                  )
-                ]
-            ),
-            child: const Icon(Icons.account_circle_outlined,color: Colors.white,),
-          ),
+           child: FloatingButton(),),
           if(Responsive.isTablet(context)) const Spacer(),
         ],
       ),

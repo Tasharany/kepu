@@ -4,6 +4,7 @@ import 'package:kepu/Services/auth.dart';
 import 'package:kepu/routes.dart';
 import 'package:kepu/view/splash/splash_screen.dart';
 import 'package:provider/provider.dart';
+import 'Widgets/first_example.dart';
 import 'firebase_options.dart';
 import 'package:get/get.dart';
 
@@ -38,7 +39,13 @@ class _AppState extends State<App> {
         theme: ThemeData(
           useMaterial3: true,
         ),
-        home: const SplashView()
+    );
+  }
+  Widget build2(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Custom TabBar',
+      theme: ThemeData(primarySwatch: Colors.blue, brightness: Brightness.dark),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

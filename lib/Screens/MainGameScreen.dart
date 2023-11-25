@@ -10,14 +10,14 @@ import 'package:kepu/Widgets/CustomLists.dart';
 import 'package:kepu/Widgets/LoadingScreen.dart';
 import 'package:kepu/Widgets/SectionText.dart';
 
-class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
+class MainGameScreen extends StatefulWidget {
+  const MainGameScreen({super.key});
 
   @override
-  State<MainScreen> createState() => _MainScreenState();
+  State<MainGameScreen> createState() => _MainGmeScreenState();
 }
 
-class _MainScreenState extends State<MainScreen>  with TickerProviderStateMixin{
+class _MainGameScreenState extends State<MainGameScreen>  with TickerProviderStateMixin{
   late TabController _tabController;
   ScrollController _scrollController = ScrollController();
   bool isVisible = true;
@@ -58,7 +58,7 @@ class _MainScreenState extends State<MainScreen>  with TickerProviderStateMixin{
   void show() {
     if (!isVisible) {
       (setState(
-        () => isVisible = true,
+            () => isVisible = true,
       ));
     }
   }
@@ -66,7 +66,7 @@ class _MainScreenState extends State<MainScreen>  with TickerProviderStateMixin{
   void hide() {
     if (isVisible) {
       (setState(
-        () => isVisible = false,
+            () => isVisible = false,
       ));
     }
   }
@@ -103,33 +103,28 @@ class _MainScreenState extends State<MainScreen>  with TickerProviderStateMixin{
       body: isLoading
           ? const LoadingScreen()
           : Container(
-              height: size.height,
-              width: size.width,
-              color: background_primary,
-              child: ListView(
-                padding: EdgeInsets.zero,
-                scrollDirection: Axis.vertical,
-                physics: const BouncingScrollPhysics(),
-                controller: _scrollController,
-                shrinkWrap: true,
-                children: [
-                  CustomCarouselSlider(topRatedShows),
-                  SectionText("Popular", "Movies"),
-                  CustomListMovie(popularMovie),
-                  SectionText("TOP Rated", "Movies"),
-                  CustomListMovie(topRatedMovie),
-                  SectionText("Popular", "Shows"),
-                  CustomListTV(popularShows),
-                  SectionText("NoW PLAying", "Movies"),
-                  CustomListMovie(nowPLayingMovie),
-                ],
-              ),
-            ),
+        height: size.height,
+        width: size.width,
+        color: background_primary,
+        child: ListView(
+          padding: EdgeInsets.zero,
+          scrollDirection: Axis.vertical,
+          physics: const BouncingScrollPhysics(),
+          controller: _scrollController,
+          shrinkWrap: true,
+          children: [
+            CustomCarouselSlider(topRatedShows),
+            SectionText("Popular", "Games"),
+            CustomListMovie(popularMovie),
+            SectionText("TOP Rated", "Games"),
+            CustomListMovie(topRatedMovie),
+            SectionText("Popular", "Games"),
+            CustomListTV(popularShows),
+            SectionText("NoW PLAying", "Games"),
+            CustomListMovie(nowPLayingMovie),
+          ],
+        ),
+      ),
     );
   }
 }
-
-
-
-
-
