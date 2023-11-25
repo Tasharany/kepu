@@ -14,7 +14,7 @@ class MainGameScreen extends StatefulWidget {
   const MainGameScreen({super.key});
 
   @override
-  State<MainGameScreen> createState() => _MainGmeScreenState();
+  State<MainGameScreen> createState() => _MainGameScreenState();
 }
 
 class _MainGameScreenState extends State<MainGameScreen>  with TickerProviderStateMixin{
