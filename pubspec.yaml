@@ -67,7 +67,8 @@ dependencies:
   flutter_svg: ^2.0.7
   animated_bottom_navigation_bar: ^1.2.0
   material_design_icons_flutter: ^7.0.7296
-
+  msh_checkbox: ^1.1.1
+  uuid: ^3.0.6
 
 
 
@@ -103,6 +104,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
+    - images/
     - assets/
     - assets/images/
     - assets/pick.png

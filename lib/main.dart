@@ -2,17 +2,14 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:kepu/Services/auth.dart';
 import 'package:kepu/routes.dart';
-import 'package:kepu/view/splash/splash_screen.dart';
-import 'package:kepu/view_model/services/splash_services.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 import 'package:get/get.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,);
-  runApp(const App());
+  await Firebase.initializeApp();
+  runApp(App());
 }
 
 class App extends StatefulWidget {
@@ -31,17 +28,7 @@ class _AppState extends State<App> {
       ),
     );
   }
-  /*
-  Widget build1(BuildContext context) {
-    return GetMaterialApp(
-        theme: ThemeData(
-          useMaterial3: true,
-        ),
-        debugShowCheckedModeBanner: false,
-        home: const SplashView()
-    );
-  }
-*/
+
 }
 
 

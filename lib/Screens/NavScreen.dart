@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:kepu/Screens/LoginScreen.dart';
 import 'package:kepu/Screens/MainScreen.dart';
-import '../view/sign in/sign_in.dart';
 import 'DetailScreen.dart';
 import 'ProfileScreen.dart';
 

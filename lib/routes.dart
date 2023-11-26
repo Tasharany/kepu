@@ -8,19 +8,17 @@ import 'package:kepu/Screens/TvShowScreen.dart';
 import 'package:kepu/Screens/Pouch/CinemaPouch.dart';
 import 'package:kepu/Screens/Pouch/PocketPouch.dart';
 import 'package:kepu/Screens/Pouch/ChartPouch.dart';
-import 'package:kepu/view/home/home.dart';
 import 'package:kepu/Screens/Spin/CinemaSpin.dart';
 import 'package:kepu/Screens/Home/CinemaHome.dart';
 import 'package:kepu/Screens/Home/GameHome.dart';
 import 'package:kepu/Screens/Home/MusicHome.dart';
 import 'package:kepu/Screens/Spin/GameSpin.dart';
 import 'package:kepu/Screens/Spin/MusicSpin.dart';
+import 'package:kepu/screen/home.dart';
 import 'Screens/DetailScreen.dart';
 import 'Screens/NavScreen.dart';
 import 'Screens/ProfileScreen.dart';
-
-
-
+import 'auth/main_page.dart';
 
 GoRouter router = GoRouter(initialLocation: '/', routes: [
   GoRoute(
@@ -49,8 +47,8 @@ GoRouter router = GoRouter(initialLocation: '/', routes: [
   ),
   GoRoute(
     path: '/todo',
-    builder: (context, state) =>  HomePage(),
-    pageBuilder: defaultPageBuilder<HomePage>(HomePage()), // routed to the To-do list screen
+    builder: (context, state) =>  Home_Screen(),
+    pageBuilder: defaultPageBuilder<Home_Screen>(Home_Screen()), // should be routed to the To-do list screen
   ),
   GoRoute(
     path: '/movie/:id',
