@@ -33,6 +33,7 @@ class _AppState extends State<App> {
       ),
     );
   }
+  /*
   Widget build1(BuildContext context) {
     return GetMaterialApp(
         theme: ThemeData(
@@ -42,7 +43,7 @@ class _AppState extends State<App> {
         home: const SplashView()
     );
   }
-
+*/
 }
 
 

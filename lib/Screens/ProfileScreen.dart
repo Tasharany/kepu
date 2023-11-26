@@ -105,8 +105,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
           })),
       backgroundColor: background_primary,
       extendBody: true,
-      body:// isLoading
-         //? LoadingScreen() :
+      body: isLoading
+         ? LoadingScreen() :
            Container(
               child: ListView(
                 controller: _scrollController,
