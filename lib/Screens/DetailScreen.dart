@@ -74,6 +74,14 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
                 ),
               ),
             ),
+      Center(
+        child: Text(
+          'Advanced Settings',
+          style: TextStyle(
+            fontSize: 30,
+          ),
+        ),
+      ),
           ],
         ),
       ),

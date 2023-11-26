@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:kepu/Services/auth.dart';
 import 'package:kepu/routes.dart';
+import 'package:kepu/view/splash/splash_screen.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 import 'package:get/get.dart';
@@ -33,10 +34,10 @@ class _AppState extends State<App> {
   }
   Widget build1(BuildContext context) {
     return GetMaterialApp(
-        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           useMaterial3: true,
         ),
+        home: const SplashView()
     );
   }
 

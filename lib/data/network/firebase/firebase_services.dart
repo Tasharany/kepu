@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import '../../../util/utils.dart';
@@ -16,7 +15,7 @@ class FirebaseService {
   static final FirebaseAuth auth = FirebaseAuth.instance;
   static final FirebaseDatabase database = FirebaseDatabase.instance;
   static final signInController = Get.put(SignInController());
-  static final signUpController = Get.put(SignupController());
+ static final signUpController = Get.put(SignupController());
 
 
 

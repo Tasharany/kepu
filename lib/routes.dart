@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:kepu/Screens/Home/HomeScreen.dart';
 import 'package:kepu/Screens/LoginScreen.dart';
-import 'package:kepu/Screens/MainScreen.dart';
 import 'package:kepu/Screens/MovieScreen.dart';
-import 'package:kepu/Screens/Profile/ProfileScreen.dart';
 import 'package:kepu/Screens/Profile/ProfileEditScreen.dart';
 import 'package:kepu/Screens/SearchScreen.dart';
 import 'package:kepu/Screens/TvShowScreen.dart';
-import 'package:kepu/Screens/ToDoListScreen.dart';
 import 'package:kepu/Screens/Pouch/CinemaPouch.dart';
 import 'package:kepu/Screens/Pouch/PocketPouch.dart';
 import 'package:kepu/Screens/Pouch/ChartPouch.dart';
@@ -20,6 +16,8 @@ import 'package:kepu/Screens/Home/MusicHome.dart';
 import 'package:kepu/Screens/Spin/GameSpin.dart';
 import 'package:kepu/Screens/Spin/MusicSpin.dart';
 import 'Screens/DetailScreen.dart';
+import 'Screens/NavScreen.dart';
+import 'Screens/ProfileScreen.dart';
 
 
 
@@ -27,10 +25,8 @@ import 'Screens/DetailScreen.dart';
 GoRouter router = GoRouter(initialLocation: '/', routes: [
   GoRoute(
     path: '/',
-    builder: (context, state) =>  DetailScreen(),
-    pageBuilder: defaultPageBuilder<DetailScreen>(DetailScreen()),
+    builder: (context, state) => const NavScreen(),
   ),
-
   GoRoute(
     path: '/login',
     builder: (context, state) => const LoginScreen(),
@@ -38,8 +34,8 @@ GoRouter router = GoRouter(initialLocation: '/', routes: [
   ),
   GoRoute(
     path: '/main',
-    builder: (context, state) => const MainScreen(),
-    pageBuilder: defaultPageBuilder<MainScreen>(const MainScreen()),
+    builder: (context, state) => const DetailScreen(),
+    pageBuilder: defaultPageBuilder<DetailScreen>(const DetailScreen()),
   ),
   GoRoute(
     path: '/search',
@@ -58,11 +54,11 @@ GoRouter router = GoRouter(initialLocation: '/', routes: [
   ),
   GoRoute(
     path: '/movie/:id',
-    builder: (context, state) => MovieScreen(state.pathParameters['id']!),
+    builder: (context, state) => MovieScreen(state.params['id']!),
   ),
   GoRoute(
     path: '/tv/:id',
-    builder: (context, state) => TVShowScreen(state.pathParameters['id']!),
+    builder: (context, state) => TVShowScreen(state.params['id']!),
   ),
   GoRoute(
     path: '/pouch',
@@ -103,11 +99,6 @@ GoRouter router = GoRouter(initialLocation: '/', routes: [
     path: '/editprofile',
     builder: (context, state) => ProfileEditScreen(),
     pageBuilder: defaultPageBuilder<ProfileEditScreen>(ProfileEditScreen()),
-  ),
-  GoRoute(
-    path: '/home',
-    builder: (context, state) => const DetailScreen(),
-    pageBuilder: defaultPageBuilder<DetailScreen>(const DetailScreen()),
   ),
   GoRoute(
     path: '/gamespin',

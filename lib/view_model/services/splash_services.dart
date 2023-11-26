@@ -2,7 +2,6 @@ import 'dart:async';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:kepu/view/home/home.dart';
-
 import '../../view/sign up/sign_up.dart';
 import '../controller/home_controller.dart';
 import '../controller/new_task_controller.dart';

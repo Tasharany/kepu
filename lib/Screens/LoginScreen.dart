@@ -4,13 +4,15 @@ import 'package:kepu/Services/auth.dart';
 import 'package:kepu/Services/consts.dart';
 import 'package:provider/provider.dart';
 import 'package:kepu/Screens/Home/HomeScreen.dart';
-//replaced this screen with coverScreen
+import 'package:go_router/go_router.dart';
+
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
+
     return Scaffold(
       body: Container(
           color: Colors.white,
@@ -56,6 +58,7 @@ class LoginScreen extends StatelessWidget {
                               context,
                               listen: false);
                           provider.googleLogin();
+
                         },
                         icon: const FaIcon(
                           FontAwesomeIcons.google,
@@ -71,9 +74,9 @@ class LoginScreen extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(4)),
                             backgroundColor: const Color(0xFFFBCD71)),
                       )
-
                   ),
                 ),
+
                 Center(
                   child: Container(
                       margin: const EdgeInsets.only(top: 5, left: 24, right: 24),
@@ -97,7 +100,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                   Container(
                   margin: const EdgeInsets.fromLTRB(28, 0, 28, 24),
-                  )
+                  ),
               ],
             ),
           ))),

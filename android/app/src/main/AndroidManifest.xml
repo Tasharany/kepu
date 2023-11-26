@@ -8,9 +8,10 @@
         </intent>
     </queries>
    <application
-        android:label="Kepu!"
-        android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+           android:label="Kepu!"
+            android:name="${applicationName}"
+            android:icon="@mipmap/ic_launcher"
+           android:enableOnBackInvokedCallback="true">
 
         <activity
             android:name=".MainActivity"
@@ -38,6 +39,5 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-       android:enableOnBackInvokedCallback="true"
     </application>
 </manifest>
