@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 import 'package:kepu/res/constants.dart';
 import 'package:kepu/view_model/services/splash_services.dart';
+import '../../view_model/controller/home_controller.dart';
+
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -13,8 +16,9 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     // TODO: implement initState
     super.initState();
-  // homeController.getTasks();
     SplashServices.checkLogin();
+    //HomeController.getTasks();
+
   }
   @override
   Widget build(BuildContext context) {

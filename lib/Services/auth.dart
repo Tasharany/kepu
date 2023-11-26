@@ -56,7 +56,7 @@ class GoogleSignInProvider extends ChangeNotifier {
 class FireBaseServices {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
- // final FirebaseDatabase database = FirebaseDatabase.instance;
+ final FirebaseDatabase database = FirebaseDatabase.instance;
   Future<void> addWatching(String id, String status, String mediaType) async {
     List watchlist = await _firestore
         .collection("Data")

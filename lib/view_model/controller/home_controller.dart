@@ -1,4 +1,4 @@
-import 'package:connectivity/connectivity.dart';
+//import 'package:connectivity/connectivity.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:kepu/db_helper/dbHelper.dart';
@@ -12,8 +12,8 @@ class HomeController extends GetxController {
   final PageController pageController = PageController();
   final DbHelper db = DbHelper();
   final DateTime dateTime = DateTime.now();
-  Connectivity? connectivity;
-
+// Connectivity? connectivity;
+  HomeController.getTasks();
   List<RxList> list=[
     [].obs,
     [].obs,

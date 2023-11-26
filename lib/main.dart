@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:kepu/Services/auth.dart';
 import 'package:kepu/routes.dart';
 import 'package:kepu/view/splash/splash_screen.dart';
+import 'package:kepu/view_model/services/splash_services.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 import 'package:get/get.dart';
@@ -37,6 +38,7 @@ class _AppState extends State<App> {
         theme: ThemeData(
           useMaterial3: true,
         ),
+        debugShowCheckedModeBanner: false,
         home: const SplashView()
     );
   }

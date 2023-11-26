@@ -11,6 +11,7 @@ class HomePage extends StatelessWidget {
   final controller = Get.put(HomeController());
   ScrollController _scrollController = ScrollController();
   bool isVisible = true;
+  HomePage.getTasks();
   @override
   Widget build(BuildContext context) {
     return Material(

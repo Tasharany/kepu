@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:kepu/view/sign%20in/components/signin_bar.dart';
 import 'package:kepu/view/sign%20in/components/signin_input_form.dart';
 import 'package:kepu/view/sign%20up/sign_up.dart';
@@ -40,7 +41,8 @@ class SignInBody extends StatelessWidget {
                 text: "Login Account",
                 loading: controller.loading.value,
                 onTap: () {
-                  controller.loginAccount();
+                  GoogleSignIn();
+               //   controller.loginAccount();
                 },
               ),
             ),
