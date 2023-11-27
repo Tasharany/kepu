@@ -5,19 +5,12 @@ import 'package:kepu/Screens/MovieScreen.dart';
 import 'package:kepu/Screens/Profile/ProfileEditScreen.dart';
 import 'package:kepu/Screens/SearchScreen.dart';
 import 'package:kepu/Screens/TvShowScreen.dart';
-import 'package:kepu/Screens/Pouch/CinemaPouch.dart';
-import 'package:kepu/Screens/Pouch/PocketPouch.dart';
-import 'package:kepu/Screens/Pouch/ChartPouch.dart';
-import 'package:kepu/Screens/Spin/CinemaSpin.dart';
-import 'package:kepu/Screens/Home/CinemaHome.dart';
-import 'package:kepu/Screens/Home/GameHome.dart';
-import 'package:kepu/Screens/Home/MusicHome.dart';
-import 'package:kepu/Screens/Spin/GameSpin.dart';
-import 'package:kepu/Screens/Spin/MusicSpin.dart';
 import 'package:kepu/screen/home.dart';
 import 'Screens/DetailScreen.dart';
 import 'Screens/NavScreen.dart';
+import 'Screens/PouchScreen.dart';
 import 'Screens/ProfileScreen.dart';
+import 'Screens/RandomScreen.dart';
 import 'auth/main_page.dart';
 
 GoRouter router = GoRouter(initialLocation: '/', routes: [
@@ -60,53 +53,18 @@ GoRouter router = GoRouter(initialLocation: '/', routes: [
   ),
   GoRoute(
     path: '/pouch',
-    builder: (context, state) => CinemaPouch(),
-    pageBuilder: defaultPageBuilder<CinemaPouch>(CinemaPouch()),
-  ),
-  GoRoute(
-    path: '/pocketpouch',
-    builder: (context, state) => PocketPouch(),
-    pageBuilder: defaultPageBuilder<PocketPouch>(PocketPouch()),
-  ),
-  GoRoute(
-    path: '/chartpouch',
-    builder: (context, state) => ChartPouch(),
-    pageBuilder: defaultPageBuilder<ChartPouch>(ChartPouch()),
-  ),
-  GoRoute(
-    path: '/cinemahome',
-    builder: (context, state) => CinemaHome(),
-    pageBuilder: defaultPageBuilder<CinemaHome>(CinemaHome()),
-  ),
-  GoRoute(
-    path: '/gamehome',
-    builder: (context, state) => GameHome(),
-    pageBuilder: defaultPageBuilder<GameHome>(GameHome()),
-  ),
-  GoRoute(
-    path: '/musichome',
-    builder: (context, state) => MusicHome(),
-    pageBuilder: defaultPageBuilder<MusicHome>(MusicHome()),
+    builder: (context, state) => PouchScreen(),
+    pageBuilder: defaultPageBuilder<PouchScreen>(PouchScreen()),
   ),
   GoRoute(
     path: '/spin',
-    builder: (context, state) => CinemaSpin(),
-    pageBuilder: defaultPageBuilder<CinemaSpin>(CinemaSpin()),
+    builder: (context, state) => RandomScreen(),
+    pageBuilder: defaultPageBuilder<RandomScreen>(RandomScreen()),
   ),
   GoRoute(
     path: '/editprofile',
     builder: (context, state) => ProfileEditScreen(),
     pageBuilder: defaultPageBuilder<ProfileEditScreen>(ProfileEditScreen()),
-  ),
-  GoRoute(
-    path: '/gamespin',
-    builder: (context, state) => GameSpin(),
-    pageBuilder: defaultPageBuilder<GameSpin>(GameSpin()),
-  ),
-  GoRoute(
-    path: '/musicspin',
-    builder: (context, state) => MusicSpin(),
-    pageBuilder: defaultPageBuilder<MusicSpin>(MusicSpin()),
   ),
 
 ]);
