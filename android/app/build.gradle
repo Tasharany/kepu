@@ -52,7 +52,13 @@ android {
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
+    signingConfigs {
+        release {
 
+            storeFile file('debug.keystore')
+
+        }
+    }
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.

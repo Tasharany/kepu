@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import '../Widgets/BottomNavBar.dart';
 import 'MainScreen.dart';
+import 'Music/main_screen/music_home_screen.dart';
 
 class DetailScreen extends StatefulWidget {
   const DetailScreen({
@@ -131,13 +132,8 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
               ),
             ),
       Center(
-        child: Text(
-          'Music',
-          style: TextStyle(
-            fontSize: 30,
-          ),
-        ),
-      ),
+        child: MusicHomeScreen(),
+            ),
           ],
         ),
       ),

@@ -33,12 +33,13 @@ dependencies:
   flex_color_scheme: ^7.2.0
   flutter:
     sdk: flutter
-
+  flutter_localizations:
+    sdk: flutter
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  http: ^0.13.5
+  http: any
   dio: ^4.0.6
   firebase_core: ^2.4.1
   firebase_auth: ^4.2.4
@@ -49,7 +50,7 @@ dependencies:
   carousel_slider: ^4.2.1
   unicons: ^2.1.0
   cached_network_image: ^3.2.3
-  go_router: ^6.0.1
+  go_router: ^8.2.0
   url_launcher: ^6.1.8
   lottie: ^2.3.2
   cloud_firestore: ^4.7.1
@@ -64,13 +65,51 @@ dependencies:
   email_validator: ^2.1.17
   shared_preferences: ^2.2.0
   sign_in_with_apple: ^5.0.0
-  flutter_svg: ^2.0.7
+  flutter_svg: any
   animated_bottom_navigation_bar: ^1.2.0
   material_design_icons_flutter: ^7.0.7296
   msh_checkbox: ^1.1.1
   uuid: ^3.0.6
   flutter_fortune_wheel: ^1.3.0
   rxdart: ^0.27.3
+
+  audio_service: ^0.18.10
+  audio_video_progress_bar: ^1.0.1
+  dart_des: ^1.0.2
+  eva_icons_flutter: ^3.1.0
+  get_it: ^7.6.0
+  iconsax: ^0.0.8
+  just_audio: ^0.9.35
+  sliding_up_panel: ^2.0.0+1
+  logging: any
+  duration_picker: ^1.1.1
+  flutter_displaymode: ^0.6.0
+  flutter_swipe_action_cell: ^3.1.2
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  flutter_colorpicker: ^1.0.3
+  dropdown_button2: ^2.3.9
+  dynamic_color: ^1.6.5
+  flutter_lyric: ^2.0.4+6
+  flip_card: ^0.7.0
+  permission_handler: ^10.4.1
+  flutter_progress_status: ^0.0.3
+  path_provider: ^2.0.15
+  youtube_explode_dart: ^2.0.2
+  auto_size_text: ^3.0.0
+  skeletons: ^0.0.3
+  country_picker: ^2.0.20
+  audio_tagger:
+    git:
+      url: https://github.com/SongTube/audio_tagger
+      ref: main
+  just_audio_mpv: ^0.1.7
+  audiotags: ^1.2.1
+  bitsdojo_window: ^0.1.5
+  change_app_package_name: ^1.1.0
+  titlebar_buttons: ^1.0.0
+  auto_route: ^7.8.4
+
 
 dev_dependencies:
   flutter_test:
@@ -103,6 +142,7 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  generate: true
   assets:
     - images/
     - assets/
@@ -130,7 +170,8 @@ flutter:
     - assets/launcher_icon/mipmap-xxhdpi/ic_launcher.png
     - assets/launcher_icon/mipmap-xxxhdpi/ic_launcher.png
     - assets/launcher_icon/foreground.png
-
+flutter_intl:
+  enabled: true
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

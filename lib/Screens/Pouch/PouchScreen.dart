@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-import '../Widgets/BottomNavBar.dart';
+import '../../Widgets/BottomNavBar.dart';
+import 'ChartPouch.dart';
 
 class PouchScreen extends StatefulWidget {
   const PouchScreen({
@@ -121,12 +122,7 @@ class _PouchScreenState extends State<PouchScreen> with TickerProviderStateMixin
         body: const TabBarView(
           children: [
             Center(
-              child: Text(
-                'Movies',
-                style: TextStyle(
-                  fontSize: 30,
-                ),
-              ),
+              child: ChartPouch(),
             ),
             Center(
               child: Text(

@@ -8,10 +8,10 @@ import 'package:kepu/Screens/TvShowScreen.dart';
 import 'package:kepu/screen/home.dart';
 import 'Screens/DetailScreen.dart';
 import 'Screens/NavScreen.dart';
-import 'Screens/PouchScreen.dart';
+import 'Screens/Pouch/PouchScreen.dart';
 import 'Screens/ProfileScreen.dart';
 import 'Screens/RandomScreen.dart';
-import 'auth/main_page.dart';
+import 'package:kepu/utils/router.dart';
 
 GoRouter router = GoRouter(initialLocation: '/', routes: [
   GoRoute(
@@ -45,11 +45,11 @@ GoRouter router = GoRouter(initialLocation: '/', routes: [
   ),
   GoRoute(
     path: '/movie/:id',
-    builder: (context, state) => MovieScreen(state.params['id']!),
+    builder: (context, state) => MovieScreen(state.pathParameters['id']!),
   ),
   GoRoute(
     path: '/tv/:id',
-    builder: (context, state) => TVShowScreen(state.params['id']!),
+    builder: (context, state) => TVShowScreen(state.pathParameters['id']!),
   ),
   GoRoute(
     path: '/pouch',
