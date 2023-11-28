@@ -86,7 +86,7 @@ class _Home_ScreenState extends State<Home_Screen> {
         child: FloatingActionButton(
           onPressed: () {
             Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => Add_creen(),
+              builder: (context) => Add_screen(),
             ));
           },
           backgroundColor: custom_green,

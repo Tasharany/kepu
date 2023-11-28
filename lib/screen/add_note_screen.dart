@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:kepu/const/colors.dart';
 import 'package:kepu/data/firestor.dart';
 
-class Add_creen extends StatefulWidget {
-  const Add_creen({super.key});
+class Add_screen extends StatefulWidget {
+  const Add_screen({super.key});
 
   @override
-  State<Add_creen> createState() => _Add_creenState();
+  State<Add_screen> createState() => _Add_screenState();
 }
 
-class _Add_creenState extends State<Add_creen> {
+class _Add_screenState extends State<Add_screen> {
   final title = TextEditingController();
   final subtitle = TextEditingController();
 

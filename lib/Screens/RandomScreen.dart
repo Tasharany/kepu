@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import '../Widgets/BottomNavBar.dart';
+import 'Spin/SpinWheelThree.dart';
+import 'Spin/SpinWheelTwo.dart';
 import 'Spin/spinwheelscreen.dart';
 
 
@@ -124,20 +126,10 @@ class _RandomScreenState extends State<RandomScreen> with TickerProviderStateMix
               child: SpinWheel(),
             ),
             Center(
-              child: Text(
-                'Games',
-                style: TextStyle(
-                  fontSize: 30,
-                ),
-              ),
+              child: SpinWheel2(),
             ),
             Center(
-              child: Text(
-                'Music',
-                style: TextStyle(
-                  fontSize: 30,
-                ),
-              ),
+              child: SpinWheel3()
             ),
           ],
         ),

@@ -54,17 +54,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   void show() {
     if (!isVisible) {
-      (setState(
-        () => isVisible = true,
-      ));
+      (setState(() => isVisible = true,));
     }
   }
 
   void hide() {
     if (isVisible) {
-      (setState(
-        () => isVisible = false,
-      ));
+      (setState(() => isVisible = false,));
     }
   }
 
