@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import '../Widgets/BottomNavBar.dart';
 import 'MainScreen.dart';
 
 class DetailScreen extends StatefulWidget {
@@ -10,11 +12,65 @@ class DetailScreen extends StatefulWidget {
 }
 
 class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMixin {
+  ScrollController _scrollController = ScrollController();
+  bool isVisible = true;
+  bool isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController = ScrollController();
+    _scrollController.addListener(listen);
+  }
+
+  @override
+  void dispose() {
+    _scrollController.removeListener(listen);
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  void listen() {
+    final direction = _scrollController.position.userScrollDirection;
+    if (direction == ScrollDirection.forward) {
+      show();
+    } else if (direction == ScrollDirection.reverse) {
+      hide();
+    }
+  }
+
+  void show() {
+    if (!isVisible) {
+      (setState(
+            () => isVisible = true,
+      ));
+    }
+  }
+
+  void hide() {
+    if (isVisible) {
+      (setState(
+            () => isVisible = false,
+      ));
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+        bottomNavigationBar: AnimatedBuilder(
+            animation: _scrollController,
+            builder: ((context, child) {
+              return AnimatedContainer(
+                duration: const Duration(milliseconds: 800),
+                curve: Curves.fastLinearToSlowEaseIn,
+                height: isVisible ? 75 : 0,
+                child: BottomNavBar(
+                  currentIndex: 0,
+                ),
+              );
+            })),
         appBar: AppBar(
           title: Center(child: Text("What's New?",style: TextStyle(
         fontWeight: FontWeight.bold,
@@ -68,7 +124,7 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
             ),
             Center(
               child: Text(
-                'Advanced Settings',
+                'Games',
                 style: TextStyle(
                   fontSize: 30,
                 ),
@@ -76,7 +132,7 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
             ),
       Center(
         child: Text(
-          'Advanced Settings',
+          'Music',
           style: TextStyle(
             fontSize: 30,
           ),

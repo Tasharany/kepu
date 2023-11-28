@@ -99,7 +99,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               curve: Curves.fastLinearToSlowEaseIn,
               height: isVisible ? 75 : 0,
               child: BottomNavBar(
-                currentIndex: 2,
+                currentIndex: 4,
               ),
             );
           })),
@@ -218,7 +218,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     margin: EdgeInsets.only(right: 8, left: 8),
                     alignment: Alignment.topLeft,
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
                           children: [

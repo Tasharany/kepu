@@ -87,18 +87,6 @@ class _MainScreenState extends State<MainScreen>  with TickerProviderStateMixin{
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
-      bottomNavigationBar: AnimatedBuilder(
-          animation: _scrollController,
-          builder: ((context, child) {
-            return AnimatedContainer(
-              duration: const Duration(milliseconds: 800),
-              curve: Curves.fastLinearToSlowEaseIn,
-              height: isVisible ? 75 : 0,
-              child: BottomNavBar(
-                currentIndex: 0,
-              ),
-            );
-          })),
       extendBody: true,
       body: isLoading
           ? const LoadingScreen()

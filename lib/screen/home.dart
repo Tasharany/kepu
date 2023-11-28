@@ -4,6 +4,8 @@ import 'package:kepu/const/colors.dart';
 import 'package:kepu/screen/add_note_screen.dart';
 import 'package:kepu/widgets/stream_note.dart';
 
+import '../Widgets/BottomNavBar.dart';
+
 class Home_Screen extends StatefulWidget {
   const Home_Screen({super.key});
 
@@ -11,12 +13,73 @@ class Home_Screen extends StatefulWidget {
   State<Home_Screen> createState() => _Home_ScreenState();
 }
 
-bool show = true;
+
 
 class _Home_ScreenState extends State<Home_Screen> {
+  ScrollController _scrollController = ScrollController();
+  bool isVisible = true;
+  bool isLoading = true;
+  late List watchlist;
+  List completed = [];
+  List watching = [];
+  List onhold = [];
+  List dropped = [];
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController = ScrollController();
+    _scrollController.addListener(listen);
+  }
+
+  @override
+  void dispose() {
+    _scrollController.removeListener(listen);
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  void listen() {
+    final direction = _scrollController.position.userScrollDirection;
+    if (direction == ScrollDirection.forward) {
+      show0();
+    } else if (direction == ScrollDirection.reverse) {
+      hide();
+    }
+  }
+
+  void show0() {
+    if (!isVisible) {
+      (setState(
+            () => isVisible = true,
+      ));
+    }
+  }
+
+  void hide() {
+    if (isVisible) {
+      (setState(
+            () => isVisible = false,
+      ));
+    }
+  }
+
+  bool show = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: AnimatedBuilder(
+          animation: _scrollController,
+          builder: ((context, child) {
+            return AnimatedContainer(
+              duration: const Duration(milliseconds: 800),
+              curve: Curves.fastLinearToSlowEaseIn,
+              height: isVisible ? 75 : 0,
+              child: BottomNavBar(
+                currentIndex: 1,
+              ),
+            );
+          })),
       backgroundColor: backgroundColors,
       floatingActionButton: Visibility(
         visible: show,

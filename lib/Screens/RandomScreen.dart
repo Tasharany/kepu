@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import '../Widgets/BottomNavBar.dart';
+import 'Spin/spinwheelscreen.dart';
 
 
 class RandomScreen extends StatefulWidget {
@@ -10,11 +13,65 @@ class RandomScreen extends StatefulWidget {
 }
 
 class _RandomScreenState extends State<RandomScreen> with TickerProviderStateMixin {
+  ScrollController _scrollController = ScrollController();
+  bool isVisible = true;
+  bool isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController = ScrollController();
+    _scrollController.addListener(listen);
+  }
+
+  @override
+  void dispose() {
+    _scrollController.removeListener(listen);
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  void listen() {
+    final direction = _scrollController.position.userScrollDirection;
+    if (direction == ScrollDirection.forward) {
+      show();
+    } else if (direction == ScrollDirection.reverse) {
+      hide();
+    }
+  }
+
+  void show() {
+    if (!isVisible) {
+      (setState(
+            () => isVisible = true,
+      ));
+    }
+  }
+
+  void hide() {
+    if (isVisible) {
+      (setState(
+            () => isVisible = false,
+      ));
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+        bottomNavigationBar: AnimatedBuilder(
+            animation: _scrollController,
+            builder: ((context, child) {
+              return AnimatedContainer(
+                duration: const Duration(milliseconds: 800),
+                curve: Curves.fastLinearToSlowEaseIn,
+                height: isVisible ? 75 : 0,
+                child: BottomNavBar(
+                  currentIndex: 3,
+                ),
+              );
+            })),
         appBar: AppBar(
           title: Center(child: Text("What's Next?",style: TextStyle(
               fontWeight: FontWeight.bold,
@@ -64,12 +121,7 @@ class _RandomScreenState extends State<RandomScreen> with TickerProviderStateMix
         body: const TabBarView(
           children: [
             Center(
-              child: Text(
-               'Movies',
-                style: TextStyle(
-                  fontSize: 30,
-                ),
-              ),
+              child: SpinWheel(),
             ),
             Center(
               child: Text(
