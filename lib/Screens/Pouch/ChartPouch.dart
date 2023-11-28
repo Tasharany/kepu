@@ -18,11 +18,20 @@ import '../WatchListScreen.dart';
   }
 
   class _ChartPouchState extends State<ChartPouch> {
+    bool isVisible = true;
+    bool isLoading = true;
     late List watchlist;
     List completed = [];
     List watching = [];
     List onhold = [];
     List dropped = [];
+
+    @override
+    void initState() {
+      super.initState();
+      fetchData();
+
+    }
 
     void fetchData() async {
       watchlist = await FireBaseServices().getWatchList();
@@ -37,6 +46,9 @@ import '../WatchListScreen.dart';
           dropped.add(watchlist[i]);
         }
       }
+      setState(() {
+        isLoading = false;
+      });
     }
     final User _user = FirebaseAuth.instance.currentUser!;
     @override
@@ -51,77 +63,6 @@ import '../WatchListScreen.dart';
             scrollDirection: Axis.vertical,
             padding: const EdgeInsets.only(top: 0),
             children: [
-              Stack(
-                alignment: Alignment.bottomLeft,
-                children: [
-                  Container(
-                    height: 300,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: NetworkImage(
-                          _user.photoURL.toString(),
-                        ),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    child: ClipRect(
-                      child: BackdropFilter(
-                        filter: ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
-                        child: Container(
-                          color: Colors.black.withOpacity(0.1),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    height: 300,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment.center,
-                        end: Alignment.bottomCenter,
-                        colors: [
-                          Colors.transparent,
-                          background_primary.withOpacity(0.50),
-                          background_primary.withOpacity(0.75),
-                          background_primary.withOpacity(1.00),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        margin: const EdgeInsets.only(left: 20, bottom: 20),
-                        height: 100,
-                        width: 100,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          image: DecorationImage(
-                              image:
-                              NetworkImage(_user.photoURL.toString()),
-                              fit: BoxFit.cover),
-                        ),
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        margin: const EdgeInsets.only(left: 20, bottom: 20),
-                        child: Text(
-                          _user.displayName.toString(),
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 24,
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
-                      ),
-                    ],
-                  ),
-
-                ],
-              ),
               Container(
                 margin: EdgeInsets.only(right: 8, left: 8),
                 alignment: Alignment.topLeft,
