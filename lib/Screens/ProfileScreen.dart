@@ -80,7 +80,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
             );
           })),
-      backgroundColor: Colors.orange[100],
+      backgroundColor: Colors.blue[100],
       extendBody: true,
       body:
            Container(

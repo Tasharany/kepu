@@ -7,6 +7,8 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:kepu/generated/l10n.dart';
 
+import '../../../utils/playlists.dart';
+
 class PlaylistsScreen extends StatelessWidget {
   const PlaylistsScreen({super.key});
 
@@ -79,8 +81,12 @@ class PlaylistsScreen extends StatelessWidget {
       ),
       // floatingActionButton: FloatingActionButton(
       //   onPressed: () => showCreatePlaylist(context),
-      //   child: const Icon(Icons.playlist_add),
+       // child: const Icon(Icons.playlist_add),
       // ),
+       floatingActionButton: FloatingActionButton(
+       onPressed: () => context.go('/find'),
+    child: const Icon(Icons.playlist_add),
+       ),
     );
   }
 }

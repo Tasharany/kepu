@@ -84,11 +84,6 @@ class _SearchScreenState extends State<SearchScreen> {
             body: Stack(
               alignment: AlignmentDirectional.topStart,
               children: [
-                Image.asset(
-                  'assets/backdrop.png',
-                  fit: BoxFit.fitWidth,
-                  width: size.width,
-                ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,

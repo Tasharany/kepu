@@ -21,6 +21,8 @@ import 'package:kepu/screens/music/settings/setting_screen.dart';
 import '../Screens/Music/main_screen/music_home_screen.dart';
 import 'package:kepu/utils/router.dart';
 
+import '../Screens/NavScreen.dart';
+
 PageController pageController = PageController();
 GoRouter route = GoRouter(
   navigatorKey: GetIt.I<GlobalKey<NavigatorState>>(),
@@ -51,8 +53,8 @@ List<StatefulShellBranch> branches = [
       GoRoute(
           path: '/',
           pageBuilder: (context, state) =>
-              const NoTransitionPage(child: MusicHomeScreen()),
-          // const NoTransitionPage(child: NavScreen()),
+             // const NoTransitionPage(child: MusicHomeScreen()),
+           const NoTransitionPage(child: NavScreen()),
           routes: [
             GoRoute(
               path: 'list',

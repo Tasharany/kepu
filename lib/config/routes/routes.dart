@@ -4,7 +4,6 @@ import '../../feature/categories/presentation/pages/categories_page.dart';
 import '../../feature/favourites/presentation/pages/favourites_page.dart';
 import '../../feature/games/presentation/pages/game_details_page.dart';
 import '../../feature/games/presentation/pages/games_page.dart';
-
 import '../../core/navigation/navigation.dart';
 import '../../feature/categories/domain/model/genre.dart';
 import '../../feature/categories/presentation/pages/category_games_page.dart';

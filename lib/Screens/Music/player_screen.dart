@@ -80,7 +80,7 @@ class _PlayerScreenState extends State<PlayerScreen> {
                     onPressed: () => Navigator.pop(context),
                     icon: const Icon(EvaIcons.chevronDownOutline))
                 : null,
-            title: Text("Gyawun", style: textStyle(context, bold: false)),
+            title: Text("Music", style: textStyle(context, bold: false)),
             centerTitle: true,
             actions: song != null
                 ? [

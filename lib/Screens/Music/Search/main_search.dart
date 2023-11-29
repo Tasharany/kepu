@@ -25,7 +25,7 @@ class _MainSearchScreenState extends State<MainSearchScreen>
   List<String> hints = [];
   final TextEditingController _searchController = TextEditingController();
   SearchProvider searchProvider =
-      Hive.box('settings').get('searchProvider', defaultValue: 'saavn') ==
+      Hive.box('settings').get('searchProvider', defaultValue: 'youtube') ==
               'youtube'
           ? SearchProvider.youtube
           : SearchProvider.saavn;

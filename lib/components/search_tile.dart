@@ -23,9 +23,9 @@ class SearchTile extends StatelessWidget {
         if (item['type'] == 'song' || item['type'] == 'video') {
           context.read<MediaManager>().addAndPlay([item]);
         } else if (item['type'] == 'artist') {
-          context.go('/search/artist', extra: item);
+          context.go('/find/artist', extra: item);
         } else {
-          context.go('/search/list', extra: item);
+          context.go('/find/list', extra: item);
         }
       },
       onLongPress: () {
