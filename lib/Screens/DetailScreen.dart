@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import '../Widgets/BottomNavBar.dart';
+import '../feature/games/presentation/pages/home_page.dart';
 import 'MainScreen.dart';
 import 'Music/main_screen/music_home_screen.dart';
 
@@ -124,12 +125,7 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
               child: MainScreen(),
             ),
             Center(
-              child: Text(
-                'Games',
-                style: TextStyle(
-                  fontSize: 30,
-                ),
-              ),
+              child: HomePage(),
             ),
       Center(
         child: MusicHomeScreen(),

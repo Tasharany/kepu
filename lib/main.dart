@@ -10,6 +10,7 @@ import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get_it/get_it.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../generated/l10n.dart';
 import 'package:kepu/providers/audio_handler.dart';
 import 'package:kepu/providers/media_manager.dart';
@@ -20,9 +21,16 @@ import 'package:kepu/ui/themes/light.dart';
 import 'package:kepu/utils/playback_cache.dart';
 import 'package:kepu/utils/router.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'config/routes/routes.dart';
+import 'config/theme/theme.dart';
+import 'injector.dart' as di;
+import 'injector.dart';
+//games
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await di.init();
   await Firebase.initializeApp();
   Future<Box<E>> openBox<E>(String name) async {
     return await Hive.openBox(name, path: Platform.isAndroid ? null : 'Kepu');
@@ -80,6 +88,11 @@ class _AppState extends State<App> {
   }
   @override
   Widget build(BuildContext context) {
+    final prefs = sl<SharedPreferences>();
+    MaterialApp(
+        routes: Routes.routes,
+        theme: themeData
+    );
     return ChangeNotifierProvider(
       create: (context) => GoogleSignInProvider(),
       child: MaterialApp.router(

@@ -46,28 +46,6 @@ class _MusicHomeScreenState extends State<MusicHomeScreen>
 
     return Scaffold(
       extendBody: true,
-      appBar: AppBar(
-        title: Hero(
-          tag: "SearchField",
-          child: TextField(
-            onTap: () =>  GoRouter.of(context).go('search'),
-            readOnly: true,
-            decoration: InputDecoration(
-              fillColor: darkGreyColor.withAlpha(50),
-              filled: true,
-              contentPadding:
-                  const EdgeInsets.symmetric(vertical: 2, horizontal: 16),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(35),
-                borderSide: BorderSide.none,
-              ),
-              hintText: S.of(context).searchGyawun,
-              prefixIcon: const Icon(Icons.search),
-            ),
-          ),
-        ),
-        centerTitle: true,
-      ),
       body: loading
           ? const HomePageSkeleton()
           : RefreshIndicator(
