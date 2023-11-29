@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import '../../Widgets/BottomNavBar.dart';
+import '../../feature/favourites/presentation/pages/favourites_page.dart';
+import '../Music/playlists/favorites_details.dart';
 import 'ChartPouch.dart';
 
 class PouchScreen extends StatefulWidget {
@@ -119,26 +121,16 @@ class _PouchScreenState extends State<PouchScreen> with TickerProviderStateMixin
             ),
           ),
         ),
-        body: const TabBarView(
+        body:  TabBarView(
           children: [
             Center(
               child: ChartPouch(),
             ),
             Center(
-              child: Text(
-                'Games',
-                style: TextStyle(
-                  fontSize: 30,
-                ),
-              ),
+              child: FavouritesPage(),
             ),
             Center(
-              child: Text(
-                'Music',
-                style: TextStyle(
-                  fontSize: 30,
-                ),
-              ),
+              child: FavoriteDetails(),
             ),
           ],
         ),
