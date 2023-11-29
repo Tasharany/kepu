@@ -90,6 +90,7 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     final prefs = sl<SharedPreferences>();
     MaterialApp(
+        initialRoute: prefs.getBool('onBoardingStatus') ?? false ? Routes.homeContainer : Routes.initialRoute,
         routes: Routes.routes,
         theme: themeData
     );
@@ -107,6 +108,7 @@ class _AppState extends State<App> {
         supportedLocales: S.delegate.supportedLocales,
       ),
     );
+
   }
 
 

@@ -63,8 +63,8 @@ class S {
   /// `Search Gyawun`
   String get searchGyawun {
     return Intl.message(
-      'Search',
-      name: 'search',
+      'Search Gyawun',
+      name: 'searchGyawun',
       desc: '',
       args: [],
     );

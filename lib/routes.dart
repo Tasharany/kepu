@@ -5,7 +5,7 @@ import 'package:kepu/Screens/MovieScreen.dart';
 import 'package:kepu/Screens/Profile/ProfileEditScreen.dart';
 import 'package:kepu/Screens/SearchScreen.dart';
 import 'package:kepu/Screens/TvShowScreen.dart';
-import 'package:kepu/screen/home.dart';
+import 'package:kepu/screen/todo.dart';
 import 'Screens/DetailScreen.dart';
 import 'Screens/NavScreen.dart';
 import 'Screens/Pouch/PouchScreen.dart';
@@ -40,8 +40,8 @@ GoRouter router = GoRouter(initialLocation: '/', routes: [
   ),
   GoRoute(
     path: '/todo',
-    builder: (context, state) =>  Home_Screen(),
-    pageBuilder: defaultPageBuilder<Home_Screen>(Home_Screen()), // is routed to the To-do list screen
+    builder: (context, state) =>  ToDoListScreen(),
+    pageBuilder: defaultPageBuilder<ToDoListScreen>(ToDoListScreen()), // is routed to the To-do list screen
   ),
   GoRoute(
     path: '/movie/:id',

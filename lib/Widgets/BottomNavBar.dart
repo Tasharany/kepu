@@ -102,7 +102,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           IconButton(
             icon: Image(
               image: widget.currentIndex == 4 ?
-              AssetImage('assets/BottomNav/Activectodo_FILL0_wght400_GRAD0_opsz24 1.png') :
+              AssetImage('assets/BottomNav/Activeperson_FILL0_wght400_GRAD0_opsz24 1.png') :
               AssetImage('assets/BottomNav/person_FILL0_wght400_GRAD0_opsz24 1.png'),
               height: 41,
               width: 41,

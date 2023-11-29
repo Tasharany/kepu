@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import '../Widgets/BottomNavBar.dart';
-import '../feature/games/presentation/pages/home_page.dart';
+import '../feature/games/presentation/pages/game_home_page.dart';
+import '../feature/games/presentation/pages/games_page.dart';
 import 'MainScreen.dart';
 import 'Music/main_screen/music_home_screen.dart';
 
@@ -119,13 +120,13 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
             ),
           ),
         ),
-        body: const TabBarView(
+        body:  TabBarView(
           children: [
             Center(
               child: MainScreen(),
             ),
             Center(
-              child: HomePage(),
+              child: GamesPage(),
             ),
       Center(
         child: MusicHomeScreen(),

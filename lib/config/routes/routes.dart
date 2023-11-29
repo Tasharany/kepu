@@ -9,7 +9,7 @@ import '../../core/navigation/navigation.dart';
 import '../../feature/categories/domain/model/genre.dart';
 import '../../feature/categories/presentation/pages/category_games_page.dart';
 import '../../feature/games/domain/model/game.dart';
-import '../../feature/games/presentation/pages/home_page.dart';
+import '../../feature/games/presentation/pages/game_home_page.dart';
 import '../../feature/games/presentation/pages/screenshots_page.dart';
 import '../../feature/onboarding/presentation/pages/onboarding_screens_container.dart';
 import '../../feature/search/domain/model/search_results_model.dart';

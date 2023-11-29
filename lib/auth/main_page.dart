@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:kepu/auth/auth_page.dart';
-import 'package:kepu/screen/home.dart';
+import 'package:kepu/screen/todo.dart';
 
 class Main_Page extends StatelessWidget {
   const Main_Page({super.key});
@@ -13,7 +13,7 @@ class Main_Page extends StatelessWidget {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return Home_Screen();
+            return ToDoListScreen();
           } else {
             return Auth_Page();
           }

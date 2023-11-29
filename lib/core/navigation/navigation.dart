@@ -4,7 +4,7 @@ import '../../config/theme/colors.dart';
 import '../../feature/categories/presentation/pages/categories_page.dart';
 import '../../feature/favourites/presentation/pages/favourites_page.dart';
 import '../../feature/games/presentation/pages/games_page.dart';
-import '../../feature/games/presentation/pages/home_page.dart';
+import '../../feature/games/presentation/pages/game_home_page.dart';
 
 class NavigationContainer extends StatefulWidget {
   const NavigationContainer({Key? key}) : super(key: key);
@@ -17,7 +17,7 @@ class _NavigationContainerState extends State<NavigationContainer> {
   int _selectedIndex = 0;
 
   static final List<Widget> _widgetOptions = <Widget>[
-    const HomePage(),
+    const GameHomePage(),
     CategoriesPage(),
     FavouritesPage(),
   ];

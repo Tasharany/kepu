@@ -137,8 +137,8 @@ flutter_launcher_icons: ^0.12.0
 flutter_icons:
   android: true
   image_path_android: "assets/AppIcon.png"
-  adaptive_icon_background: "#ffffff"
-  adaptive_icon_foreground: "assets/launcher_icon/mipmap-xxxhdpi/ic_launcher.png"
+  adaptive_icon_background: "assets/launcher_icon/background.png"
+  adaptive_icon_foreground: "assets/launcher_icon/foreground.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

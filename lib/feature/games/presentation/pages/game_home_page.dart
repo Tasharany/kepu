@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import '../../../../config/theme/colors.dart';
 import '../../../tags/presentation/pages/tags_page.dart';
-import '../widgets/custom_painter.dart';
 import 'games_page.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class GameHomePage extends StatefulWidget {
+  const GameHomePage({super.key});
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _GameHomePageState createState() => _GameHomePageState();
 }
 
-class _HomePageState extends State<HomePage>
+class _GameHomePageState extends State<GameHomePage>
     with SingleTickerProviderStateMixin {
   PageController _pageController = PageController();
 
@@ -96,19 +95,5 @@ class _HomePageState extends State<HomePage>
         ),
       ),
     ));
-  }
-
-
-
-
-
-  void _onGamesButtonPress() {
-    _pageController.animateToPage(0,
-        duration: const Duration(milliseconds: 500), curve: Curves.decelerate);
-  }
-
-  void _onTagsButtonPress() {
-    _pageController.animateToPage(1,
-        duration: const Duration(milliseconds: 500), curve: Curves.decelerate);
   }
 }
