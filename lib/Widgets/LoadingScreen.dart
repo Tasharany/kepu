@@ -14,7 +14,7 @@ class LoadingScreen extends StatelessWidget {
       color: background_primary,
       child: Center(
         child: Lottie.asset(
-          "assets/LoadingDuck.json",
+          "assets/kepu.json",
           width: size.width * 0.5,
           frameRate: FrameRate(60),
         ),

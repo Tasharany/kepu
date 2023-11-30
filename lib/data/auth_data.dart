@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:kepu/data/firestor.dart';
+import 'package:kepu/data/firestore.dart';
 
 abstract class AuthenticationDatasource {
   Future<void> register(String email, String password, String PasswordConfirm);

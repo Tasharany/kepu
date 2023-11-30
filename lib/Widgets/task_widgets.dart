@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kepu/const/colors.dart';
-import 'package:kepu/data/firestor.dart';
+import 'package:kepu/data/firestore.dart';
 import 'package:kepu/model/notes_model.dart';
 import 'package:kepu/screen/edit_screen.dart';
 

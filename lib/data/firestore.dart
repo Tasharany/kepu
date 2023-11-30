@@ -111,7 +111,7 @@ class Firestore_Datasource {
     }
   }
 
-  Future<bool> delet_note(String uuid) async {
+  Future<bool> delete_note(String uuid) async {
     try {
       await _firestore
           .collection('users')

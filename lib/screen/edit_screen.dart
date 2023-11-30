@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kepu/const/colors.dart';
-import 'package:kepu/data/firestor.dart';
+import 'package:kepu/data/firestore.dart';
 import 'package:kepu/model/notes_model.dart';
 
 import '../utils.dart';
@@ -86,6 +86,30 @@ class _Edit_ScreenState extends State<Edit_Screen> {
             },
             child: Text(
               'edit task',
+              style: SafeGoogleFont (
+                'Radio Canada',
+                fontSize: 17,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            )
+        ),
+        OutlinedButton(
+            style: OutlinedButton.styleFrom(
+              primary: Colors.black,
+              backgroundColor: kepuYellow,
+              minimumSize: Size(170, 48),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(5))
+              ),
+              side: BorderSide(color: Color(0x000000)),
+            ),
+            onPressed: () {
+              Firestore_Datasource().delete_note(widget._note.id,);
+              Navigator.pop(context);
+            },
+            child: Text(
+              'delete task',
               style: SafeGoogleFont (
                 'Radio Canada',
                 fontSize: 17,

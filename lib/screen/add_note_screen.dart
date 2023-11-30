@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:kepu/const/colors.dart';
-import 'package:kepu/data/firestor.dart';
+import 'package:kepu/data/firestore.dart';
 
 import '../utils.dart';
 

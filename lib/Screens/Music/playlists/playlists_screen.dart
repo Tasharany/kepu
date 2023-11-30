@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttericon/linecons_icons.dart';
 import 'package:go_router/go_router.dart';
 import 'package:kepu/ui/colors.dart';
 import 'package:kepu/ui/text_styles.dart';
@@ -85,7 +86,7 @@ class PlaylistsScreen extends StatelessWidget {
       // ),
        floatingActionButton: FloatingActionButton(
        onPressed: () => context.go('/find'),
-    child: const Icon(Icons.playlist_add),
+    child:  Icon(Linecons.search),
        ),
     );
   }

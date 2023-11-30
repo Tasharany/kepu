@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:kepu/widgets/task_widgets.dart';
 
-import '../data/firestor.dart';
+import '../data/firestore.dart';
 
 class Stream_note extends StatelessWidget {
   bool done;
@@ -24,7 +24,7 @@ class Stream_note extends StatelessWidget {
               return Dismissible(
                   key: UniqueKey(),
                   onDismissed: (direction) {
-                    Firestore_Datasource().delet_note(note.id);
+                    Firestore_Datasource().delete_note(note.id);
                   },
                   child: Task_Widget(note));
             },

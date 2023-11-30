@@ -70,32 +70,6 @@ import 'package:fluttericon/linecons_icons.dart';
 
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: GestureDetector(
-                        onTap: () {
-                          GoRouter.of(context).pushReplacement('/search');
-                        },
-                        child: Container(
-                          height: 50,
-                          width: 50,
-                          margin: const EdgeInsets.only(
-                            right: 25,
-                            bottom: 200,
-                          ),
-                          decoration: BoxDecoration(
-                              color: Color(0xFF14303B).withOpacity(0.25),
-                              border: Border.all(
-                                  color: Color(0xFF14303B).withOpacity(0.25),
-                                  width: 1.5),
-                              borderRadius: BorderRadius.circular(6)),
-                          child: Icon(
-                            Linecons.search,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ),
                     Column(
                       children: [
                         GestureDetector(
@@ -184,6 +158,9 @@ import 'package:fluttericon/linecons_icons.dart';
             ],
           ),
         ),
+          floatingActionButton: FloatingActionButton(
+          onPressed: () => context.go('/search'),
+      child: const Icon(Linecons.search),),
       );
     }
   }
