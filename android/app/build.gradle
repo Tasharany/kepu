@@ -63,7 +63,7 @@ android {
         release {
             // TODO: Add your own signing config for the release build.
                 // Signing with the debug keys for now, so `flutter run --release` works.
-                signingConfig signingConfigs.debug
+                signingConfig signingConfigs.release
             }
 
         }
@@ -73,6 +73,11 @@ android {
 flutter {
     source '../..'
 }
+repositories {
+    // ...
+    maven { url "https://jitpack.io" }
+    mavenCentral()
+}
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -81,7 +86,10 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation ("com.firebaseui:firebase-ui-auth:7.2.0")
     implementation ("com.google.firebase:firebase-database")
-
+    implementation 'androidx.window:window:1.0.0'
+    implementation 'androidx.window:window-java:1.0.0'
+    implementation "dev.shreyaspatil.EasyUpiPayment:EasyUpiPayment:3.0.3"
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.2'
 
 
 

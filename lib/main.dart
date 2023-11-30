@@ -31,6 +31,7 @@ import 'injector.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await di.init();
+
   await Firebase.initializeApp();
 
   await Hive.initFlutter();

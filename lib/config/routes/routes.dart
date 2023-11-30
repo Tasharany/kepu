@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kepu/feature/favourites/presentation/pages/favorite_game_details.dart';
+import '../../Screens/NavScreen.dart';
 import '../../feature/categories/presentation/pages/categories_page.dart';
 import '../../feature/favourites/presentation/pages/favourites_page.dart';
 import '../../feature/games/presentation/pages/game_details_page.dart';
@@ -27,8 +28,9 @@ class Routes {
   static const String searchPage = '/home_container/categories/search';
   static const String searchResultDetails = '/home_container/categories/search';
   static const String favoriteGameDetails = '/home_container/favorites/game_details';
+  static const String navpage = '/lib/Screens/NavScreen';
 
-  static const initialRoute = navigationContainer;
+  static const initialRoute = navpage;
 
   static final Map<String, WidgetBuilder> routes = {
     navigationContainer: (context) =>  OnBoardingScreensContainer(),
@@ -37,6 +39,7 @@ class Routes {
     gameDetailsPage: (context) => GameDetailsPage(game: ModalRoute.of(context)!.settings.arguments as GameResults),
     categoriesPage: (context) =>  CategoriesPage(),
     favoritesPage: (context) =>  FavouritesPage(),
+    navpage: (context) =>  NavScreen(),
     screenshotsPage: (context) =>  ScreenshotsPage(
       screenshot: ModalRoute.of(context)!.settings.arguments as String,
     ),

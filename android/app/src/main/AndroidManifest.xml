@@ -29,13 +29,13 @@
            android:label="Kepu!"
             android:name="${applicationName}"
             android:icon="@mipmap/ic_launcher"
-
+           android:enableOnBackInvokedCallback="true"
            android:appCategory="audio"
            android:usesCleartextTraffic="true"
            android:requestLegacyExternalStorage="true">   >
 
         <activity
-                android:name="com.ryanheise.audioservice.AudioServiceActivity"
+            android:name="com.ryanheise.audioservice.AudioServiceActivity"
             android:exported="true"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"

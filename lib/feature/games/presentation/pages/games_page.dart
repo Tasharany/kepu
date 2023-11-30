@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fluttericon/linecons_icons.dart';
 import '../../../../Widgets/LoadingScreen.dart';
+import '../../../../config/routes/routes.dart';
 import '../../../../core/widgets/loading/loading.dart';
 import '../../../../injector.dart';
 import '../blocs/games_bloc/games_bloc.dart';
@@ -16,6 +18,9 @@ class GamesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: buildBody(context),
+    //  floatingActionButton: FloatingActionButton(
+     //   onPressed: () => Routes.categoryGamesPage,
+      //  child: const Icon(Linecons.search),),
     );
   }
 
