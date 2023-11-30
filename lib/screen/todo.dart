@@ -5,6 +5,7 @@ import 'package:kepu/screen/add_note_screen.dart';
 import 'package:kepu/widgets/stream_note.dart';
 
 import '../Widgets/BottomNavBar.dart';
+import '../utils.dart';
 
 class ToDoListScreen extends StatefulWidget {
   const ToDoListScreen({super.key});
@@ -80,7 +81,7 @@ class _ToDoListScreenState extends State<ToDoListScreen> {
               ),
             );
           })),
-      backgroundColor: backgroundColors,
+      backgroundColor: backgroundColor,
       floatingActionButton: Visibility(
         visible: show,
         child: FloatingActionButton(
@@ -89,7 +90,7 @@ class _ToDoListScreenState extends State<ToDoListScreen> {
               builder: (context) => Add_screen(),
             ));
           },
-          backgroundColor: custom_green,
+          backgroundColor: kepuYellow,
           child: Icon(Icons.add, size: 30),
         ),
       ),
@@ -110,13 +111,32 @@ class _ToDoListScreenState extends State<ToDoListScreen> {
           },
           child: Column(
             children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 15.0),
+                child: Text(
+                  'to do',
+                  style: SafeGoogleFont (
+                      'Radio Canada',
+                      fontSize: 28,
+                      color: kepuTitleBlue,
+                      fontWeight: FontWeight.bold,
+                      decoration: TextDecoration.underline,
+                  ),
+                ),
+              ),
               Stream_note(false),
-              Text(
-                'isDone',
-                style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.grey.shade500,
-                    fontWeight: FontWeight.bold),
+              Padding(
+                padding: const EdgeInsets.only(top: 15.0),
+                child: Text(
+                  'done',
+                  style: SafeGoogleFont (
+                      'Radio Canada',
+                      fontSize: 28,
+                      color: kepuTitleBlue,
+                      fontWeight: FontWeight.bold,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
               ),
               Stream_note(true),
             ],

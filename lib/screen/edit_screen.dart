@@ -3,6 +3,8 @@ import 'package:kepu/const/colors.dart';
 import 'package:kepu/data/firestor.dart';
 import 'package:kepu/model/notes_model.dart';
 
+import '../utils.dart';
+
 class Edit_Screen extends StatefulWidget {
   Note _note;
   Edit_Screen(this._note, {super.key});
@@ -28,16 +30,20 @@ class _Edit_ScreenState extends State<Edit_Screen> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColors,
+      backgroundColor: backgroundColor,
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            title_widgets(),
+            label('title:'),
+            title_widget(),
             SizedBox(height: 20),
-            subtite_wedgite(),
+            label('description:'),
+            description_widget(),
             SizedBox(height: 20),
-            imagess(),
+            label('type:'),
+            tasktype_widget(),
             SizedBox(height: 20),
             button()
           ],
@@ -46,39 +52,78 @@ class _Edit_ScreenState extends State<Edit_Screen> {
     );
   }
 
+  Widget label(String name) {
+    return Padding (
+        padding: const EdgeInsets.only(left: 20),
+        child: Text(
+          name,
+          style: SafeGoogleFont (
+              'Radio Canada',
+              fontSize: 25,
+              color: Colors.black,
+              fontWeight: FontWeight.bold),
+        )
+    );
+  }
+
   Widget button() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            primary: custom_green,
-            minimumSize: Size(170, 48),
-          ),
-          onPressed: () {
-            Firestore_Datasource().Update_Note(
-                widget._note.id, indexx, title!.text, subtitle!.text);
-            Navigator.pop(context);
-          },
-          child: Text('add task'),
+        OutlinedButton(
+            style: OutlinedButton.styleFrom(
+              primary: Colors.black,
+              backgroundColor: kepuYellow,
+              minimumSize: Size(170, 48),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(5))
+              ),
+              side: BorderSide(color: Color(0x000000)),
+            ),
+            onPressed: () {
+              Firestore_Datasource().Update_Note(widget._note.id, indexx, title!.text, subtitle!.text);
+              Navigator.pop(context);
+            },
+            child: Text(
+              'edit task',
+              style: SafeGoogleFont (
+                'Radio Canada',
+                fontSize: 17,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            )
         ),
-        ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            primary: Colors.red,
-            minimumSize: Size(170, 48),
-          ),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Cancel'),
+        OutlinedButton(
+            style: OutlinedButton.styleFrom(
+              primary: Colors.black,
+              backgroundColor: kepuYellow,
+              minimumSize: Size(170, 48),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(5))
+              ),
+              side: BorderSide(color: Color(0x000000)),
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: Text(
+              'cancel',
+              style: SafeGoogleFont (
+                'Radio Canada',
+                fontSize: 17,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            )
         ),
       ],
     );
   }
 
-  Container imagess() {
+  Container tasktype_widget() {
     return Container(
-      height: 180,
+      height: 100,
       child: ListView.builder(
         itemCount: 4,
         scrollDirection: Axis.horizontal,
@@ -96,12 +141,13 @@ class _Edit_ScreenState extends State<Edit_Screen> {
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
                     width: 2,
-                    color: indexx == index ? custom_green : Colors.grey,
+                    color: indexx == index ? outlineColor : Colors.grey,
                   ),
                 ),
-                width: 140,
+                width: 100,
                 margin: EdgeInsets.all(8),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset('images/${index}.png'),
                   ],
@@ -114,7 +160,7 @@ class _Edit_ScreenState extends State<Edit_Screen> {
     );
   }
 
-  Widget title_widgets() {
+  Widget title_widget() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Container(
@@ -128,7 +174,7 @@ class _Edit_ScreenState extends State<Edit_Screen> {
           style: TextStyle(fontSize: 18, color: Colors.black),
           decoration: InputDecoration(
               contentPadding:
-                  EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+              EdgeInsets.symmetric(horizontal: 15, vertical: 15),
               hintText: 'title',
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
@@ -140,7 +186,7 @@ class _Edit_ScreenState extends State<Edit_Screen> {
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(
-                  color: custom_green,
+                  color: outlineColor,
                   width: 2.0,
                 ),
               )),
@@ -149,7 +195,7 @@ class _Edit_ScreenState extends State<Edit_Screen> {
     );
   }
 
-  Padding subtite_wedgite() {
+  Padding description_widget() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Container(
@@ -175,7 +221,7 @@ class _Edit_ScreenState extends State<Edit_Screen> {
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
               borderSide: BorderSide(
-                color: custom_green,
+                color: outlineColor,
                 width: 2.0,
               ),
             ),

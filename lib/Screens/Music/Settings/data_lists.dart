@@ -10,7 +10,6 @@ import 'package:kepu/api/extensions.dart';
 import 'package:kepu/models/setting_item.dart';
 import 'package:kepu/providers/media_manager.dart';
 import 'package:kepu/providers/theme_manager.dart';
-import 'package:kepu/screens/music/settings/equalizer_screen.dart';
 import 'package:kepu/ui/colors.dart';
 import 'package:kepu/ui/text_styles.dart';
 import 'package:kepu/utils/format_duration.dart';

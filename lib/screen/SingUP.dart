@@ -37,7 +37,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColors,
+      backgroundColor: backgroundColor,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -101,7 +101,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
           width: double.infinity,
           height: 50,
           decoration: BoxDecoration(
-            color: custom_green,
+            color: outlineColor,
             borderRadius: BorderRadius.circular(10),
           ),
           child: Text(
@@ -133,7 +133,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
           decoration: InputDecoration(
               prefixIcon: Icon(
                 iconss,
-                color: _focusNode.hasFocus ? custom_green : Color(0xffc5c5c5),
+                color: _focusNode.hasFocus ? outlineColor : Color(0xffc5c5c5),
               ),
               contentPadding:
                   EdgeInsets.symmetric(horizontal: 15, vertical: 15),
@@ -148,7 +148,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(
-                  color: custom_green,
+                  color: outlineColor,
                   width: 2.0,
                 ),
               )),
@@ -164,7 +164,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
         width: double.infinity,
         height: 300,
         decoration: BoxDecoration(
-          color: backgroundColors,
+          color: backgroundColor,
           image: DecorationImage(
             image: AssetImage('images/7.png'),
             fit: BoxFit.fitWidth,

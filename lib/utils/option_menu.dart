@@ -5,10 +5,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:kepu/generated/l10n.dart';
 import 'package:kepu/providers/media_manager.dart';
-import 'package:kepu/screens/music/settings/equalizer_screen.dart';
 import 'package:kepu/ui/text_styles.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
+
+import '../Screens/Music/Settings/equalizer_screen.dart';
 
 showSongOptions(BuildContext context, Map<String, dynamic> song,
     {dynamic playlistKey}) {

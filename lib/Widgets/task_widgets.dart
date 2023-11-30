@@ -4,6 +4,8 @@ import 'package:kepu/data/firestor.dart';
 import 'package:kepu/model/notes_model.dart';
 import 'package:kepu/screen/edit_screen.dart';
 
+import '../utils.dart';
+
 class Task_Widget extends StatefulWidget {
   Note _note;
   Task_Widget(this._note, {super.key});
@@ -38,7 +40,7 @@ class _Task_WidgetState extends State<Task_Widget> {
           child: Row(
             children: [
               // image
-              imageee(),
+              type_thumbnail(),
               SizedBox(width: 25),
               // title and subtitle
               Expanded(
@@ -51,13 +53,17 @@ class _Task_WidgetState extends State<Task_Widget> {
                       children: [
                         Text(
                           widget._note.title,
-                          style: TextStyle(
+                          style: SafeGoogleFont (
+                            'Radio Canada',
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
+                            color: Colors.black,
                           ),
                         ),
                         Checkbox(
-                          activeColor: custom_green,
+                          side: BorderSide(color: Colors.grey),
+                          activeColor: kepuSelectionBlue,
+                          checkColor: kepuTitleBlue,
                           value: isDone,
                           onChanged: (value) {
                             setState(() {
@@ -71,7 +77,8 @@ class _Task_WidgetState extends State<Task_Widget> {
                     ),
                     Text(
                       widget._note.subtitle,
-                      style: TextStyle(
+                      style: SafeGoogleFont (
+                          'Radio Canada',
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: Colors.grey.shade400),
@@ -97,7 +104,7 @@ class _Task_WidgetState extends State<Task_Widget> {
             width: 90,
             height: 28,
             decoration: BoxDecoration(
-              color: custom_green,
+              color: outlineColor,
               borderRadius: BorderRadius.circular(18),
             ),
             child: Padding(
@@ -149,6 +156,7 @@ class _Task_WidgetState extends State<Task_Widget> {
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
+                        color: Color(0xff18d8a2),
                       ),
                     ),
                   ],
@@ -161,15 +169,14 @@ class _Task_WidgetState extends State<Task_Widget> {
     );
   }
 
-  Widget imageee() {
+  Widget type_thumbnail() {
     return Container(
-      height: 130,
+      height: 100,
       width: 100,
       decoration: BoxDecoration(
         color: Colors.white,
         image: DecorationImage(
           image: AssetImage('images/${widget._note.image}.png'),
-          fit: BoxFit.cover,
         ),
       ),
     );
