@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +12,9 @@ import 'package:kepu/ui/colors.dart';
 import 'package:kepu/ui/text_styles.dart';
 import 'package:kepu/utils/option_menu.dart';
 import 'package:provider/provider.dart';
+
+import '../../../const/colors.dart';
+import '../../../utils.dart';
 
 class ListScreen extends StatefulWidget {
   final Map list;
@@ -79,7 +83,13 @@ class _ListScreenState extends State<ListScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.list['type'].toString().capitalize(),
-            style: textStyle(context)),
+          style: SafeGoogleFont (
+            'Radio Canada',
+            fontSize: 22,
+            fontWeight: FontWeight.w700,
+            color: Colors.black87,
+          ),
+        ),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -92,8 +102,12 @@ class _ListScreenState extends State<ListScreen> {
             const SizedBox(height: 8),
             Text(
               S.of(context).songs,
-              style: textStyle(context, bold: true)
-                  .copyWith(color: Theme.of(context).colorScheme.primary),
+              style: SafeGoogleFont (
+                  'Radio Canada',
+                  color: kepuBlue,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+              ),
             ),
             SizedBox(
               height: 30,
@@ -118,7 +132,9 @@ class _ListScreenState extends State<ListScreen> {
                         ? Theme.of(context).primaryColor.withAlpha(170)
                         : darkGreyColor.withAlpha(50),
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(5),
+                      side: BorderSide(color: Colors.black87, width: 1.5),
+                    ),
                     onPressed: () {
                       if (param == 'title') {
                         songs = List.from(copySongs);
@@ -130,7 +146,10 @@ class _ListScreenState extends State<ListScreen> {
                       }
                     },
                     child: Text(S.of(context).title,
-                        style: smallTextStyle(context)),
+                      style: SafeGoogleFont (
+                        'Radio Canada',
+                      ),
+                    ),
                   ),
                   const SizedBox(width: 8),
                   MaterialButton(
@@ -138,7 +157,9 @@ class _ListScreenState extends State<ListScreen> {
                         ? Theme.of(context).primaryColor.withAlpha(170)
                         : darkGreyColor.withAlpha(50),
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(5),
+                      side: BorderSide(color: Colors.black87, width: 1.5),
+                    ),
                     onPressed: () {
                       if (param == 'release_date') {
                         songs = List.from(copySongs);
@@ -150,7 +171,10 @@ class _ListScreenState extends State<ListScreen> {
                       }
                     },
                     child: Text(S.of(context).date,
-                        style: smallTextStyle(context)),
+                      style: SafeGoogleFont (
+                        'Radio Canada',
+                      ),
+                    ),
                   )
                 ],
               ),
@@ -182,11 +206,18 @@ class _ListScreenState extends State<ListScreen> {
                               ],
                             ),
                           ),
-                          title: Text(song['title'],
-                              style: smallTextStyle(context, bold: true),
-                              maxLines: 1),
-                          subtitle: Text(song['subtitle'],
-                              style: smallTextStyle(context), maxLines: 1),
+                          title: AutoSizeText(song['title'],
+                            style: SafeGoogleFont (
+                              'Radio Canada',
+                            ),
+                            maxLines: 1,
+                          ),
+                          subtitle: AutoSizeText(song['subtitle'],
+                            style: SafeGoogleFont (
+                              'Radio Canada',
+                            ),
+                            maxLines: 1,
+                          ),
                         );
                       }).toList(),
                       if (more) const Center(child: CircularProgressIndicator())

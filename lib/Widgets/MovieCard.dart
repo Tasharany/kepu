@@ -1,6 +1,9 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
+
+import '../utils.dart';
 
 class MovieCard extends StatelessWidget {
   MovieCard(this.title, this.image, this.Id, this.mediaType, {super.key});
@@ -23,7 +26,7 @@ class MovieCard extends StatelessWidget {
           Container(
             height: 150,
             width: 100,
-            margin: const EdgeInsets.fromLTRB(8, 4, 8, 4),
+            margin: const EdgeInsets.fromLTRB(8, 0, 8, 4),
             decoration: BoxDecoration(
               image: DecorationImage(fit: BoxFit.cover, image: image),
               borderRadius: BorderRadius.circular(10),
@@ -31,10 +34,14 @@ class MovieCard extends StatelessWidget {
           ),
           SizedBox(
             width: 100,
-            child: Text(
+            child: AutoSizeText(
               title,
-              style: const TextStyle(color: Colors.white),
+              style: SafeGoogleFont (
+                  'Radio Canada',
+                  color: Colors.black87
+              ),
               maxLines: 1,
+              minFontSize: 15,
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.center,
             ),

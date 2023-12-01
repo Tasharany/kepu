@@ -10,6 +10,9 @@ import 'package:unicons/unicons.dart';
 import 'package:kepu/Services/extraServices.dart';
 import 'package:kepu/Widgets/DetailScreenComponents.dart';
 
+import '../const/colors.dart';
+import '../utils.dart';
+
 class MovieScreen extends StatefulWidget {
   MovieScreen(this.movieId, {super.key});
   String movieId;
@@ -108,23 +111,25 @@ class _MovieScreenState extends State<MovieScreen> {
                                     snapshot.data!.voteAverage
                                         .toString()
                                         .substring(0, 3),
-                                    style: const TextStyle(
+                                    style: SafeGoogleFont (
+                                        'Radio Canada',
                                         fontSize: 40,
                                         fontWeight: FontWeight.w500,
-                                        color: Colors.white),
+                                        color: Colors.black87),
                                   ),
                                   Text(
                                     snapshot.data!.title.toString(),
                                     overflow: TextOverflow.ellipsis,
                                     maxLines: 2,
-                                    style: const TextStyle(
+                                    style: SafeGoogleFont (
+                                        'Radio Canada',
                                         fontSize: 24,
                                         fontWeight: FontWeight.w500,
-                                        color: Colors.white),
+                                        color: Colors.black87),
                                   ),
                                   Row(
                                     children: [
-                                      CircularButtons(
+                                      PlayButton(
                                         UniconsLine.play,
                                         onTap: () {
                                           HapticFeedback.lightImpact();
@@ -136,7 +141,7 @@ class _MovieScreenState extends State<MovieScreen> {
                                                   (value) => LaunchUrl(value));
                                         },
                                       ),
-                                      CircularButtons(
+                                      CircularButton(
                                         UniconsLine.plus,
                                         onTap: () {
                                           HapticFeedback.lightImpact();
@@ -146,7 +151,7 @@ class _MovieScreenState extends State<MovieScreen> {
                                       ),
                                       Visibility(
                                         visible: snapshot.data!.adult,
-                                        child: CircularButtons(
+                                        child: PlayButton(
                                           UniconsLine.eighteen_plus,
                                           onTap: () {},
                                         ),
@@ -176,7 +181,8 @@ class _MovieScreenState extends State<MovieScreen> {
                                     return TextContainer(
                                         snapshot.data![index].name.toString(),
                                         const EdgeInsets.only(right: 8),
-                                        const Color(0xFF14303B));
+                                      kepuAccentBlue,
+                                    );
                                   },
                                 ),
                               );
@@ -184,7 +190,8 @@ class _MovieScreenState extends State<MovieScreen> {
                               return TextContainer(
                                   "Loading",
                                   const EdgeInsets.all(8),
-                                  const Color(0xFF14303B));
+                                kepuBlue,
+                              );
                             }
                           },
                         ),
@@ -198,12 +205,14 @@ class _MovieScreenState extends State<MovieScreen> {
                                     status,
                                     const EdgeInsets.only(
                                         left: 8, right: 8, bottom: 8),
-                                    const Color(0xFF382E39)),
+                                    kepuAccentBlue,
+                                ),
                                 TextContainer(
                                     "Release: ${DateFormat.yMMMMd().format(DateTime.parse(releaseDate))}",
                                     const EdgeInsets.only(
                                         left: 8, right: 8, bottom: 8),
-                                    const Color(0xFF545551)),
+                                    kepuBlue,
+                                ),
                               ],
                             ),
                             TitleText("Overview"),
@@ -213,8 +222,8 @@ class _MovieScreenState extends State<MovieScreen> {
                                             "null"
                                     ? "No overview available"
                                     : snapshot.data!.overview.toString(),
-                                const EdgeInsets.all(8),
-                                const Color(0xFF0F1D39)),
+                                const EdgeInsets.fromLTRB(8, 12, 8, 12),
+                                const Color(0xFFD5D5D5)),
                             TitleText("Recommendations"),
                             CustomListMovie(recommendedMovies),
                           ],

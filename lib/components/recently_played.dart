@@ -14,7 +14,9 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:provider/provider.dart';
 
+import '../const/colors.dart';
 import '../generated/l10n.dart';
+import '../utils.dart';
 
 class RecentlyPlayed extends StatelessWidget {
   const RecentlyPlayed({
@@ -36,15 +38,20 @@ class RecentlyPlayed extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8),
-                    child: Text(S.of(context).recentlyPlayed,
-                        style: textStyle(context, bold: true).copyWith(
-                            color: Theme.of(context).colorScheme.primary)),
+                    child: Text(S.of(context).recentlyPlayed.toUpperCase(),
+                      style: SafeGoogleFont (
+                          'Radio Canada',
+                          color: kepuBlue,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          letterSpacing: 1),
+                    ),
                   ),
                   const SizedBox(height: 8),
                   SizedBox(
-                    height: 193,
+                    height: 176,
                     child: ListView.separated(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
                       scrollDirection: Axis.horizontal,
                       itemCount: songsItems.length,
                       itemBuilder: (context, index) {
@@ -122,8 +129,10 @@ class RecentlyPlayed extends StatelessWidget {
                                           child: Center(
                                             child: AutoSizeText(
                                               song.title,
-                                              style: smallTextStyle(context,
-                                                  bold: true),
+                                              style: SafeGoogleFont (
+                                                  'Radio Canada',
+                                                  color: Colors.black87
+                                              ),
                                               overflow: TextOverflow.clip,
                                               maxLines: 2,
                                             ),

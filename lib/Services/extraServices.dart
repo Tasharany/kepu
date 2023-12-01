@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:kepu/Services/auth.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../utils.dart';
+
 Future<void> LaunchUrl(String url) async {
   final Uri url0 = Uri.parse(url);
   if (!await launchUrl(url0)) {
@@ -15,6 +17,9 @@ void pshowDialog(BuildContext context, String Id, String mediaType) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10))
+        ),
         backgroundColor: const Color(0xFF12121C).withOpacity(0.95),
         title: SizedBox(
           width: MediaQuery.of(context).size.width * 0.8,
@@ -22,8 +27,9 @@ void pshowDialog(BuildContext context, String Id, String mediaType) {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(
-                "Select Watchlist",
-                style: TextStyle(
+                "Select Option",
+                style: SafeGoogleFont (
+                  'Radio Canada',
                   color: Colors.white.withOpacity(0.5),
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -41,7 +47,7 @@ void pshowDialog(BuildContext context, String Id, String mediaType) {
                   FireBaseServices().addWatching(Id, "Watching", mediaType);
                   Navigator.pop(context);
                 },
-                child: const Row(
+                child: Row(
                   children: [
                     Icon(
                       Icons.play_circle_rounded,
@@ -52,7 +58,8 @@ void pshowDialog(BuildContext context, String Id, String mediaType) {
                     ),
                     Text(
                       "Watching",
-                      style: TextStyle(
+                      style: SafeGoogleFont (
+                        'Radio Canada',
                         color: Color(0xFF16F66A),
                       ),
                     )
@@ -68,7 +75,7 @@ void pshowDialog(BuildContext context, String Id, String mediaType) {
                   FireBaseServices().addWatching(Id, "Completed", mediaType);
                   Navigator.pop(context);
                 },
-                child: const Row(
+                child: Row(
                   children: [
                     Icon(
                       Icons.check_circle_rounded,
@@ -79,7 +86,8 @@ void pshowDialog(BuildContext context, String Id, String mediaType) {
                     ),
                     Text(
                       "Completed",
-                      style: TextStyle(
+                      style: SafeGoogleFont (
+                        'Radio Canada',
                         color: Color(0xFF36A5D0),
                       ),
                     )
@@ -95,7 +103,7 @@ void pshowDialog(BuildContext context, String Id, String mediaType) {
                   FireBaseServices().addWatching(Id, "On-Hold", mediaType);
                   Navigator.pop(context);
                 },
-                child: const Row(
+                child: Row(
                   children: [
                     Icon(
                       Icons.pause_rounded,
@@ -104,7 +112,10 @@ void pshowDialog(BuildContext context, String Id, String mediaType) {
                     SizedBox(
                       width: 8,
                     ),
-                    Text("On Hold", style: TextStyle(color: Color(0xFFDAC22E)))
+                    Text("On Hold",
+                        style: SafeGoogleFont (
+                        'Radio Canada',
+                        color: Color(0xFFDAC22E)))
                   ],
                 ),
               ),
@@ -117,7 +128,7 @@ void pshowDialog(BuildContext context, String Id, String mediaType) {
                   FireBaseServices().addWatching(Id, "Dropped", mediaType);
                   Navigator.pop(context);
                 },
-                child: const Row(
+                child: Row(
                   children: [
                     Icon(
                       Icons.delete_rounded,
@@ -126,7 +137,10 @@ void pshowDialog(BuildContext context, String Id, String mediaType) {
                     SizedBox(
                       width: 8,
                     ),
-                    Text("Dropped", style: TextStyle(color: Color(0xFFE52E5C)))
+                    Text("Dropped",
+                        style: SafeGoogleFont (
+                        'Radio Canada',
+                        color: Color(0xFFE52E5C)))
                   ],
                 ),
               ),

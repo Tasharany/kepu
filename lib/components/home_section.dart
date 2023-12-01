@@ -11,6 +11,9 @@ import 'package:kepu/utils/snackbar.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:provider/provider.dart';
 
+import '../const/colors.dart';
+import '../utils.dart';
+
 class HomeSection extends StatefulWidget {
   const HomeSection({
     super.key,
@@ -43,18 +46,24 @@ class _HomeSectionState extends State<HomeSection> {
       mainAxisSize: MainAxisSize.min,
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8),
-          child: Text(widget.sectionIitem['title'],
-              style: textStyle(context, bold: true)
-                  .copyWith(color: Theme.of(context).colorScheme.primary)),
+          padding: const EdgeInsets.fromLTRB(8, 8, 0, 8),
+          child: Text(
+            widget.sectionIitem['title'].toUpperCase(),
+            style: SafeGoogleFont (
+                'Radio Canada',
+                color: kepuBlue,
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+                letterSpacing: 1),
+          ),
         ),
         const SizedBox(height: 8),
         SizedBox(
-          height: 191,
+          height: 176,
           child: ListView.separated(
             shrinkWrap: true,
             cacheExtent: null,
-            padding: const EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 8),
             scrollDirection: Axis.horizontal,
             itemCount: items.length,
             itemBuilder: (context, index) {
@@ -137,13 +146,13 @@ class _HomeSectionState extends State<HomeSection> {
                         child: Center(
                           child: AutoSizeText(
                             song['title'],
-                            style: customTextStyle(context,
-                                    bold: false, fontSize: 14)
-                                .copyWith(height: 1.2),
-                            minFontSize: 10,
-                            maxFontSize: 16,
-                            overflow: TextOverflow.clip,
-                            maxLines: 2,
+                            style: SafeGoogleFont (
+                                'Radio Canada',
+                                color: Colors.black87
+                            ),
+                            minFontSize: 15,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                           ),
                         ),
                       ),

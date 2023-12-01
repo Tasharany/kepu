@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kepu/feature/categories/presentation/widgets/error_widget.dart';
 import '../../../../injector.dart';
+import '../../../../utils.dart';
 import '../bloc/favs_bloc.dart';
 import '../widets/favs_list_widget.dart';
 
@@ -13,7 +14,14 @@ class FavouritesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: const Text('Favorites')),
+        title: Center(
+            child: Text(
+                'Favorites',
+                style: SafeGoogleFont (
+                  'Radio Canada',
+                )
+            )
+        ),
       ),
       body: _buildBody(context),
     );

@@ -134,7 +134,7 @@ class _TVShowScreenState extends State<TVShowScreen> {
                                   ),
                                   Row(
                                     children: [
-                                      CircularButtons(
+                                      PlayButton(
                                         UniconsLine.play,
                                         onTap: () {
                                           HapticFeedback.lightImpact();
@@ -146,7 +146,7 @@ class _TVShowScreenState extends State<TVShowScreen> {
                                                   (value) => LaunchUrl(value));
                                         },
                                       ),
-                                      CircularButtons(
+                                      PlayButton(
                                         UniconsLine.plus,
                                         onTap: () {
                                           HapticFeedback.lightImpact();
@@ -156,7 +156,7 @@ class _TVShowScreenState extends State<TVShowScreen> {
                                       ),
                                       Visibility(
                                         visible: snapshot.data!.adult,
-                                        child: CircularButtons(
+                                        child: PlayButton(
                                           UniconsLine.eighteen_plus,
                                           onTap: () {},
                                         ),

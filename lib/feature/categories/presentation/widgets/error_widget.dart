@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../../utils.dart';
+
 class ErrorMessageWidget extends StatelessWidget {
   final String message;
 
@@ -15,15 +17,16 @@ class ErrorMessageWidget extends StatelessWidget {
           children: [
             const Icon(
               Icons.error_outline,
-              color: Colors.red,
+              color: Color(0xffa22c24),
               size: 60,
             ),
             const SizedBox(height: 20),
             Text(
               message,
               textAlign: TextAlign.center,
-              style: const TextStyle(
-                color: Colors.red,
+              style: SafeGoogleFont (
+                'Radio Canada',
+                color: Color(0xffa22c24),
                 fontSize: 18,
               ),
             ),

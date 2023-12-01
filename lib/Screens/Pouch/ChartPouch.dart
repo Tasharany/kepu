@@ -7,6 +7,8 @@ import 'package:provider/provider.dart';
 import 'package:kepu/utils/router.dart';
 import '../../Services/auth.dart';
 import '../../Services/consts.dart';
+import '../../const/colors.dart';
+import '../../utils.dart';
 import '../WatchListScreen.dart';
 import 'package:fluttericon/linecons_icons.dart';
   @override
@@ -172,9 +174,9 @@ Widget WatchListTile(String count, String title) {
     width: 160,
     margin: const EdgeInsets.all(8),
     decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(10),
-      color: Color(0xFF14303B).withOpacity(0.25),
-      border: Border.all(color: Color(0xFF14303B).withOpacity(0.5), width: 1),
+        color: const Color(0xFFFDF7FC),
+        border: Border.all(width: 1.5, color: const Color(0xFF373741)),
+        borderRadius: BorderRadius.circular(5)
     ),
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -184,7 +186,8 @@ Widget WatchListTile(String count, String title) {
           margin: const EdgeInsets.only(top: 8, left: 8),
           child: Text(
             count,
-            style: TextStyle(
+            style: SafeGoogleFont (
+              'Radio Canada',
               color: accent_secondary,
               fontSize: 36,
             ),
@@ -194,9 +197,10 @@ Widget WatchListTile(String count, String title) {
           margin: const EdgeInsets.only(top: 4, left: 8),
           child: Text(
             title,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 18,
+            style: SafeGoogleFont (
+              'Radio Canada',
+              color: Colors.black87,
+              fontSize: 20,
             ),
           ),
         ),

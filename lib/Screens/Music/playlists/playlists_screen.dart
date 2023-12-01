@@ -8,6 +8,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:kepu/generated/l10n.dart';
 
+import '../../../utils.dart';
 import '../../../utils/playlists.dart';
 
 class PlaylistsScreen extends StatelessWidget {
@@ -18,7 +19,12 @@ class PlaylistsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(S.of(context).saved,
-            style: mediumTextStyle(context, bold: false)),
+            style: SafeGoogleFont (
+              'Radio Canada',
+              color: Colors.black87,
+              fontSize: 22,
+            ),
+        ),
         centerTitle: true,
       ),
       body: ListView(
@@ -32,7 +38,12 @@ class PlaylistsScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8)),
                   title: Text(S().favorites,
-                      style: textStyle(context, bold: false)),
+                    style: SafeGoogleFont (
+                      'Radio Canada',
+                      color: Colors.black87,
+                      fontSize: 18,
+                    ),
+                  ),
                   leading: Container(
                       height: 50,
                       width: 50,
@@ -41,7 +52,12 @@ class PlaylistsScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: const Icon(Iconsax.heart5)),
-                  subtitle: Text('${box.values.length} ${S().songs}'),
+                  subtitle: Text('${box.values.length} ${S().songs}',
+                    style: SafeGoogleFont (
+                    'Radio Canada',
+                    color: Colors.black87,
+                  ),
+                  ),
                 );
               }),
           ValueListenableBuilder(

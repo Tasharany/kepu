@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:kepu/api/image_resolution_modifier.dart';
@@ -9,6 +10,8 @@ import 'package:kepu/ui/text_styles.dart';
 import 'package:kepu/utils/get_subtitle.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
+
+import '../utils.dart';
 
 class PlaylistAlbumHeader extends StatefulWidget {
   const PlaylistAlbumHeader({
@@ -55,9 +58,17 @@ class _PlaylistAlbumHeaderState extends State<PlaylistAlbumHeader> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(widget.item['title'],
-                    style: textStyle(context), maxLines: 2),
-                Text(getSubTitle(widget.item), maxLines: 2),
+                AutoSizeText(widget.item['title'],
+                  style: SafeGoogleFont (
+                      'Radio Canada',
+                  ),
+                  maxLines: 1,
+              ),
+                AutoSizeText(getSubTitle(widget.item),
+                  style: SafeGoogleFont (
+                    'Radio Canada',
+                  ),
+                ),
                 Wrap(
                   spacing: 4,
                   runSpacing: 4,
@@ -68,9 +79,15 @@ class _PlaylistAlbumHeaderState extends State<PlaylistAlbumHeader> {
                       },
                       color: Theme.of(context).colorScheme.inversePrimary,
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Text(S.of(context).playAll,
-                          style: smallTextStyle(context, bold: true)),
+                        borderRadius: BorderRadius.circular(5),
+                        side: BorderSide(color: Colors.black87, width: 1.5),
+                      ),
+                      child: AutoSizeText(S.of(context).playAll,
+                        style: SafeGoogleFont (
+                          'Radio Canada',
+                        ),
+                        maxLines: 2,
+                      ),
                     ),
                     MaterialButton(
                       color: isSaved

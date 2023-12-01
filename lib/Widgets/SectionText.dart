@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:kepu/Services/consts.dart';
 
+import '../utils.dart';
+
 Widget SectionText(String ktitle, String ntitle) {
   return Container(
       width: double.infinity,
-      margin: const EdgeInsets.all(8),
+      margin: const EdgeInsets.fromLTRB(8, 8, 8, 0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -13,20 +15,22 @@ Widget SectionText(String ktitle, String ntitle) {
             padding: const EdgeInsets.only(right: 8.0),
             child: Text(
               ktitle.toUpperCase(),
-              style: const TextStyle(
-                  color: Colors.white,
+              style: SafeGoogleFont (
+                  'Radio Canada',
+                  color: accent_secondary,
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
-                  letterSpacing: 5),
+                  letterSpacing: 1),
             ),
           ),
           Text(
             ntitle.toUpperCase(),
-            style: TextStyle(
+            style: SafeGoogleFont (
+                'Radio Canada',
                 color: accent_secondary,
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
-                letterSpacing: 5),
+                letterSpacing: 1),
           ),
         ],
       ));

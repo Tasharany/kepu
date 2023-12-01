@@ -4,10 +4,10 @@ String footer_text = " Welcome to Kepu! ";
 String sign_in_text = "Sign In";
 
 // Theme
-Color background_primary = const Color(0xFF66D0E1);
-Color accent_secondary = const Color(0xFF00FFD1);
+Color background_primary = const Color(0xfff5f5f5);
+Color accent_secondary = const Color(0xFFB86A8E);
 Color accent_t = const Color(0xFF34323A);
-Color inactive_accent = const Color(0xFF96C9DF);
+Color inactive_accent = const Color(0xFFF7EDF2);
 
 List<Color> ColorPallete = [
   const Color(0xFF14303B),

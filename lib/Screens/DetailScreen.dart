@@ -82,7 +82,7 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
                   "what's new?",
                   style: SafeGoogleFont (
                     'Radio Canada',
-                    fontSize: 20,
+                    fontSize: 25,
                     fontWeight: FontWeight.w700,
                     color: kepuTitleBlue,
                   ),
@@ -91,33 +91,33 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
           bottom: PreferredSize(
             preferredSize: Size.fromHeight(AppBar().preferredSize.height),
             child: Container(
-              margin: EdgeInsets.only(bottom: 15),
+              margin: EdgeInsets.symmetric(vertical: 15),
               height: 60,
               padding: const EdgeInsets.symmetric(
                 horizontal: 30,
                 vertical: 2,
               ),
               child: Container(
-                // decoration: BoxDecoration(
-                //   color: Colors.white,
-                //   borderRadius: BorderRadius.circular(30),
-                //   boxShadow: <BoxShadow>[
-                //     BoxShadow(
-                //         color: Colors.black26,
-                //         blurRadius: 4,
-                //         offset: Offset(0.0, 5)
-                //     )
-                //   ],
-                //   border: Border.all(
-                //     color: Colors.black87,
-                //     width: 1.5,
-                //   ),
-                // ),
-                child: TabBar(
-                  indicator: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.transparent,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(30),
+                  boxShadow: <BoxShadow>[
+                    BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 4,
+                        offset: Offset(0.0, 5)
+                    )
+                  ],
+                  border: Border.all(
+                    color: Colors.black87,
+                    width: 1.5,
                   ),
+                ),
+                child: TabBar(
+                    indicatorColor: kepuYellow,
+                    indicatorWeight: 4.5,
+                    dividerColor: Colors.transparent,
+                  overlayColor: MaterialStateProperty.all(Colors.transparent),
                   tabs: const [
                     Tab(
                       icon: ImageIcon(
