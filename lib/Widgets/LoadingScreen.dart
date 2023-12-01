@@ -15,8 +15,8 @@ class LoadingScreen extends StatelessWidget {
       child: Center(
         child: Lottie.asset(
           "assets/kepu.json",
-          width: size.width * 0.5,
-          frameRate: FrameRate(60),
+          width: size.width,
+          frameRate: FrameRate(30),
         ),
       ),
     );

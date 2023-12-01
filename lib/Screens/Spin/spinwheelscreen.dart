@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_fortune_wheel/flutter_fortune_wheel.dart';
 import 'package:rxdart/rxdart.dart';
 
+import '../../const/colors.dart';
+import '../../utils.dart';
+
 class SpinWheel extends StatefulWidget {
   const SpinWheel({Key? key}) : super(key: key);
 
@@ -54,6 +57,7 @@ class _SpinWheelState extends State<SpinWheel> {
                 },
               ),
             ),
+        SizedBox(height:20),
             GestureDetector(
               onTap: () {
                 setState(() {
@@ -61,11 +65,21 @@ class _SpinWheelState extends State<SpinWheel> {
                 });
               },
               child: Container(
+                decoration: BoxDecoration(
+                    color: kepuYellow,
+                    border: Border.all(width: 1.5, color: const Color(0xFF373741)),
+                    borderRadius: BorderRadius.circular(5)),
                 height: 40,
                 width: 120,
-                color: Colors.red[200],
                 child: Center(
-                  child: Text("SPIN"),
+                  child: Text(
+                      "spin",
+                    style: SafeGoogleFont (
+                    'Radio Canada',
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
                 ),
               ),
             ),

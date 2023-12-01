@@ -47,7 +47,7 @@ class FavsItemWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             border: Border.all(width: 1.5, color: const Color(0xFF373741)),
           ),
-          height: 110,
+          height: 113,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
