@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kepu/Services/consts.dart';
 
+import '../utils.dart';
+
 class SearchCard extends StatelessWidget {
   SearchCard(this.title, this.image, this.popularRating, this.mediatype,
       {super.key});
@@ -37,8 +39,9 @@ class SearchCard extends StatelessWidget {
                   width: size.width - 150,
                   child: Text(
                     title,
-                    style: const TextStyle(
-                      color: Colors.white,
+                    style: SafeGoogleFont (
+                      'Radio Canada',
+                      color: Colors.black87,
                       fontSize: 16,
                     ),
                     maxLines: 1,
@@ -51,10 +54,11 @@ class SearchCard extends StatelessWidget {
                     width: size.width - 150,
                     child: Row(
                       children: [
-                        const Text(
+                        Text(
                           'Media Type: ',
-                          style: TextStyle(
-                            color: Colors.white,
+                          style: SafeGoogleFont (
+                            'Radio Canada',
+                            color: Colors.black87,
                             fontSize: 14,
                           ),
                           maxLines: 1,
@@ -80,7 +84,8 @@ class SearchCard extends StatelessWidget {
                       children: [
                         Text(
                           mediatype == 'person' ? 'Popularity: ' : 'Rating: ',
-                          style: TextStyle(
+                          style: SafeGoogleFont (
+                            'Radio Canada',
                             color: accent_secondary,
                             fontSize: 14,
                           ),
@@ -90,8 +95,9 @@ class SearchCard extends StatelessWidget {
                         ),
                         Text(
                           popularRating.toString(),
-                          style: const TextStyle(
-                            color: Colors.white,
+                          style: SafeGoogleFont (
+                            'Radio Canada',
+                            color: Colors.black87,
                             fontSize: 14,
                           ),
                           maxLines: 1,

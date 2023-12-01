@@ -94,8 +94,10 @@ class _SearchScreenState extends State<SearchScreen> {
                       height: 50,
                       margin: const EdgeInsets.fromLTRB(8, 28, 8, 0),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: accent_t.withOpacity(0.95),
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15),
+                        border:
+                        Border.all(width: 1.5, color: const Color(0xFF373741)),
                       ),
                       child: TextField(
                         controller: myController,

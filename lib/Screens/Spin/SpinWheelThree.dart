@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_fortune_wheel/flutter_fortune_wheel.dart';
 import 'package:rxdart/rxdart.dart';
 
+import '../../const/colors.dart';
+import '../../utils.dart';
+
 class SpinWheel3 extends StatefulWidget {
   const SpinWheel3({Key? key}) : super(key: key);
 
@@ -40,7 +43,19 @@ class _SpinWheel3State extends State<SpinWheel3> {
                 animateFirst: false,
                 items: [
                   for(int i = 0; i < items.length; i++)...<FortuneItem>{
-                    FortuneItem(child: Text(items[i].toString())),
+                    FortuneItem(child: Text(
+                        items[i].toString(),
+                      style: SafeGoogleFont (
+                        'Radio Canada',
+                        color: Colors.black87,
+                      ),
+                    ),
+                      style: FortuneItemStyle(
+                        color: Colors.white, // <-- custom circle slice fill color
+                        borderColor: kepuBlue, // <-- custom circle slice stroke color
+                        borderWidth: 2, // <-- custom circle slice stroke width
+                      ),
+                    ),
                   },
                 ],
                 onAnimationEnd: () {
@@ -56,6 +71,7 @@ class _SpinWheel3State extends State<SpinWheel3> {
                 },
               ),
             ),
+            SizedBox(height:20),
             GestureDetector(
               onTap: () {
                 setState(() {
@@ -63,11 +79,21 @@ class _SpinWheel3State extends State<SpinWheel3> {
                 });
               },
               child: Container(
-                height: 40,
-                width: 120,
-                color: Colors.green[200],
+                decoration: BoxDecoration(
+                    color: kepuYellow,
+                    border: Border.all(width: 1.5, color: const Color(0xFF373741)),
+                    borderRadius: BorderRadius.circular(5)),
+                height: 60,
+                width: 200,
                 child: Center(
-                  child: Text("SPIN"),
+                  child: Text(
+                    "spin",
+                    style: SafeGoogleFont (
+                      'Radio Canada',
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
                 ),
               ),
             ),

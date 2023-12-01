@@ -163,7 +163,9 @@ class _Add_screenState extends State<Add_screen> {
         child: TextField(
           controller: title,
           focusNode: _focusNode1,
-          style: TextStyle(fontSize: 18, color: Colors.black),
+          style: SafeGoogleFont (
+              'Radio Canada',
+              fontSize: 18, color: Colors.black),
           decoration: InputDecoration(
               contentPadding:
                   EdgeInsets.symmetric(horizontal: 15, vertical: 15),
@@ -198,7 +200,9 @@ class _Add_screenState extends State<Add_screen> {
           maxLines: 3,
           controller: subtitle,
           focusNode: _focusNode2,
-          style: TextStyle(fontSize: 18, color: Colors.black),
+          style: SafeGoogleFont (
+              'Radio Canada',
+              fontSize: 18, color: Colors.black),
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
             enabledBorder: OutlineInputBorder(
