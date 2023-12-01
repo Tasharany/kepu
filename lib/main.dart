@@ -53,7 +53,7 @@ void main() async {
   GetIt.I.registerSingleton(mediaManager);
   GetIt.I.registerSingleton(themeManager);
   GetIt.I.registerSingleton(PlaybackCache());
-
+  //runApp(MyApp());
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (context) => themeManager),
@@ -122,31 +122,18 @@ class _MainAppState extends State<MainApp> {
 
     });
   }
-
+  Widget build2(BuildContext context) {
+    return MaterialApp(
+        routes: Routes.routes,
+    );
+  }
 }
 
 Future<Box<E>> openBox<E>(String name) async {
   return await Hive.openBox(name, path: Platform.isAndroid ? null : 'Kepu');
 }
 
-  class MyApp extends StatelessWidget {
-    const MyApp({super.key});
 
-    @override
-    Widget build(BuildContext context) {
-      SystemChrome.setSystemUIOverlayStyle( const SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
-        statusBarIconBrightness: Brightness.light,
-        systemNavigationBarColor: AppColors.dark,
-        systemNavigationBarIconBrightness: Brightness.light,
-      ));
 
-      final prefs = sl<SharedPreferences>();
-      return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          initialRoute: prefs.getBool('onBoardingStatus') ?? false ? Routes.homeContainer : Routes.initialRoute,
-          routes: Routes.routes,
-          theme: themeData
-      );
-    }
-  }
+
+
