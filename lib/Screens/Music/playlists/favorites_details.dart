@@ -9,6 +9,8 @@ import 'package:kepu/utils/option_menu.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 
+import '../../../utils.dart';
+
 class FavoriteDetails extends StatelessWidget {
   const FavoriteDetails({super.key});
 
@@ -17,14 +19,25 @@ class FavoriteDetails extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(S.of(context).favorites,
-            style: mediumTextStyle(context, bold: false)),
+            style: SafeGoogleFont (
+              'Radio Canada',
+            ),
+        ),
         centerTitle: true,
       ),
       body: ValueListenableBuilder(
         valueListenable: Hive.box('favorites').listenable(),
         builder: (context, Box box, child) {
           if (box.isEmpty) {
-            return Center(child: Text(S.of(context).nothingInHere));
+            return Center(
+                child: Text(
+                    S.of(context).nothingInHere,
+                    style: SafeGoogleFont (
+                      'Radio Canada',
+                      fontSize: 17,
+                    ),
+                ),
+            );
           }
           List songs = box.values.toList();
           return ListView.builder(
