@@ -7,6 +7,8 @@ import 'package:kepu/Widgets/BottomNavBar.dart';
 import 'package:kepu/Widgets/SearchList.dart';
 import 'package:unicons/unicons.dart';
 
+import '../utils.dart';
+
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
 
@@ -99,17 +101,18 @@ class _SearchScreenState extends State<SearchScreen> {
                         controller: myController,
                         cursorColor: accent_secondary,
                         maxLines: 1,
-                        style: const TextStyle(
-                          color: Colors.white,
+                        style: SafeGoogleFont (
+                          'Radio Canada',
+                          color: Colors.black87,
                           fontSize: 20,
                         ),
                         decoration: const InputDecoration(
                             border: InputBorder.none,
                             prefixIcon: Icon(
                               UniconsLine.search,
-                              color: Colors.white,
+                              color: Colors.black87,
                             ),
-                            prefixIconColor: Colors.white),
+                            prefixIconColor: Colors.black87),
                         onChanged: (value) {
                           setState(() {
                             query = myController.text;
