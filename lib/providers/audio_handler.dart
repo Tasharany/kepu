@@ -19,7 +19,7 @@ Future<AudioHandler> initAudioService() async {
       androidNotificationChannelName: 'Kepu Audio Service',
       androidShowNotificationBadge: true,
       androidNotificationIcon: 'drawable/ic_stat_music_note',
-      // androidNotificationOngoing: true,
+       androidNotificationOngoing: true,
       androidStopForegroundOnPause: true,
       notificationColor: Colors.grey[900],
     ),

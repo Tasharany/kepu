@@ -20,7 +20,6 @@ import 'package:kepu/services/server.dart';
 import 'package:kepu/ui/themes/dark.dart';
 import 'package:kepu/ui/themes/light.dart';
 import 'package:kepu/utils/playback_cache.dart';
-import 'package:kepu/utils/router.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'config/routes/routes.dart';
 import 'config/theme/colors.dart';
@@ -145,7 +144,7 @@ Future<Box<E>> openBox<E>(String name) async {
       final prefs = sl<SharedPreferences>();
       return MaterialApp(
           debugShowCheckedModeBanner: false,
-        //  initialRoute: prefs.getBool('onBoardingStatus') ?? false ? Routes.homeContainer : Routes.initialRoute,
+          initialRoute: prefs.getBool('onBoardingStatus') ?? false ? Routes.homeContainer : Routes.initialRoute,
           routes: Routes.routes,
           theme: themeData
       );

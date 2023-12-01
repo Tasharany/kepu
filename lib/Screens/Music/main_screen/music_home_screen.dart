@@ -13,7 +13,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:kepu/components/skeletons/home_page.dart';
 import '../../../generated/l10n.dart';
-import 'package:kepu/utils/router.dart';
+
 class MusicHomeScreen extends StatefulWidget {
   const MusicHomeScreen({super.key});
 

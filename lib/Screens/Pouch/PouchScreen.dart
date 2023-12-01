@@ -131,7 +131,7 @@ class _PouchScreenState extends State<PouchScreen> with TickerProviderStateMixin
               child: FavouritesPage(),
             ),
             Center(
-              child: PlaylistsScreen(),
+              child: FavoriteDetails(),
             ),
           ],
         ),

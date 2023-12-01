@@ -23,16 +23,17 @@ import 'Screens/Music/artists/artist_screen.dart';
 import 'Screens/Music/download_screen.dart';
 import 'Screens/Music/lists/list_screen.dart';
 import 'Screens/Music/main_screen.dart';
+import 'Screens/Music/main_screen/music_home_screen.dart';
 import 'Screens/Music/playlists/favorites_details.dart';
 import 'Screens/Music/playlists/playlists_screen.dart';
 import 'Screens/NavScreen.dart';
 import 'Screens/Pouch/PouchScreen.dart';
 import 'Screens/ProfileScreen.dart';
 import 'Screens/RandomScreen.dart';
-import 'package:kepu/utils/router.dart';
+
 
 GoRouter router = GoRouter(
-    navigatorKey: GetIt.I<GlobalKey<NavigatorState>>(),
+   // navigatorKey: GetIt.I<GlobalKey<NavigatorState>>(),
     initialLocation: '/',
     routes: [
   GoRoute(
@@ -108,8 +109,8 @@ List<StatefulShellBranch> branches = [
       GoRoute(
           path: '/',
           pageBuilder: (context, state) =>
-          // const NoTransitionPage(child: MusicHomeScreen()),
-          const NoTransitionPage(child: NavScreen()),
+           //const NoTransitionPage(child: MusicHomeScreen()),
+          const NoTransitionPage(child:DetailScreen()),
           routes: [
             GoRoute(
               path: 'list',

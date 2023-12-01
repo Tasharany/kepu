@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
-import 'package:kepu/utils/router.dart';
 import '../../Services/auth.dart';
 import '../../Services/consts.dart';
 import '../WatchListScreen.dart';
