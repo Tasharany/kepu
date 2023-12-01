@@ -15,8 +15,8 @@ Future<AudioHandler> initAudioService() async {
   return await AudioService.init(
     builder: () => MyAudioHandler(),
     config: AudioServiceConfig(
-      androidNotificationChannelId: 'com.webyte.gyavun.audio',
-      androidNotificationChannelName: 'Gyavun Audio Service',
+      androidNotificationChannelId: 'com.myApp.kepu.audio',
+      androidNotificationChannelName: 'Kepu Audio Service',
       androidShowNotificationBadge: true,
       androidNotificationIcon: 'drawable/ic_stat_music_note',
       // androidNotificationOngoing: true,
