@@ -11,6 +11,8 @@ import 'package:unicons/unicons.dart';
 import 'package:kepu/Services/extraServices.dart';
 import 'package:kepu/Widgets/DetailScreenComponents.dart';
 
+import '../utils.dart';
+
 class TVShowScreen extends StatefulWidget {
   TVShowScreen(this.movieId, {super.key});
   String movieId;
@@ -118,19 +120,21 @@ class _TVShowScreenState extends State<TVShowScreen> {
                                     snapshot.data!.voteAverage
                                         .toString()
                                         .substring(0, 3),
-                                    style: const TextStyle(
+                                    style: SafeGoogleFont (
+                                        'Radio Canada',
                                         fontSize: 40,
                                         fontWeight: FontWeight.w500,
-                                        color: Colors.white),
+                                        color: Colors.black87),
                                   ),
                                   Text(
                                     snapshot.data!.name.toString(),
                                     overflow: TextOverflow.ellipsis,
                                     maxLines: 2,
-                                    style: const TextStyle(
+                                    style: SafeGoogleFont (
+                                        'Radio Canada',
                                         fontSize: 24,
                                         fontWeight: FontWeight.w500,
-                                        color: Colors.white),
+                                        color: Colors.black87),
                                   ),
                                   Row(
                                     children: [
@@ -146,7 +150,7 @@ class _TVShowScreenState extends State<TVShowScreen> {
                                                   (value) => LaunchUrl(value));
                                         },
                                       ),
-                                      PlayButton(
+                                      CircularButton(
                                         UniconsLine.plus,
                                         onTap: () {
                                           HapticFeedback.lightImpact();
