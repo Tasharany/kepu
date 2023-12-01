@@ -2,6 +2,8 @@ import 'dart:io';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swipe_action_cell/flutter_swipe_action_cell.dart';
+import 'package:fluttericon/linecons_icons.dart';
+import 'package:go_router/go_router.dart';
 import 'package:kepu/generated/l10n.dart';
 import 'package:kepu/providers/media_manager.dart';
 import 'package:kepu/ui/text_styles.dart';
@@ -80,6 +82,10 @@ class FavoriteDetails extends StatelessWidget {
             },
           );
         },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => context.go('/find'),
+        child:  Icon(Linecons.search),
       ),
     );
   }
