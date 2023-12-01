@@ -126,7 +126,7 @@ class _Edit_ScreenState extends State<Edit_Screen> {
 
   Container tasktype_widget() {
     return Container(
-      height: 100,
+      height: 120,
       child: ListView.builder(
         itemCount: 4,
         scrollDirection: Axis.horizontal,

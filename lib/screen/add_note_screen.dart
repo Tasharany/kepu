@@ -115,7 +115,7 @@ class _Add_screenState extends State<Add_screen> {
 
   Container tasktype_widget() {
     return Container(
-      height: 100,
+      height: 120,
       child: ListView.builder(
         itemCount: 4,
         scrollDirection: Axis.horizontal,

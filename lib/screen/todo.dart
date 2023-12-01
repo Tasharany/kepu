@@ -93,6 +93,7 @@ class _ToDoListScreenState extends State<ToDoListScreen> {
           style: OutlinedButton.styleFrom(
             primary: Colors.black,
             backgroundColor: kepuYellow,
+            minimumSize: Size(48, 48),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(5))
             ),

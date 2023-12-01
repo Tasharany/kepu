@@ -56,7 +56,7 @@ class FavsItemWidget extends StatelessWidget {
                   child: Column(
                     children: [
                       Container(
-                          height: 100,
+                          height: 110,
                           decoration: BoxDecoration(
                               borderRadius: const BorderRadius.only(
                                   topLeft: Radius.circular(10),
@@ -89,6 +89,7 @@ class FavsItemWidget extends StatelessWidget {
                         maxLines: 1,
                       ),
                     ),
+                    SizedBox(height: 10),
                     Text('Released on: ${game.released}',
                         style: SafeGoogleFont (
                             'Radio Canada',
