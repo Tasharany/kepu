@@ -160,6 +160,7 @@ import 'package:fluttericon/linecons_icons.dart';
           ),
         ),
           floatingActionButton: FloatingActionButton(
+            backgroundColor: kepuYellow,
           onPressed: () => context.go('/search'),
       child: const Icon(Linecons.search),),
       );

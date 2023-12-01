@@ -11,6 +11,8 @@ import 'package:kepu/ui/text_styles.dart';
 import 'package:kepu/utils/enums.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
+import '../../../utils.dart';
+
 class MainSearchScreen extends StatefulWidget {
   const MainSearchScreen({super.key});
 
@@ -87,7 +89,9 @@ class _MainSearchScreenState extends State<MainSearchScreen>
         child: Column(
           children: [
             ListTile(
-              title: Text(S().searchProvider, style: textStyle(context)),
+              title: Text(S().searchProvider, style: SafeGoogleFont (
+        'Radio Canada',
+              )),
               trailing: DropdownButton2(
                 underline: const SizedBox.shrink(),
                 value: searchProvider,
@@ -149,9 +153,9 @@ class _MainSearchScreenState extends State<MainSearchScreen>
                                         children: [
                                           Text(
                                             key,
-                                            style: textStyle(context).copyWith(
-                                                color: Theme.of(context)
-                                                    .primaryColor),
+                                              style: SafeGoogleFont (
+                                                'Radio Canada',
+                                              )
                                           ),
                                           ...val.map((item) {
                                             return SearchTile(item: item);

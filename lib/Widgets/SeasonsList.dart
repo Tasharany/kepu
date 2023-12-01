@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kepu/Services/API.dart';
 
+import '../utils.dart';
+
 class SeasonsList extends StatefulWidget {
   SeasonsList(this.seasonNumber, this.movieId, {super.key});
   int seasonNumber;
@@ -59,7 +61,8 @@ class _SeasonsListState extends State<SeasonsList> {
                           margin: const EdgeInsets.all(10),
                           child: Text(
                             snapshot.data[index].episodeNumber.toString(),
-                            style: const TextStyle(
+                            style: SafeGoogleFont (
+                                'Radio Canada',
                                 color: Colors.white,
                                 fontSize: 24,
                                 shadows: <Shadow>[
@@ -79,8 +82,9 @@ class _SeasonsListState extends State<SeasonsList> {
                             textAlign: TextAlign.left,
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
-                            style: const TextStyle(
-                              color: Colors.white,
+                            style: SafeGoogleFont (
+                              'Radio Canada',
+                              color: Colors.black87,
                             )),
                       ),
                     ]),

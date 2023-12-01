@@ -8,9 +8,9 @@ Widget TextContainer(String data, EdgeInsets margin, Color color) {
     constraints: const BoxConstraints(minHeight: 36),
     margin: margin,
     decoration: BoxDecoration(
-        color: color.withOpacity(0.6),
+        color: kepuBlue,
         border:
-            Border.all(width: 1.5, color: kepuAccentBlue),
+            Border.all(width: 1.5, color: Colors.black87),
         borderRadius: BorderRadius.circular(5)),
     child: Padding(
       padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),

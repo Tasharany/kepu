@@ -11,6 +11,7 @@ import 'package:kepu/utils/option_menu.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 
+import '../../../const/colors.dart';
 import '../../../utils.dart';
 
 class FavoriteDetails extends StatelessWidget {
@@ -97,6 +98,7 @@ class FavoriteDetails extends StatelessWidget {
         },
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: kepuYellow,
         onPressed: () => context.go('/find'),
         child:  Icon(Linecons.search),
       ),

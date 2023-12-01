@@ -11,6 +11,9 @@ import 'package:kepu/Widgets/BottomNavBar.dart';
 import 'package:provider/provider.dart';
 import 'package:kepu/Widgets/LoadingScreen.dart';
 
+import '../const/colors.dart';
+import '../utils.dart';
+
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
 
@@ -80,7 +83,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
             );
           })),
-      backgroundColor: Colors.blue[100],
+      backgroundColor: backgroundColor,
       extendBody: true,
       body:
            Container(
@@ -130,8 +133,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             margin: const EdgeInsets.only(left: 20, bottom: 20),
                             child: Text(
                               _user.displayName.toString(),
-                              style: const TextStyle(
-                                color: Colors.white,
+                              style: SafeGoogleFont (
+                                'Radio Canada',
+                                color: Colors.black87,
                                 fontSize: 24,
                               ),
                               textAlign: TextAlign.center,
@@ -157,14 +161,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               bottom: 200,
                             ),
                             decoration: BoxDecoration(
-                                color: Color(0xFF14303B).withOpacity(0.25),
+                                color: kepuYellow,
                                 border: Border.all(
-                                    color: Color(0xFF14303B).withOpacity(0.25),
+                                    color: Colors.black87,
                                     width: 1.5),
                                 borderRadius: BorderRadius.circular(6)),
                             child: Icon(
                               Icons.logout_rounded,
-                              color: Colors.white,
+                              color: Colors.black87,
                             ),
                           ),
                         ),
