@@ -70,14 +70,14 @@ class GameItemWidget extends StatelessWidget {
                         game?.name ?? '',
                         style: SafeGoogleFont (
                             'Radio Canada',
-                            color: Colors.black87,
+                            color: kepuDarkGreen,
                             fontSize: 14,
                             fontWeight: FontWeight.bold),
                         overflow: TextOverflow.ellipsis,
                       ),
                     ),
                   ),
-                  const Spacer(),
+                  SizedBox(width: 20),
                   Padding(
                     padding: const EdgeInsets.only(right: 10.0),
                     child: Container(

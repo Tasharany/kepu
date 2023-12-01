@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kepu/config/theme/colors.dart';
+import '../../../../const/colors.dart';
+import '../../../../utils.dart';
 import '../../../games/domain/model/game.dart';
 import '../pages/favorite_game_details.dart';
 
@@ -41,7 +43,10 @@ class FavsItemWidget extends StatelessWidget {
         child: Container(
           margin: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-              color: AppColors.darkGrey, borderRadius: BorderRadius.circular(10)),
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(width: 1.5, color: const Color(0xFF373741)),
+          ),
           height: 110,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -75,9 +80,9 @@ class FavsItemWidget extends StatelessWidget {
                     Expanded(
                       child: Text(
                         game.name ?? '',
-                        style: const TextStyle(
+                        style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            color: AppColors.white,
+                            color: kepuDarkGreen,
                             fontSize: 20
                         ),
                         overflow: TextOverflow.ellipsis,
@@ -85,19 +90,27 @@ class FavsItemWidget extends StatelessWidget {
                       ),
                     ),
                     Text('Released on: ${game.released}',
-                        style: const TextStyle(color: AppColors.white, fontSize: 12)),
+                        style: SafeGoogleFont (
+                            'Radio Canada',
+                            color: Colors.black87, fontSize: 12)),
                     Text('Rating: ${game.rating.toString()}/5',
-                        style: const TextStyle(color: AppColors.white, fontSize: 12)),
+                        style: SafeGoogleFont (
+                            'Radio Canada',
+                            color: Colors.black87, fontSize: 12)),
                     Text('Overall Rating: ${game.metaCritic.toString()}%',
-                        style: const TextStyle(color: AppColors.white, fontSize: 12)),
+                        style: SafeGoogleFont (
+                            'Radio Canada',
+                            color: Colors.black87, fontSize: 12)),
                     Text('Genres: ${game.genres?.map((e) => e.name).toList()}',
-                        style: const TextStyle(color: AppColors.white, fontSize: 12)),
+                        style: SafeGoogleFont (
+                            'Radio Canada',
+                            color: Colors.black87, fontSize: 12)),
                   ],
                 ),
               ),
               const Padding(
                 padding: EdgeInsets.all(5.0),
-                child: Icon(Icons.favorite, color: AppColors.orange),
+                child: Icon(Icons.favorite, color: Color(0xff6CA78D)),
               )
             ],
           ),

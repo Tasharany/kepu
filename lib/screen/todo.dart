@@ -84,13 +84,20 @@ class _ToDoListScreenState extends State<ToDoListScreen> {
       backgroundColor: backgroundColor,
       floatingActionButton: Visibility(
         visible: show,
-        child: FloatingActionButton(
+        child: OutlinedButton(
           onPressed: () {
             Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => Add_screen(),
             ));
           },
-          backgroundColor: kepuYellow,
+          style: OutlinedButton.styleFrom(
+            primary: Colors.black,
+            backgroundColor: kepuYellow,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(5))
+            ),
+            side: BorderSide(color: Color(0x000000)),
+          ),
           child: Icon(Icons.add, size: 30),
         ),
       ),

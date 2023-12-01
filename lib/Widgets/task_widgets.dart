@@ -118,7 +118,8 @@ class _Task_WidgetState extends State<Task_Widget> {
                   SizedBox(width: 10),
                   Text(
                     widget._note.time,
-                    style: TextStyle(
+                    style: SafeGoogleFont (
+                      'Radio Canada',
                       color: Colors.white,
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
@@ -153,7 +154,8 @@ class _Task_WidgetState extends State<Task_Widget> {
                     SizedBox(width: 10),
                     Text(
                       'edit',
-                      style: TextStyle(
+                      style: SafeGoogleFont (
+                        'Radio Canada',
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
                         color: Color(0xff18d8a2),
