@@ -45,7 +45,9 @@ class _Edit_ScreenState extends State<Edit_Screen> {
             label('type:'),
             tasktype_widget(),
             SizedBox(height: 20),
-            button()
+            button(),
+            SizedBox(height: 20),
+            cancel(),
           ],
         ),
       ),
@@ -110,29 +112,6 @@ class _Edit_ScreenState extends State<Edit_Screen> {
             },
             child: Text(
               'delete task',
-              style: SafeGoogleFont (
-                'Radio Canada',
-                fontSize: 17,
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
-              ),
-            )
-        ),
-        OutlinedButton(
-            style: OutlinedButton.styleFrom(
-              primary: Colors.black,
-              backgroundColor: kepuYellow,
-              minimumSize: Size(170, 48),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(5))
-              ),
-              side: BorderSide(color: Color(0x000000)),
-            ),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: Text(
-              'cancel',
               style: SafeGoogleFont (
                 'Radio Canada',
                 fontSize: 17,
@@ -254,4 +233,36 @@ class _Edit_ScreenState extends State<Edit_Screen> {
       ),
     );
   }
+
+  Widget cancel() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        OutlinedButton(
+            style: OutlinedButton.styleFrom(
+              primary: Colors.black,
+              backgroundColor: kepuYellow,
+              minimumSize: Size(170, 48),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(5))
+              ),
+              side: BorderSide(color: Color(0x000000)),
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: Text(
+              'cancel',
+              style: SafeGoogleFont (
+                'Radio Canada',
+                fontSize: 17,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            )
+        ),
+      ],
+    );
+  }
+
 }

@@ -3,8 +3,10 @@ import 'package:flutter/rendering.dart';
 import '../Widgets/BottomNavBar.dart';
 import '../feature/games/presentation/pages/game_home_page.dart';
 import '../feature/games/presentation/pages/games_page.dart';
+import '../utils.dart';
 import 'MainScreen.dart';
 import 'Music/main_screen/music_home_screen.dart';
+import 'package:kepu/const/colors.dart';
 
 class DetailScreen extends StatefulWidget {
   const DetailScreen({
@@ -75,44 +77,65 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
               );
             })),
         appBar: AppBar(
-          title: Center(child: Text("What's New?",style: TextStyle(
-        fontWeight: FontWeight.bold,
-        color: Colors.black,
-        fontSize: 20))),
+          title: Center(
+              child: Text(
+                  "what's new?",
+                  style: SafeGoogleFont (
+                    'Radio Canada',
+                    fontSize: 20,
+                    fontWeight: FontWeight.w700,
+                    color: kepuTitleBlue,
+                  ),
+              )
+          ),
           bottom: PreferredSize(
             preferredSize: Size.fromHeight(AppBar().preferredSize.height),
             child: Container(
+              margin: EdgeInsets.only(bottom: 15),
               height: 60,
               padding: const EdgeInsets.symmetric(
                 horizontal: 30,
                 vertical: 2,
               ),
               child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(
-                    30,
-                  ),
-                  color: Colors.grey[200],
-                ),
+                // decoration: BoxDecoration(
+                //   color: Colors.white,
+                //   borderRadius: BorderRadius.circular(30),
+                //   boxShadow: <BoxShadow>[
+                //     BoxShadow(
+                //         color: Colors.black26,
+                //         blurRadius: 4,
+                //         offset: Offset(0.0, 5)
+                //     )
+                //   ],
+                //   border: Border.all(
+                //     color: Colors.black87,
+                //     width: 1.5,
+                //   ),
+                // ),
                 child: TabBar(
-                  labelColor: Colors.purple[300],
-                  unselectedLabelColor: Colors.black,
                   indicator: BoxDecoration(
-                    borderRadius: BorderRadius.circular(
-                      10,
-                    ),
-                    //color: Colors.red.shade200,
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.transparent,
                   ),
                   tabs: const [
                     Tab(
-                      icon: ImageIcon(AssetImage('assets/page-1/images/movie-8ev.png')),
+                      icon: ImageIcon(
+                        AssetImage('assets/page-1/images/movie-8ev.png'),
+                        color: Color(0xffB96B8F),
+                      ),
                     ),
                     Tab(
-                      icon: ImageIcon(AssetImage('assets/page-1/images/movie-hog.png')),
+                      icon: ImageIcon(
+                          AssetImage('assets/page-1/images/movie-hog.png'),
+                        color: Color(0xff6CA78D),
+                      ),
                     ),
-
                     Tab(
-                      icon: ImageIcon(AssetImage('assets/page-1/images/movie-fke.png')),
+                      icon: ImageIcon(
+                          AssetImage('assets/page-1/images/movie-fke.png'),
+                        color: Color(0xff7aafef),
+                      ),
                     ),
                   ],
                 ),
@@ -128,8 +151,8 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
             Center(
               child: GamesPage(),
             ),
-      Center(
-        child: MusicHomeScreen(),
+           Center(
+              child: MusicHomeScreen(),
             ),
           ],
         ),
