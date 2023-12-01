@@ -134,7 +134,7 @@ class RecentlyPlayed extends StatelessWidget {
                                                   color: Colors.black87
                                               ),
                                               overflow: TextOverflow.clip,
-                                              maxLines: 2,
+                                              maxLines: 1,
                                             ),
                                           ),
                                         ),

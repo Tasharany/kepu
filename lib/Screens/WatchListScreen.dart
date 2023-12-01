@@ -75,14 +75,14 @@ Future<Widget> WatchListItem(String id, String mediaType, context) async {
               children: [
                 Text(details.title,
                     style: const TextStyle(
-                      color: Colors.white,
+                      color: Colors.black87,
                       fontSize: 20,
                     ),
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left),
                 Text("Release Date: ${details.releaseDate}",
                     style: const TextStyle(
-                      color: Colors.white,
+                      color: Colors.black87,
                       fontSize: 16,
                     ),
                     maxLines: 1,
@@ -91,7 +91,7 @@ Future<Widget> WatchListItem(String id, String mediaType, context) async {
                 Text(
                     "Rating: ${details.voteAverage.toString().substring(0, 3)}",
                     style: const TextStyle(
-                      color: Colors.white,
+                      color: Colors.black87,
                       fontSize: 16,
                     ),
                     maxLines: 1,
@@ -99,7 +99,7 @@ Future<Widget> WatchListItem(String id, String mediaType, context) async {
                     textAlign: TextAlign.left),
                 const Text("Type: Movie",
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black87,
                       fontSize: 16,
                     ),
                     maxLines: 1,
@@ -139,7 +139,7 @@ Future<Widget> WatchListItem(String id, String mediaType, context) async {
               children: [
                 Text(details.name,
                     style: const TextStyle(
-                      color: Colors.white,
+                      color: Colors.black87,
                       fontSize: 20,
                     ),
                     maxLines: 1,
@@ -147,7 +147,7 @@ Future<Widget> WatchListItem(String id, String mediaType, context) async {
                     textAlign: TextAlign.left),
                 Text("First Air Date: ${details.firstAirDate}",
                     style: const TextStyle(
-                      color: Colors.white,
+                      color: Colors.black87,
                       fontSize: 16,
                     ),
                     maxLines: 1,
@@ -156,7 +156,7 @@ Future<Widget> WatchListItem(String id, String mediaType, context) async {
                 Text(
                     "Rating: ${details.voteAverage.toString().substring(0, 3)}",
                     style: const TextStyle(
-                      color: Colors.white,
+                      color: Colors.black87,
                       fontSize: 16,
                     ),
                     maxLines: 1,
@@ -164,7 +164,7 @@ Future<Widget> WatchListItem(String id, String mediaType, context) async {
                     textAlign: TextAlign.left),
                 const Text("Type: TV Show",
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black87,
                       fontSize: 16,
                     ),
                     maxLines: 1,
