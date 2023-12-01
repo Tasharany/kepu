@@ -78,7 +78,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     curve: Curves.fastLinearToSlowEaseIn,
                     height: isVisible ? 75 : 0,
                     child: BottomNavBar(
-                      currentIndex: 1,
+                      currentIndex: 2,
                     ),
                   );
                 })),
