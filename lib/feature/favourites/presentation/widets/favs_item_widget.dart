@@ -89,7 +89,7 @@ class FavsItemWidget extends StatelessWidget {
                         maxLines: 1,
                       ),
                     ),
-                    SizedBox(height: 10),
+                    // SizedBox(height: 10),
                     Text('Released on: ${game.released}',
                         style: SafeGoogleFont (
                             'Radio Canada',
