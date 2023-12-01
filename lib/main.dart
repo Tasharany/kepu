@@ -31,8 +31,8 @@ import 'injector.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await di.init();
   await Firebase.initializeApp();
+  await di.init();
 
   await Hive.initFlutter();
   await openBox('HomeCache');
@@ -42,6 +42,9 @@ void main() async {
   await openBox('songHistory');
   await openBox('playlists');
 
+  if (Platform.isAndroid) {
+    await FlutterDisplayMode.setHighRefreshRate();
+  }
 
   GetIt.I.registerSingleton<AudioHandler>(await initAudioService());
   GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
