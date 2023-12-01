@@ -33,8 +33,8 @@ class Routes {
   static const initialRoute = navpage;
 
   static final Map<String, WidgetBuilder> routes = {
-    navigationContainer: (context) =>  OnBoardingScreensContainer(),
-    homeContainer: (context) => const NavigationContainer(),
+    navigationContainer: (context) =>  NavScreen(),
+    homeContainer: (context) => const NavScreen(),
     gamesPage: (context) =>  GamesPage(),
     gameDetailsPage: (context) => GameDetailsPage(game: ModalRoute.of(context)!.settings.arguments as GameResults),
     categoriesPage: (context) =>  CategoriesPage(),

@@ -20,9 +20,9 @@ import 'package:kepu/services/server.dart';
 import 'package:kepu/ui/themes/dark.dart';
 import 'package:kepu/ui/themes/light.dart';
 import 'package:kepu/utils/playback_cache.dart';
-import 'package:kepu/utils/router.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'config/routes/routes.dart';
+import 'config/theme/colors.dart';
 import 'config/theme/theme.dart';
 import 'injector.dart' as di;
 import 'injector.dart';
@@ -30,9 +30,8 @@ import 'injector.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await di.init();
-
   await Firebase.initializeApp();
+  await di.init();
 
   await Hive.initFlutter();
   await openBox('HomeCache');
@@ -42,10 +41,6 @@ void main() async {
   await openBox('songHistory');
   await openBox('playlists');
 
-  SystemChrome.setEnabledSystemUIMode(
-    SystemUiMode.edgeToEdge,
-    overlays: [SystemUiOverlay.top],
-  );
   if (Platform.isAndroid) {
     await FlutterDisplayMode.setHighRefreshRate();
   }
@@ -67,6 +62,7 @@ void main() async {
     ],
     child: const MainApp(),
   ));
+
 }
 
 class MainApp extends StatefulWidget {
@@ -97,13 +93,13 @@ class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
     ThemeManager themeManager = context.watch<ThemeManager>();
-
     return DynamicColorBuilder(builder: (lightScheme, darkScheme) {
       return Shortcuts(
         shortcuts: <LogicalKeySet, Intent>{
           LogicalKeySet(LogicalKeyboardKey.select): const ActivateIntent(),
         },
         child: MaterialApp.router(
+            title: 'Kepu',
           locale: Locale(themeManager.language['code']),
           localizationsDelegates: const [
             S.delegate,
@@ -123,11 +119,34 @@ class _MainAppState extends State<MainApp> {
           debugShowCheckedModeBanner: false,
         ),
       );
+
     });
   }
+
 }
 
 Future<Box<E>> openBox<E>(String name) async {
   return await Hive.openBox(name, path: Platform.isAndroid ? null : 'Kepu');
 }
 
+  class MyApp extends StatelessWidget {
+    const MyApp({super.key});
+
+    @override
+    Widget build(BuildContext context) {
+      SystemChrome.setSystemUIOverlayStyle( const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.light,
+        systemNavigationBarColor: AppColors.dark,
+        systemNavigationBarIconBrightness: Brightness.light,
+      ));
+
+      final prefs = sl<SharedPreferences>();
+      return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          initialRoute: prefs.getBool('onBoardingStatus') ?? false ? Routes.homeContainer : Routes.initialRoute,
+          routes: Routes.routes,
+          theme: themeData
+      );
+    }
+  }

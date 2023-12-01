@@ -42,7 +42,7 @@ class FavsItemWidget extends StatelessWidget {
           margin: const EdgeInsets.all(8),
           decoration: BoxDecoration(
               color: AppColors.darkGrey, borderRadius: BorderRadius.circular(10)),
-          height: 100,
+          height: 110,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
