@@ -121,7 +121,7 @@ class _TVShowScreenState extends State<TVShowScreen> {
                                     style: const TextStyle(
                                         fontSize: 40,
                                         fontWeight: FontWeight.w500,
-                                        color: Colors.white),
+                                        color: Colors.black),
                                   ),
                                   Text(
                                     snapshot.data!.name.toString(),
@@ -130,7 +130,7 @@ class _TVShowScreenState extends State<TVShowScreen> {
                                     style: const TextStyle(
                                         fontSize: 24,
                                         fontWeight: FontWeight.w500,
-                                        color: Colors.white),
+                                        color: Colors.black),
                                   ),
                                   Row(
                                     children: [
